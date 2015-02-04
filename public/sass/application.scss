@@ -1,0 +1,154 @@
+// Import elements
+@import 'elements';
+
+// Set up main content
+#content {
+  @include outer-block;
+  padding-bottom: 120px;
+}
+
+.inner-block {
+  @include inner-block;
+}
+
+// Your styles here
+#email-block {
+    width: $two-thirds;
+	h2 {
+	/*border-top: 5px solid $link-colour;
+    padding-top: 20px;*/
+	}
+}
+.service-info__help {
+    float: right;
+    width: 50%;
+    margin-top: 15px;
+}
+.hmrc-banner {
+    border-left: 2px solid #009390;
+    width: 45%;
+    float: left;
+    font-family: Helvetica, Arial;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 15px 0;
+    padding: 3px 0 2px 8px;
+    text-decoration: none;
+    text-transform: none;
+}
+.hmrc-crest {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    background: url('../images/icons/crests/hmrc_crest_18px.png') no-repeat;
+    vertical-align: middle;
+    }.hmrc-crest {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    background: url('../images/icons/crests/hmrc_crest_18px.png') no-repeat;
+    vertical-align: middle;
+}
+.service-info__help p {
+    font-family: nta, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    text-transform: none;
+    color: #6f777b;
+    text-align: right;
+}
+.secondary-text {
+    color: #6f777b;
+}
+.font-xsmall {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+}
+.form-control,
+#email {
+    width: 50%;
+}
+
+.current-question {
+    margin-top: 20px;
+}
+
+.inner {
+    width: $two-thirds;
+}
+
+.destination {
+    margin-top: -8px;
+}
+
+.page-content {
+    margin-top: 40px;
+}
+
+.alert-panel {
+    padding: 20px 20px 20px 60px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    border-left: 5px solid #bfc1c3;
+    background: #f8f8f8 url('/public/images/icons/icon-information.png') no-repeat 13px center;
+}
+
+.details-summary,
+.expense-summary {
+    tr td {
+        width: 40%;
+        &:last-child {
+            text-align: right;
+            width: 20%;
+        }
+    }
+}
+
+.column-two-thirds {
+    float: left;
+    width: $two-thirds;
+}
+
+.column-third {
+    float: left;
+    width: $one-third;
+}
+
+.related {
+    border-top: 10px solid #005ea5;
+    padding-top: 5px;
+    margin-top: 32px;
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.heading-xlarge {
+    margin-bottom :40px;
+}
+
+#test {
+    margin-bottom :15px;
+}
+
+.highlighted-event {
+    background-color: #28a197;
+    color: #fff;
+    text-align: center;
+    margin: 15px 0 0 0;
+    padding: 1.75em 0.75em 1.25em 0.75em;
+}
+
+details summary {
+    display: inline-block;
+    color: #005ea5;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0.26316em;
+}
