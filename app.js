@@ -8,6 +8,7 @@ app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
 app.set('view engine', 'html');
 app.set('vendorViews', __dirname + '/govuk/views');
 app.set('views', __dirname + '/views');
+app.use(express.basicAuth('team9-fre', 'team9-fre'));
 
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
@@ -23,4 +24,3 @@ app.listen(port);
 console.log('');
 console.log('Listening on port ' + port);
 console.log('');
-app.use(express.basicAuth('team9-fre', 'team9-fre'));
