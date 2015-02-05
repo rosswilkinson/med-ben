@@ -23,3 +23,4 @@ app.listen(port);
 console.log('');
 console.log('Listening on port ' + port);
 console.log('');
+app.use(express.basicAuth('team9-fre', 'team9-fre'));
