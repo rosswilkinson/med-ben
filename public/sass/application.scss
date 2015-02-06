@@ -152,3 +152,22 @@ details summary {
     position: relative;
     margin-bottom: 0.26316em;
 }
+
+.declaration {
+    .alert-panel {
+        margin-bottom: 30px;
+        padding: 15px 0 15px 50px;
+        background: #fff url('/public/images/icons/icon-important.png') no-repeat;
+        background-position: 0 center;
+        border-left: none;
+        p {
+            &:last-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .block-label {
+        margin-bottom: 30px;
+    }
+}
