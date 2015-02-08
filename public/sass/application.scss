@@ -171,3 +171,26 @@ details summary {
         margin-bottom: 30px;
     }
 }
+
+form.long-list {
+    .block-label {
+        width: 70%;
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: #fff;
+        input {
+            display: none;
+        }
+        &:hover {
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        &.selected {
+            border: 2px solid black;
+            background: $highlight-colour;
+            &:hover {
+                border: 2px solid black;
+            }
+        }
+    }
+}
