@@ -1,31 +1,21 @@
-/*var airlines = document.getElementById('airlines');
-//airlines.addEventListener('click', addSelected);
-//var list = [airlines];
+$(document).ready(function() {
+    
+    var next = $("#next-choice");
+    var otherInd = $("#other");
+    var nextNhs = $("#next-nhs");
+    var otherNhs = $("#other-nhs");
 
-//function addSelected (){
-//  for (var x in list) {
-//        x.parentElement.classList.remove('selected');
-//    } 
-//    airlines.parentElement.classList.add('selected');
-//}
-
-// create an array of all inputs on a page
-// add event listener to the array
- on click add selected and remove it from all of the others
-
-
-
-for (var foo in list) {
-    var t = foo.innerHTML();
-    alert(t);
-}
-
-*/
-
-var airlines = document.getElementById('airlines');
-airlines.addEventListener('click', addSelected(airlines));
-
-function addSelected (x){
-    x.parentElement.classList.remove('selected');
-    airlines.parentElement.classList.add('selected');
-}
+    $('input:radio').change(function(){
+        var current = $(this);
+        $('input:radio').parent().removeClass('selected');
+        if($(this).is(":checked")) {
+            $(current).parent().addClass('selected');
+        }
+        if( $(otherInd).is(":checked")) {
+            $(next).attr("href", "summary-other.html");
+        }
+        if( $(otherNhs).is(":checked")) {
+            $(nextNhs).attr("href", "summary-other.html");
+        }
+    });
+});

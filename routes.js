@@ -62,6 +62,10 @@ module.exports = {
       res.render('summary', {'assetPath' : assetPath });
     });
       
+    app.get('/summary-other.html', function (req, res) {
+      res.render('summary-other', {'assetPath' : assetPath });
+    });
+            
     app.get('/other-occupation.html', function (req, res) {
       res.render('other-occupation', {'assetPath' : assetPath });
     });
