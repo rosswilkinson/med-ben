@@ -72,6 +72,10 @@ module.exports = {
 
     app.get('/error.html', function (req, res) {
       res.render('error', {'assetPath' : assetPath });
+    });    
+    
+    app.get('/industry-dd.html', function (req, res) {
+      res.render('industry-dd', {'assetPath' : assetPath });
     });
 
   }

@@ -825,14 +825,14 @@ table th {
     -webkit-box-shadow: 0 0 0 #00823b;
     -moz-box-shadow: 0 0 0 #00823b;
     box-shadow: 0 0 0 #00823b; }
-  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+  .button.disabled, .button[], .button[disabled] {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5; }
-    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+    .button.disabled:hover, .button[]:hover, .button[disabled]:hover {
       cursor: default;
       background-color: #00823b; }
-    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+    .button.disabled:active, .button[]:active, .button[disabled]:active {
       top: 0;
       -webkit-box-shadow: 0 2px 0 #003518;
       -moz-box-shadow: 0 2px 0 #003518;
@@ -860,10 +860,10 @@ table th {
 .button:focus {
   outline: 3px solid #ffbf47; }
 
-.button[disabled="disabled"] {
+.button[] {
   background: #00823b; }
 
-.button[disabled="disabled"]:focus {
+.button[]:focus {
   outline: none; }
 
 .button-get-started {
@@ -1293,3 +1293,26 @@ form.long-list .block-label {
     background: #f8f8f8; }
     form.long-list .block-label.selected:hover {
       border: 2px solid black; }
+
+.dropdown input[type=text] {
+  float: left;
+  width: 75%;
+  margin-bottom: 20px;
+  padding: 3px; }
+.dropdown .li.ui-menu-item {
+  color: red; }
+.dropdown #drop-submit {
+  float: left;
+  clear: left; }
+
+.ui-autocomplete {
+  background-color: white;
+  width: 25%; }
+
+.ui-menu-item {
+  cursor: pointer;
+  border: 2px solid #fff;
+  padding: 5px; }
+  .ui-menu-item:hover {
+    color: #fff;
+    background: #005ea5; }

@@ -1,3 +1,17 @@
 <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/public/js/fre.js"></script>
+<script src="/public/js/jquery-ui.min.js"></script>
+<script src="/public/js/jquery.select-to-autocomplete.js"></script>
+
+<script>
+    (function($){
+        $(function(){
+        $('select').selectToAutocomplete();
+        $('form').submit(function(){
+	       alert( $(this).serialize() );
+	       return false;
+            });
+        });
+    })(jQuery);
+</script>

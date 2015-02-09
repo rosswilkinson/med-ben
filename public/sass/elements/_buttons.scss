@@ -13,11 +13,11 @@
 }
 
 // Disabled buttons
-.button[disabled="disabled"] {
+.button[] {
   background: $button-colour;
 }
 
-.button[disabled="disabled"]:focus {
+.button[]:focus {
   outline: none;
 }
 

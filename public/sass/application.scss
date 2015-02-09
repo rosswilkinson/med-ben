@@ -196,3 +196,31 @@ form.long-list {
         }
     }
 }
+.dropdown {
+    input[type=text] {
+        float: left;
+        width: 75%;
+        margin-bottom :20px;
+        padding :3px;
+    }
+    .li.ui-menu-item {
+        color: red;
+    }
+    #drop-submit {
+        float: left;
+        clear: left;
+    }
+}
+.ui-autocomplete {
+    background-color: white;
+    width: 25%;
+}
+.ui-menu-item {
+    cursor: pointer;
+    border: 2px solid #fff;
+    padding: 5px;
+    &:hover {
+        color: #fff;
+        background: $link-colour;
+    }
+}

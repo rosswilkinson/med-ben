@@ -16,13 +16,8 @@ $(document).ready(function() {
 
     $('input:radio').change(function(){
         var current = $(this);
-        nextInd.removeAttr( "disabled" );
-        nextIndTwo.removeAttr( "disabled" );
-        nextOc.removeAttr( "disabled" );
         nextOc.attr("href", "/summary.html");
-        otherOc.removeAttr( "disabled" );
         otherOc.attr("href", "/summary-other.html");
-        endButton.removeAttr( "disabled" );
         endButton.attr("href", "/end.html");
         
         $('input:radio').parent().removeClass('selected');
