@@ -60,7 +60,7 @@
 
   // Disabled button styles
   &.disabled,
-  &[],
+  &[disabled="disabled"],
   &[disabled] {
     @include opacity(0.5);
     &:hover{
