@@ -50,7 +50,7 @@ module.exports = {
       res.render('your-industry', {'assetPath' : assetPath });
     });
     
-      app.get('/your-occupation.html', function (req, res) {
+    app.get('/your-occupation.html', function (req, res) {
       res.render('your-occupation', {'assetPath' : assetPath });
     });
       
