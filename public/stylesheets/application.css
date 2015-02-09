@@ -1280,9 +1280,11 @@ form.long-list .block-label {
   border: 2px solid #fff;
   border-bottom: 2px solid black;
   background-color: #fff;
-  padding: 18px 30px 15px 15px; }
-  form.long-list .block-label input {
-    display: none; }
+  /*padding: 18px 30px 15px 15px;
+        input {
+            display: none;
+        }
+        */ }
   form.long-list .block-label:hover {
     border: 2px solid #fff;
     border-bottom: 2px solid black; }

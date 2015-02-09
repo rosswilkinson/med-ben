@@ -1,21 +1,40 @@
 $(document).ready(function() {
     
-    var next = $("#next-choice");
+    //your-industry
+    var nextInd = $("#next-industry");
+    var nextIndTwo = $("#next-industry-2");
     var otherInd = $("#other");
-    var nextNhs = $("#next-nhs");
-    var otherNhs = $("#other-nhs");
+
+    //your-occupation
+    var nextOc = $("#next-occupation");
+
+    //occupation-other
+    var otherOc = $("#other-occupation");
+    
+    //summary
+    var endButton = $("#end");
 
     $('input:radio').change(function(){
         var current = $(this);
+        nextInd.removeAttr( "disabled" );
+        nextIndTwo.removeAttr( "disabled" );
+        nextOc.removeAttr( "disabled" );
+        nextOc.attr("href", "/summary.html");
+        otherOc.removeAttr( "disabled" );
+        otherOc.attr("href", "/summary-other.html");
+        endButton.removeAttr( "disabled" );
+        endButton.attr("href", "/end.html");
+        
         $('input:radio').parent().removeClass('selected');
         if($(this).is(":checked")) {
             $(current).parent().addClass('selected');
         }
         if( $(otherInd).is(":checked")) {
-            $(next).attr("href", "summary-other.html");
-        }
-        if( $(otherNhs).is(":checked")) {
-            $(nextNhs).attr("href", "summary-other.html");
+            nextInd.attr("href", "/occupation-other.html");
+            nextIndTwo.attr("href", "/occupation-other.html");
+        } else {
+            nextInd.attr("href", "/your-occupation.html");
+            nextIndTwo.attr("href", "/your-occupation.html");
         }
     });
 });

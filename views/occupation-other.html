@@ -1,0 +1,40 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}            
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">Your expenses</h1>
+                </div>
+            </header> 
+            <div class="page-content">
+                <div class="current-question">
+            <form class="long-list">
+                <fieldset>
+                    <legend class="form-label-bold">(Expenses available in catagory 'other')</legend>
+                    <br>
+                    <div class="form-group form-group-compound">
+                <label class="block-label" for="protective">
+                    <input id="protective" type="radio" name="radio_group" value="Other laundry including protective clothing">
+                    Other laundry including protective clothing
+                </label>
+                </fieldset>
+                </form>
+                </div>
+                <div class="next-question">
+                    <br>
+                    <a id="other-occupation" href="" class="button" disabled="disabled">Next</a>
+                </div>
+                <div>
+                    <a href="#">Back</a>
+                </div>
+            </div><!-- end page-content -->    
+        </div><!-- end inner -->    
+    </div><!-- end inner block -->    
+</main>
+{{/content}}
+{{/layout}}
