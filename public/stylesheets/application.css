@@ -1327,3 +1327,7 @@ form.long-list .block-label {
 
 #global-header .header-proposition #proposition-links a {
   text-decoration: underline; }
+
+.error-block {
+  border-left-color: #b10e1e;
+  display: none; }

@@ -236,3 +236,8 @@ form.long-list {
 #global-header .header-proposition #proposition-links a {
     text-decoration: underline;
 }
+
+.error-block {
+    border-left-color: $red;
+    display:  none;
+}
