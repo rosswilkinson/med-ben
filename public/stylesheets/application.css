@@ -1316,3 +1316,14 @@ form.long-list .block-label {
   .ui-menu-item:hover {
     color: #fff;
     background: #005ea5; }
+
+#proposition-name {
+  display: none; }
+
+#proposition-links {
+  float: right; }
+  #proposition-links li a {
+    text-decoration: underline; }
+
+#global-header .header-proposition #proposition-links a {
+  text-decoration: underline; }

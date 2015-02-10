@@ -224,3 +224,15 @@ form.long-list {
         background: $link-colour;
     }
 }
+#proposition-name {
+    display: none;
+}
+#proposition-links {
+    float: right;
+    li a {
+        text-decoration: underline;
+    }
+}
+#global-header .header-proposition #proposition-links a {
+    text-decoration: underline;
+}
