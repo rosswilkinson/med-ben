@@ -1331,3 +1331,6 @@ form.long-list .block-label {
 .error-block {
   border-left-color: #b10e1e;
   display: none; }
+
+.ind-help {
+  clear: both; }

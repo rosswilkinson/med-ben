@@ -72,10 +72,20 @@ module.exports = {
 
     app.get('/error.html', function (req, res) {
       res.render('error', {'assetPath' : assetPath });
-    });    
+    });  
+      
+    /*DropDown */
     
-    app.get('/industry-dd.html', function (req, res) {
-      res.render('industry-dd', {'assetPath' : assetPath });
+    app.get('/dd/dd-start.html', function (req, res) {
+      res.render('dd/dd-start', {'assetPath' : assetPath });
+    });
+    
+    app.get('/dd/dd-industry.html', function (req, res) {
+      res.render('dd/dd-industry', {'assetPath' : assetPath });
+    });
+      
+    app.get('/dd/dd-employment.html', function (req, res) {
+      res.render('dd/dd-employment', {'assetPath' : assetPath });
     });
 
   }
