@@ -241,6 +241,12 @@ form.long-list {
     border-left-color: $red;
     display:  none;
 }
+.error-block.displayBlock {
+    display: block;
+}
 .ind-help {
     clear: both;
+}
+.form-alert {
+
 }

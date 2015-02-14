@@ -12,16 +12,14 @@
             </div>
         </header>
             <div class="page-content">
-            <form class="long-list">
-            <h2 class="heading-small">Choose your industry:</h2>
-                
+                <h2 class="heading-small">Choose your industry:</h2>
                 <div class="panel-indent error-block">
-                    <p>Please choose an industry from the list below</p>
+                    <p>Please choose an industry from the list</p>
                 </div>
-                
+                        <a id="next-industry" class="button alertButton" >Next</a>
+
+            <form class="long-list">
                 <fieldset>
-                    <br>
-                        <a id="next-industry" href="/your-occupation.html" class="button" >Next</a>
                     <div class="form-group form-group-compound">
                 <label class="block-label" for="agriculture">
                     <input id="agriculture" type="radio" name="radio_group" value="Agriculture">
@@ -162,12 +160,16 @@
                     </div>
                 </fieldset>                
                 </form>
+                                <div class="panel-indent error-block">
+                    <p>Please choose an industry from the list</p>
+                </div>
+
                     <div class="next-question">
                         <br>
-                        <a id="next-industry-2" href="/your-occupation.html" class="button">Next</a>
+                        <a id="next-industry-2" class="button alertButton">Next</a>
                     </div>
                     <div>
-                        <a href="#">Back</a>
+                        <a id="next-industry-2" href="/your-employment.html">Back</a>
                     </div>
             </div><!-- page-content -->    
         </div><!-- end inner -->    

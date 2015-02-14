@@ -1332,5 +1332,9 @@ form.long-list .block-label {
   border-left-color: #b10e1e;
   display: none; }
 
+.error-block.displayBlock {
+  display: block; }
+
 .ind-help {
   clear: both; }
+

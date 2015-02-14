@@ -87,6 +87,10 @@ module.exports = {
     app.get('/dd/dd-employment.html', function (req, res) {
       res.render('dd/dd-employment', {'assetPath' : assetPath });
     });
+      
+    app.get('/dd/dd-not-listed.html', function (req, res) {
+      res.render('dd/dd-not-listed', {'assetPath' : assetPath });
+    });
 
   }
 };
