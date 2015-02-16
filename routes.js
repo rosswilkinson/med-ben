@@ -79,6 +79,10 @@ module.exports = {
     app.get('/dd/dd-start.html', function (req, res) {
       res.render('dd/dd-start', {'assetPath' : assetPath });
     });
+      
+    app.get('/dd/dd.html', function (req, res) {
+      res.render('dd/dd', {'assetPath' : assetPath });
+    });
     
     app.get('/dd/dd-industry.html', function (req, res) {
       res.render('dd/dd-industry', {'assetPath' : assetPath });
@@ -86,6 +90,10 @@ module.exports = {
       
     app.get('/dd/dd-employment.html', function (req, res) {
       res.render('dd/dd-employment', {'assetPath' : assetPath });
+    });
+      
+    app.get('/dd/dd-occupation.html', function (req, res) {
+      res.render('dd/dd-occupation', {'assetPath' : assetPath });
     });
       
     app.get('/dd/dd-not-listed.html', function (req, res) {

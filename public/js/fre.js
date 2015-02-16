@@ -1,5 +1,16 @@
 $(document).ready(function() {
     
+    $('select').selectToAutocomplete();
+    $('form').submit(function(){
+        var x = ( $(this).serialize() );
+        if (x.length == 9 || x.length === 0) {
+            buttonClick();
+        } else {
+	        window.open('/dd/dd-occupation.html', '_self')
+        }
+	        return false;
+	   });
+    
     //your-industry
     var nextInd = $("#next-industry");
     var alertButton = $('.alertButton');
@@ -15,7 +26,6 @@ $(document).ready(function() {
     
     //summary
     var endBtn = $('#end');
-
         
     var buttonClick = function() {
         if (flag !== true) {
