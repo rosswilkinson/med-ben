@@ -74,10 +74,6 @@
     width: 50%;
 }
 
-.current-question {
-    margin-top: 20px;
-}
-
 .inner {
     width: $two-thirds;
 }
@@ -87,7 +83,10 @@
 }
 
 .page-content {
-    margin-top: 40px;
+    h2 {
+        margin-top :0;
+        margin-bottom: 30px;
+    }
 }
 
 .alert-panel {
@@ -171,7 +170,7 @@ details summary {
         margin-bottom: 30px;
     }
 }
-
+//form
 form.long-list {
     .block-label {
         width: 70%;
@@ -196,6 +195,10 @@ form.long-list {
         }
     }
 }
+.form-group {
+    margin-bottom: 30px;
+}
+//dropdown
 .dropdown {
     input[type=text] {
         float: left;
@@ -236,10 +239,10 @@ form.long-list {
 #global-header .header-proposition #proposition-links a {
     text-decoration: underline;
 }
-
 .error-block {
     border-left-color: $red;
     display:  none;
+    margin-bottom: 30px;
 }
 .error-block.displayBlock {
     display: block;

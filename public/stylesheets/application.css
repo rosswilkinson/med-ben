@@ -1202,17 +1202,15 @@ ul li, ol li {
 .form-control, #email {
   width: 50%; }
 
-.current-question {
-  margin-top: 20px; }
-
 .inner {
   width: 66.66667%; }
 
 .destination {
   margin-top: -8px; }
 
-.page-content {
-  margin-top: 40px; }
+.page-content h2 {
+  margin-top: 0;
+  margin-bottom: 30px; }
 
 .alert-panel {
   padding: 20px 20px 20px 60px;
@@ -1294,6 +1292,9 @@ form.long-list .block-label {
     form.long-list .block-label.selected:hover {
       border: 2px solid black; }
 
+.form-group {
+  margin-bottom: 30px; }
+
 .dropdown input[type=text] {
   float: left;
   width: 75%;
@@ -1330,7 +1331,8 @@ form.long-list .block-label {
 
 .error-block {
   border-left-color: #b10e1e;
-  display: none; }
+  display: none;
+  margin-bottom: 30px; }
 
 .error-block.displayBlock {
   display: block; }
