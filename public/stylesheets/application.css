@@ -1217,7 +1217,8 @@ ul li, ol li {
   margin-bottom: 40px;
   font-weight: bold;
   border-left: 5px solid #bfc1c3;
-  background: #f8f8f8 url('/public/images/icons/icon-information.png') no-repeat 13px center; }
+  background: #f8f8f8 url('/public/images/icons/icon-information.png') no-repeat 13px center;
+  clear: both; }
 
 .details-summary tr td, .expense-summary tr td {
   width: 20%; }
