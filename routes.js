@@ -100,5 +100,23 @@ module.exports = {
       res.render('dd/dd-not-listed', {'assetPath' : assetPath });
     });
 
+    /*Med Bens */
+      
+    app.get('/mb/mb-start.html', function (req, res) {
+      res.render('mb/mb-start', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/employment.html', function (req, res) {
+      res.render('mb/employment', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/mb-summary.html', function (req, res) {
+      res.render('mb/mb-summary', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/mb-end.html', function (req, res) {
+      res.render('mb/mb-end', {'assetPath' : assetPath });
+    });
+      
   }
 };
