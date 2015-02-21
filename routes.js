@@ -74,6 +74,13 @@ module.exports = {
       res.render('error', {'assetPath' : assetPath });
     });  
       
+    /*Occupations */
+    
+    app.get('/occupation-food.html', function (req, res) {
+      res.render('occupation-food', {'assetPath' : assetPath });
+    });
+
+      
     /*DropDown */
     
     app.get('/dd/dd-start.html', function (req, res) {

@@ -73,22 +73,18 @@
 #email {
     width: 50%;
 }
-
 .inner {
     width: $two-thirds;
 }
-
 .destination {
     margin-top: -8px;
 }
-
 .page-content {
     h2 {
         margin-top :0;
         margin-bottom: 30px;
     }
 }
-
 .alert-panel {
     padding: 20px 20px 20px 60px;
     margin-bottom: 40px;
@@ -97,7 +93,6 @@
     background: #f8f8f8 url('/public/images/icons/icon-information.png') no-repeat 13px center;
     clear :both;
 }
-
 .details-summary,
 .expense-summary {
     tr td {
@@ -115,12 +110,10 @@ hr {
     float: left;
     width: $two-thirds;
 }
-
 .column-third {
     float: right;
     width: $one-third;
 }
-
 .related {
     border-top: 10px solid #005ea5;
     padding-top: 5px;
@@ -130,7 +123,6 @@ hr {
         margin-bottom: 10px;
     }
 }
-
 .heading-xlarge {
     margin-bottom :40px;
 }
@@ -138,7 +130,6 @@ hr {
 #test {
     margin-bottom :15px;
 }
-
 .highlighted-event {
     background-color: #28a197;
     color: #fff;
@@ -146,7 +137,6 @@ hr {
     margin: 15px 0 0 0;
     padding: 1.75em 0.75em 1.25em 0.75em;
 }
-
 details summary {
     display: inline-block;
     color: #005ea5;
@@ -154,7 +144,6 @@ details summary {
     position: relative;
     margin-bottom: 0.26316em;
 }
-
 .declaration {
     .alert-panel {
         margin-bottom: 30px;
