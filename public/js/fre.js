@@ -1,21 +1,35 @@
 $(document).ready(function() {
     
+    var nextWindow = function(z) {
+        window.open('/oc/' + z + '.html', '_self');    
+    };
+    
+    var titleCheck = function(currentTitle) {
+    var nextURL = ("/oc/" + currentTitle + ".html");
+        nextInd.attr("href", nextURL);
+        nextIndTwo.attr("href", nextURL);
+    };
+    
+    var buttonClick = function() {
+        if (flag !== true) {
+            errorBlock.addClass('displayBlock');
+        } else {
+            errorBlock.removeClass('displayBlock');
+        }
+    };
+   
     $('select').selectToAutocomplete();
-    $('form').submit(function(){
+    $('form').submit(function() {
         var x = ( $(this).serialize() );
+        var y = $('form').find(":selected").attr('id'); 
         if (x.length == 9 || x.length === 0) {
             buttonClick();
         } else {
-	        window.open('/oc/food.html', '_self')
+	        nextWindow(y);
         }
         return false;
     });
     
-    var titleCheck = function(currentTitle) {
-        nextInd.attr("href", "/oc/" + currentTitle + ".html");
-        nextIndTwo.attr("href", "/oc/" + currentTitle + ".html");
-    } 
-        
     //your-industry
     var nextInd = $("#next-industry");
     var alertButton = $('.alertButton');
@@ -23,7 +37,8 @@ $(document).ready(function() {
     var otherInd = $("#other");
     var flag = false;
     var errorBlock = $('.error-block');
-        //your-occupation
+    
+    //your-occupation
     var nextOc = $("#next-occupation");
 
     //occupation-other
@@ -32,17 +47,9 @@ $(document).ready(function() {
     //summary
     var endBtn = $('#end');
         
-    var buttonClick = function() {
-        if (flag !== true) {
-            errorBlock.addClass('displayBlock');
-        } else {
-            errorBlock.removeClass('displayBlock');
-        }
-    }
-    
     alertButton.click(buttonClick);
 
-    $('input:radio').change(function(){
+    $('input:radio').change(function() {
         flag = true;
         errorBlock.removeClass('displayBlock');
         var current = $(this);
