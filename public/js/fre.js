@@ -3,21 +3,19 @@ $(document).ready(function() {
     $('select').selectToAutocomplete();
     $('form').submit(function(){
         var x = ( $(this).serialize() );
-        alert(x);
         if (x.length == 9 || x.length === 0) {
             buttonClick();
         } else {
-	        window.open('/dd/dd-occupation.html', '_self')
+	        window.open('/oc/food.html', '_self')
         }
         return false;
     });
     
-    /*
-    function to decide which view to show
-    if food is checked
-        nextIndTwo.attr("href", "/occupation-food.html");
-    */
-    
+    var titleCheck = function(currentTitle) {
+        nextInd.attr("href", "/oc/" + currentTitle + ".html");
+        nextIndTwo.attr("href", "/oc/" + currentTitle + ".html");
+    } 
+        
     //your-industry
     var nextInd = $("#next-industry");
     var alertButton = $('.alertButton');
@@ -56,15 +54,7 @@ $(document).ready(function() {
         if($(this).is(":checked")) {
             $(current).parent().addClass('selected');
         }
-        if( otherInd.is(":checked") ) {
-            nextInd.attr("href", "/occupation-other.html");
-            nextIndTwo.attr("href", "/occupation-other.html");
-        } else if ( $('#food').is(":checked") ) {
-            nextInd.attr("href", "/summary-food.html");
-            nextIndTwo.attr("href", "/summary-food.html");
-        } else {
-            nextInd.attr("href", "/your-occupation.html");
-            nextIndTwo.attr("href", "/your-occupation.html");
-        }
+        var title = $(this).attr('id');
+        titleCheck(title);
     });
 });

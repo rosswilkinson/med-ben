@@ -50,10 +50,6 @@ module.exports = {
       res.render('your-industry', {'assetPath' : assetPath });
     });
     
-    app.get('/your-occupation.html', function (req, res) {
-      res.render('your-occupation', {'assetPath' : assetPath });
-    });
-      
     app.get('/end.html', function (req, res) {
       res.render('end', {'assetPath' : assetPath });
     });
@@ -65,7 +61,7 @@ module.exports = {
     app.get('/summary-other.html', function (req, res) {
       res.render('summary-other', {'assetPath' : assetPath });
     });
-            
+                        
     app.get('/occupation-other.html', function (req, res) {
       res.render('occupation-other', {'assetPath' : assetPath });
     });
@@ -75,25 +71,29 @@ module.exports = {
     });  
       
     /*Occupations */
-      
-    app.get('/summary-ce.html', function (req, res) {
-      res.render('summary-ce', {'assetPath' : assetPath });
-    });
-      
+            
     app.get('/oc/aluminium.html', function (req, res) {
       res.render('oc/aluminium', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/agriculture.html', function (req, res) {
+      res.render('oc/agriculture', {'assetPath' : assetPath });
     });
       
     app.get('/oc/banks.html', function (req, res) {
       res.render('oc/banks', {'assetPath' : assetPath });
     });
       
+    app.get('/oc/brass.html', function (req, res) {
+      res.render('oc/brass', {'assetPath' : assetPath });
+    });
+      
     app.get('/oc/building.html', function (req, res) {
       res.render('oc/building', {'assetPath' : assetPath });
     });
       
-    app.get('/oc/constructional-engineering.html', function (req, res) {
-      res.render('oc/constructional-engineering', {'assetPath' : assetPath });
+    app.get('/oc/construction.html', function (req, res) {
+      res.render('oc/construction', {'assetPath' : assetPath });
     });
       
     app.get('/oc/clothing.html', function (req, res) {
@@ -111,21 +111,33 @@ module.exports = {
     app.get('/oc/engineering.html', function (req, res) {
       res.render('oc/engineering', {'assetPath' : assetPath });
     });
-      
-    app.get('/oc/fire.html', function (req, res) {
-      res.render('oc/ire', {'assetPath' : assetPath });
-    });
-      
+            
     app.get('/oc/fire.html', function (req, res) {
       res.render('oc/fire', {'assetPath' : assetPath });
     });
       
+    app.get('/oc/food.html', function (req, res) {
+      res.render('oc/food', {'assetPath' : assetPath });
+    });
+
+    app.get('/oc/forestry.html', function (req, res) {
+      res.render('oc/forestry', {'assetPath' : assetPath });
+    });
+
+    app.get('/oc/glass.html', function (req, res) {
+      res.render('oc/glass', {'assetPath' : assetPath });
+    });
+
+    app.get('/oc/healthcare.html', function (req, res) {
+      res.render('oc/healthcare', {'assetPath' : assetPath });
+    });
+
     app.get('/oc/heating.html', function (req, res) {
       res.render('oc/heating', {'assetPath' : assetPath });
     });
       
-    app.get('/oc/iron.html', function (req, res) {
-      res.render('oc/iron', {'assetPath' : assetPath });
+    app.get('/oc/iron-steel.html', function (req, res) {
+      res.render('oc/iron-steel', {'assetPath' : assetPath });
     });
       
     app.get('/oc/iron-mining.html', function (req, res) {
@@ -138,6 +150,10 @@ module.exports = {
       
     app.get('/oc/materials.html', function (req, res) {
       res.render('oc/materials', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/metals.html', function (req, res) {
+      res.render('oc/metals', {'assetPath' : assetPath });
     });
       
     app.get('/oc/other.html', function (req, res) {
@@ -158,6 +174,10 @@ module.exports = {
       
     app.get('/oc/prison.html', function (req, res) {
       res.render('oc/prison', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/quarrying.html', function (req, res) {
+      res.render('oc/quarrying', {'assetPath' : assetPath });
     });
       
     app.get('/oc/rail.html', function (req, res) {

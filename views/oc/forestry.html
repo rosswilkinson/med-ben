@@ -1,0 +1,67 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">You can claim £[value].</h1>
+                    <p>These expenses must not have been paid by your employer</p>
+                </div>
+            </header> 
+            <h2 class="heading-large">Summary</h2>
+            <div>
+                <h2 class="heading-small">Your employment details</h2>
+                <table class="details-summary">
+                    <tbody>
+                        <tr>
+                            <td scope="col">Employer name</td>
+                            <td scope="col">[Employer name]</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Industry</td>
+                            <td>Forestry</td>
+                            <td><a href="/your-industry.html">Change industry details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Occupation group</td>
+                            <td>All workers</td>
+                            <td><!--a href="/occupation-view.html">Change occupation details</a-->&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+                    </div><!-- end inner -->
+            <div class="declaration">
+                <h2 class="heading-large">Declaration</h2>
+
+                <div>
+                    <div class="alert-panel">
+                        <p>The information you provide in this claim must be correct and true.</p>
+                        <p>If you're in any doubt about the information that you've provided you should change it.</a></p>
+                        <p>You can be prosecuted for knowingly providing false or misleading information in your claim.</p>
+                    </div>
+                <div class="panel-indent error-block">
+                    <p>Please confirm the declaration below</p>
+                </div>
+                    <form>
+                        <label class="block-label" for="radio-1">
+                        <input id="radio-1" type="radio" name="radio-group" value="confirm">
+                        I confirm that the information I have provided in this claim is, to the best of my knowledge and belief, correct and true.
+                        </label>
+                    </form>
+                </div>
+                <div class="next-question">
+                    <a id="end" class="button alertButton">Submit your claim</a>
+                </div>
+            </div><!-- end declaration -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
