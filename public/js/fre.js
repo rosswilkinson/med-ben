@@ -60,8 +60,8 @@ $(document).ready(function() {
             nextInd.attr("href", "/occupation-other.html");
             nextIndTwo.attr("href", "/occupation-other.html");
         } else if ( $('#food').is(":checked") ) {
-            nextInd.attr("href", "/occupation-food.html");
-            nextIndTwo.attr("href", "/occupation-food.html");
+            nextInd.attr("href", "/summary-food.html");
+            nextIndTwo.attr("href", "/summary-food.html");
         } else {
             nextInd.attr("href", "/your-occupation.html");
             nextIndTwo.attr("href", "/your-occupation.html");

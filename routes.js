@@ -75,11 +75,118 @@ module.exports = {
     });  
       
     /*Occupations */
-    
-    app.get('/occupation-food.html', function (req, res) {
-      res.render('occupation-food', {'assetPath' : assetPath });
+      
+    app.get('/summary-ce.html', function (req, res) {
+      res.render('summary-ce', {'assetPath' : assetPath });
     });
-
+      
+    app.get('/oc/aluminium.html', function (req, res) {
+      res.render('oc/aluminium', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/banks.html', function (req, res) {
+      res.render('oc/banks', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/building.html', function (req, res) {
+      res.render('oc/building', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/constructional-engineering.html', function (req, res) {
+      res.render('oc/constructional-engineering', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/clothing.html', function (req, res) {
+      res.render('oc/clothing', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/docks.html', function (req, res) {
+      res.render('oc/docks', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/electrical.html', function (req, res) {
+      res.render('oc/electrical', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/engineering.html', function (req, res) {
+      res.render('oc/engineering', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/fire.html', function (req, res) {
+      res.render('oc/ire', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/fire.html', function (req, res) {
+      res.render('oc/fire', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/heating.html', function (req, res) {
+      res.render('oc/heating', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/iron.html', function (req, res) {
+      res.render('oc/iron', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/iron-mining.html', function (req, res) {
+      res.render('oc/iron-mining', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/leather.html', function (req, res) {
+      res.render('oc/leather', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/materials.html', function (req, res) {
+      res.render('oc/materials', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/other.html', function (req, res) {
+      res.render('oc/other', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/particular-engineering.html', function (req, res) {
+      res.render('oc/particular-engineering', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/police.html', function (req, res) {
+      res.render('oc/police', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/printing.html', function (req, res) {
+      res.render('oc/printing', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/prison.html', function (req, res) {
+      res.render('oc/prison', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/rail.html', function (req, res) {
+      res.render('oc/rail', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/seamen.html', function (req, res) {
+      res.render('oc/seamen', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/shipyards.html', function (req, res) {
+      res.render('oc/shipyards', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/textile.html', function (req, res) {
+      res.render('oc/textile', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/transport.html', function (req, res) {
+      res.render('oc/transport', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/vehicles.html', function (req, res) {
+      res.render('oc/vehicles', {'assetPath' : assetPath });
+    });
+      
+    app.get('/oc/wood.html', function (req, res) {
+      res.render('oc/wood', {'assetPath' : assetPath });
+    });
       
     /*DropDown */
     
