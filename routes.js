@@ -120,6 +120,10 @@ module.exports = {
       res.render('oc/food', {'assetPath' : assetPath });
     });
 
+    app.get('/oc/retail.html', function (req, res) {
+      res.render('oc/retail', {'assetPath' : assetPath });
+    });
+
     app.get('/oc/forestry.html', function (req, res) {
       res.render('oc/forestry', {'assetPath' : assetPath });
     });
@@ -244,8 +248,20 @@ module.exports = {
       res.render('mb/employment', {'assetPath' : assetPath });
     });
       
-    app.get('/mb/mb-summary.html', function (req, res) {
-      res.render('mb/mb-summary', {'assetPath' : assetPath });
+    app.get('/mb/remove.html', function (req, res) {
+      res.render('mb/remove', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/update.html', function (req, res) {
+      res.render('mb/update', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/update-summary.html', function (req, res) {
+      res.render('mb/update-summary', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/remove-summary.html', function (req, res) {
+      res.render('mb/remove-summary', {'assetPath' : assetPath });
     });
       
     app.get('/mb/mb-end.html', function (req, res) {
