@@ -238,34 +238,54 @@ module.exports = {
       res.render('dd/dd-not-listed', {'assetPath' : assetPath });
     });
 
-    /*Med Bens */
+    /* Med Bens */
       
     app.get('/mb/mb-start.html', function (req, res) {
       res.render('mb/mb-start', {'assetPath' : assetPath });
     });
       
-    app.get('/mb/employment.html', function (req, res) {
-      res.render('mb/employment', {'assetPath' : assetPath });
+    app.get('/mb/mb-summary.html', function (req, res) {
+      res.render('mb/mb-summary', {'assetPath' : assetPath });
     });
       
-    app.get('/mb/remove.html', function (req, res) {
-      res.render('mb/remove', {'assetPath' : assetPath });
+    app.get('/mb/mb-question.html', function (req, res) {
+      res.render('mb/mb-question', {'assetPath' : assetPath });
+    });
+            
+    app.get('/mb/remove-benefit.html', function (req, res) {
+      res.render('mb/remove-benefit', {'assetPath' : assetPath });
+    });
+           
+    app.get('/mb/remove-done.html', function (req, res) {
+      res.render('mb/remove-done', {'assetPath' : assetPath });
     });
       
-    app.get('/mb/update.html', function (req, res) {
-      res.render('mb/update', {'assetPath' : assetPath });
+    app.get('/mb/mybens-removed.html', function (req, res) {
+      res.render('mb/mybens-removed', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/mybens-updated.html', function (req, res) {
+      res.render('mb/mybens-updated', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb/update-benefit.html', function (req, res) {
+      res.render('mb/update-benefit', {'assetPath' : assetPath });
     });
       
     app.get('/mb/update-summary.html', function (req, res) {
       res.render('mb/update-summary', {'assetPath' : assetPath });
     });
       
-    app.get('/mb/remove-summary.html', function (req, res) {
-      res.render('mb/remove-summary', {'assetPath' : assetPath });
+    app.get('/mb/update-done.html', function (req, res) {
+      res.render('mb/update-done', {'assetPath' : assetPath });
     });
       
-    app.get('/mb/mb-end.html', function (req, res) {
-      res.render('mb/mb-end', {'assetPath' : assetPath });
+    app.get('/mb/nr-remove.html', function (req, res) {
+      res.render('mb/nr-remove', {'assetPath' : assetPath });
+    });
+
+    app.get('/mb/mb-error.html', function (req, res) {
+      res.render('mb/mb-error', {'assetPath' : assetPath });
     });
       
   }

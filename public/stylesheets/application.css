@@ -1343,3 +1343,10 @@ form.long-list .block-label {
 
 .ind-help {
   clear: both; }
+
+/*mb's*/
+.mb-sum td {
+  width: 33%; }
+.mb-sum td:last-child {
+  text-align: right;
+  padding-right: 0; }

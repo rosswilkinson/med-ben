@@ -64,4 +64,21 @@ $(document).ready(function() {
         var title = $(this).attr('id');
         titleCheck(title);
     });
+    
+    //med bens
+    var ended = $('#ended'),
+    endedChange = $('#changed'),
+    removeBen = $('#remove'),
+    choiceNext = $('#choice-next');
+    
+    $('#mb-choice input:radio').change(function() {
+        if ( ended.prop( "checked" ) ) {
+            choiceNext.attr("href", "/mb/remove-benefit.html");
+        } else if (endedChange.prop( "checked" )) {
+            choiceNext.attr("href", "/mb/update-benefit.html");
+        } else if (removeBen.prop( "checked" )) {
+            choiceNext.attr("href", "/mb/nr-remove.html");
+        }
+    });
+    
 });

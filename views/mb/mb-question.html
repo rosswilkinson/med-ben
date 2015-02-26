@@ -1,0 +1,51 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Update or remove a medical benefit</h1>
+            </header>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th scope="col">Type of income</th>
+                        <th scope="col">Medical benefit (£)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Employment name</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="heading-medium">How do you want to update this benefit?</h2>
+            <div class="group">
+                <form id="mb-choice">
+                    <label class="block-label" for="ended">
+                    <input id="ended" type="radio" name="radio-group" value="This benefit has ended, the amount is correct">
+                    This benefit has ended, but the amount shown above is correct
+                    </label>
+                    <label class="block-label" for="changed">
+                    <input id="changed" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                    This benefit has ended, the amount above needs to be changed
+                    </label>
+                    <p class="form-block">or</p>
+                    <label class="block-label" for="remove">
+                    <input id="remove" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                    Remove this benefit, I never received it for this employment
+                    </label>  
+                </form>
+            </div>
+            <br>
+            <a id="choice-next" class="button">Next</a>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
