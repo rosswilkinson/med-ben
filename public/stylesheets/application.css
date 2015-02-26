@@ -1344,6 +1344,11 @@ form.long-list .block-label {
 .ind-help {
   clear: both; }
 
+.ind-choice {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  display: none; }
+
 /*mb's*/
 .mb-sum td {
   width: 33%; }
