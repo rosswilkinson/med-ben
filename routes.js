@@ -252,6 +252,14 @@ module.exports = {
       res.render('mb/mb-question', {'assetPath' : assetPath });
     });
             
+    app.get('/mb/mb-question2.html', function (req, res) {
+      res.render('mb/mb-question2', {'assetPath' : assetPath });
+    });
+            
+    app.get('/mb/mb-question3.html', function (req, res) {
+      res.render('mb/mb-question3', {'assetPath' : assetPath });
+    });
+            
     app.get('/mb/remove-benefit.html', function (req, res) {
       res.render('mb/remove-benefit', {'assetPath' : assetPath });
     });

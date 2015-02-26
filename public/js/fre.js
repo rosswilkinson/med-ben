@@ -73,7 +73,7 @@ $(document).ready(function() {
     
     $('#mb-choice input:radio').change(function() {
         if ( ended.prop( "checked" ) ) {
-            choiceNext.attr("href", "/mb/remove-benefit.html");
+            choiceNext.attr("href", "/mb/mb-question2.html");
         } else if (endedChange.prop( "checked" )) {
             choiceNext.attr("href", "/mb/update-benefit.html");
         } else if (removeBen.prop( "checked" )) {
