@@ -287,6 +287,13 @@ module.exports = {
     app.get('/mb/mb-error.html', function (req, res) {
       res.render('mb/mb-error', {'assetPath' : assetPath });
     });
+
+    
+    /* FRE version 2 */
+      
+    app.get('/employment-summary.html', function (req, res) {
+      res.render('employment-summary', {'assetPath' : assetPath });
+    });
       
   }
 };
