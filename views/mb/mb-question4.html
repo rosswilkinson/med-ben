@@ -1,0 +1,50 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Update or remove a medical benefit</h1>
+            </header>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th scope="col">Type of income</th>
+                        <th scope="col">Medical benefit (£)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Employment name</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="heading-medium">What date did this benefit end?</h2>
+            <div class="group">
+                <form id="mb-choice">
+                    <div class="form-group">
+                        <label class="form-label" for="first-name-2">Day</label>
+                        <input class="form-control" id="first-name-2" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="last-name-2">Month</label>
+                        <input class="form-control" id="last-name-2" type="text">
+                      </div>                
+                      <div class="form-group">
+                        <label class="form-label" for="last-name-2">Year</label>
+                        <input class="form-control" id="last-name-2" type="text">
+                      </div>                
+                </form>
+            </div>
+            <br>
+            <a id="choice-next" href="mb-question5.html" class="button">Next</a>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

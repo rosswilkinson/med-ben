@@ -260,6 +260,14 @@ module.exports = {
       res.render('mb/mb-question3', {'assetPath' : assetPath });
     });
             
+    app.get('/mb/mb-question4.html', function (req, res) {
+      res.render('mb/mb-question4', {'assetPath' : assetPath });
+    });
+            
+    app.get('/mb/mb-question5.html', function (req, res) {
+      res.render('mb/mb-question5', {'assetPath' : assetPath });
+    });
+            
     app.get('/mb/remove-benefit.html', function (req, res) {
       res.render('mb/remove-benefit', {'assetPath' : assetPath });
     });

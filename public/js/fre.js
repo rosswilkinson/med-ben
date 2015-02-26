@@ -75,7 +75,7 @@ $(document).ready(function() {
         if ( ended.prop( "checked" ) ) {
             choiceNext.attr("href", "/mb/mb-question2.html");
         } else if (endedChange.prop( "checked" )) {
-            choiceNext.attr("href", "/mb/update-benefit.html");
+            choiceNext.attr("href", "/mb/mb-question4.html");
         } else if (removeBen.prop( "checked" )) {
             choiceNext.attr("href", "/mb/nr-remove.html");
         }
