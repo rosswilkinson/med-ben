@@ -1350,11 +1350,11 @@ form.long-list .block-label {
   display: none; }
 
 /*mb's*/
-.mb-sum td {
-  width: 33%; }
-.mb-sum td:last-child {
-  text-align: right;
-  padding-right: 0; }
+.mb-sum {
+  -webkit-flex: 1; }
+  .mb-sum td:last-child {
+    text-align: right;
+    padding-right: 0; }
 
 #dob .heading-medium, #dob .form-hint {
   margin-bottom: 15px; }

@@ -250,8 +250,8 @@ form.long-list {
 
 /*mb's*/
 .mb-sum {
+     -webkit-flex: 1;
     td {
-        width: 33%;    
     }
     td:last-child {
         text-align: right;

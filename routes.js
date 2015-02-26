@@ -272,6 +272,10 @@ module.exports = {
       res.render('mb/remove-benefit', {'assetPath' : assetPath });
     });
            
+    app.get('/mb/remove-benefit2.html', function (req, res) {
+      res.render('mb/remove-benefit2', {'assetPath' : assetPath });
+    });
+           
     app.get('/mb/remove-done.html', function (req, res) {
       res.render('mb/remove-done', {'assetPath' : assetPath });
     });
