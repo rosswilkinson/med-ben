@@ -1355,3 +1355,12 @@ form.long-list .block-label {
 .mb-sum td:last-child {
   text-align: right;
   padding-right: 0; }
+
+#dob .heading-medium, #dob .form-hint {
+  margin-bottom: 15px; }
+#dob .form-group {
+  width: 18%;
+  float: left;
+  clear: none; }
+  #dob .form-group .form-control {
+    width: 65%; }

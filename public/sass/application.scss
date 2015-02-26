@@ -258,3 +258,17 @@ form.long-list {
         padding-right: 0;
     }
 }
+#dob {
+    .heading-medium,
+    .form-hint {
+        margin-bottom: 15px;
+    }
+    .form-group {
+        width: 18%;
+        float: left;
+        clear:none;
+        .form-control {
+            width: 65%;
+        }
+    }
+}
