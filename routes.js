@@ -310,7 +310,6 @@ module.exports = {
 
     
     /* FRE version 2 */
-      
     app.get('/employment-summary.html', function (req, res) {
       res.render('employment-summary', {'assetPath' : assetPath });
     });
