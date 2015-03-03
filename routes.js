@@ -280,6 +280,10 @@ module.exports = {
       res.render('mb/remove-done', {'assetPath' : assetPath });
     });
       
+    app.get('/mb/remove-done2.html', function (req, res) {
+      res.render('mb/remove-done2', {'assetPath' : assetPath });
+    });
+      
     app.get('/mb/mybens-removed.html', function (req, res) {
       res.render('mb/mybens-removed', {'assetPath' : assetPath });
     });
