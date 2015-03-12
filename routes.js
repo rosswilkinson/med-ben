@@ -349,7 +349,11 @@ module.exports = {
     });
       
     app.get('/mb/nr-remove.html', function (req, res) {
-      res.render('mb/nr-remove', {'assetPath' : assetPath });
+        medBen = req.query.medBen;
+        res.render('mb/nr-remove', {
+            'medBen' : medBen, 
+            'assetPath' : assetPath 
+        });
     });
 
     app.get('/mb/mb-error.html', function (req, res) {

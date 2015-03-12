@@ -78,7 +78,7 @@ $(document).ready(function() {
         } else if (endedChange.prop( "checked" )) {
             choiceNext.attr("href", "/mb/mb-question5.html"); //was 4 for date
         } else if (removeBen.prop( "checked" )) {
-            choiceNext.attr("href", "/mb/nr-remove.html");
+            choiceNext.attr("href", "/mb/nr-remove.html?medBen=0");
         }
     });
     
