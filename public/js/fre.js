@@ -1,5 +1,6 @@
 $(document).ready(function() {
     
+    var FREForm = $('.long-list')
     var nextWindow = function(z) {
         window.open('/oc/' + z + '.html', '_self');    
     };
@@ -19,9 +20,9 @@ $(document).ready(function() {
     };
    
     $('select').selectToAutocomplete();
-    $('form').submit(function() {
+    FREForm.submit(function() {
         var x = ( $(this).serialize() );
-        var y = $('form').find(":selected").attr('id'); 
+        var y = FREForm.find(":selected").attr('id'); 
         if (x.length == 9 || x.length === 0) {
             buttonClick();
         } else {
@@ -81,4 +82,10 @@ $(document).ready(function() {
         }
     });
     
+    /*
+    removeFunction() {
+        if answer is true open nr remove
+        else open question 5
+    }
+    */
 });

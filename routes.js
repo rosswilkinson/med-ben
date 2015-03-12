@@ -1,3 +1,26 @@
+var userName,
+    medBen = 5000,
+    medBenOne = 1000,
+    medBenTwo,
+    flag,
+    remove;
+
+var flagCheck = function() {
+    if (flag === 'true') {
+        medBen = medBenOne;
+    } else if (flag === 'false') {
+        medBen = medBenTwo;
+    }
+}
+
+var summaryAmounts = function() {
+    if (flag === 'true') {
+        medBenOne = medBen;
+    } else {
+        medBenTwo = medBen;
+    }
+}
+
 module.exports = {
   bind : function (app, assetPath) {
     app.get('/', function (req, res) {
@@ -44,7 +67,7 @@ module.exports = {
       
     app.get('/your-employment.html', function (req, res) {
       res.render('your-employment', {'assetPath' : assetPath });
-    });       
+    });
     
     app.get('/your-industry.html', function (req, res) {
       res.render('your-industry', {'assetPath' : assetPath });
@@ -68,7 +91,7 @@ module.exports = {
 
     app.get('/error.html', function (req, res) {
       res.render('error', {'assetPath' : assetPath });
-    });  
+    });
       
     /*Occupations */
             
@@ -245,13 +268,25 @@ module.exports = {
     });
       
     app.get('/mb/mb-summary.html', function (req, res) {
-      res.render('mb/mb-summary', {'assetPath' : assetPath });
+        summaryAmounts();
+        res.render('mb/mb-summary', {
+          'medBenOne' : medBenOne,
+          'medBenTwo' : medBenTwo,
+          'flag' : flag,
+          'assetPath' : assetPath 
+        });
     });
       
     app.get('/mb/mb-question.html', function (req, res) {
-      res.render('mb/mb-question', {'assetPath' : assetPath });
+        flag = req.query.flag;
+        flagCheck();
+        res.render('mb/mb-question', {
+          'assetPath' : assetPath, 
+          'flag' : flag, 
+          'medBen' : medBen 
+        });
     });
-            
+      
     app.get('/mb/mb-question2.html', function (req, res) {
       res.render('mb/mb-question2', {'assetPath' : assetPath });
     });
@@ -265,7 +300,11 @@ module.exports = {
     });
             
     app.get('/mb/mb-question5.html', function (req, res) {
-      res.render('mb/mb-question5', {'assetPath' : assetPath });
+        res.render('mb/mb-question5', {
+            'assetPath' : assetPath,
+            'flag' : flag,
+            'medBen' : medBen
+        });
     });
             
     app.get('/mb/remove-benefit.html', function (req, res) {
@@ -273,7 +312,12 @@ module.exports = {
     });
            
     app.get('/mb/remove-benefit2.html', function (req, res) {
-      res.render('mb/remove-benefit2', {'assetPath' : assetPath });
+        medBen = req.query.medBen;
+        res.render('mb/remove-benefit2', {
+            'assetPath' : assetPath,
+            'medBen' : medBen,
+            'flag' : flag
+        });
     });
            
     app.get('/mb/remove-done.html', function (req, res) {
@@ -315,7 +359,15 @@ module.exports = {
     app.get('/test.html', function (req, res) {
       res.render('test', {'assetPath' : assetPath });
     });
-
+      
+    app.get('/user.html', function (req, res) {   
+        userName = req.query.userName;
+        res.render('user', {
+            'userName': userName,
+            'assetPath' : assetPath
+        });
+    });
+      
     /* FRE version 2 */
     app.get('/employment-summary.html', function (req, res) {
       res.render('employment-summary', {'assetPath' : assetPath });
