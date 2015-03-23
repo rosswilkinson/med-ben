@@ -5,12 +5,17 @@ var userName,
     flag,
     remove;
 
-var flagCheck = function() {
+
+var flagCheck = function () {
     if (flag === 'true') {
         medBen = medBenOne;
     } else if (flag === 'false') {
         medBen = medBenTwo;
     }
+};
+
+if (medBenOne === '0') {
+    alert();
 }
 
 var summaryAmounts = function() {
@@ -19,7 +24,7 @@ var summaryAmounts = function() {
     } else {
         medBenTwo = medBen;
     }
-}
+};
 
 module.exports = {
   bind : function (app, assetPath) {
@@ -312,7 +317,7 @@ module.exports = {
     });
            
     app.get('/mb/remove-benefit2.html', function (req, res) {
-        medBen = req.query.medBen;
+        medBen = req.query.amount;
         res.render('mb/remove-benefit2', {
             'assetPath' : assetPath,
             'medBen' : medBen,

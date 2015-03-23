@@ -81,11 +81,5 @@ $(document).ready(function() {
             choiceNext.attr("href", "/mb/nr-remove.html?medBen=0");
         }
     });
-    
-    /*
-    removeFunction() {
-        if answer is true open nr remove
-        else open question 5
-    }
-    */
+
 });
