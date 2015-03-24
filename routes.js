@@ -34,6 +34,16 @@ module.exports = {
                 {'assetPath' : assetPath});
 
     });
+      
+    app.get('/flatrate', function (req, res) {
+        res.render('flatrate',
+            {'assetPath' : assetPath});
+    });
+      
+    app.get('/med-ben', function (req, res) {
+        res.render('med-ben',
+            {'assetPath' : assetPath});
+    });
 
     app.get('/sample', function (req, res) {
 
@@ -265,9 +275,13 @@ module.exports = {
     app.get('/dd/dd-not-listed.html', function (req, res) {
       res.render('dd/dd-not-listed', {'assetPath' : assetPath });
     });
-
-    /* Med Bens */
       
+    /* FRE version 2 */
+    app.get('/employment-summary.html', function (req, res) {
+      res.render('employment-summary', {'assetPath' : assetPath });
+    });
+      
+/* Med Bens */
     app.get('/mb/mb-start.html', function (req, res) {
       res.render('mb/mb-start', {'assetPath' : assetPath });
     });
@@ -379,10 +393,136 @@ module.exports = {
         });
     });
       
-    /* FRE version 2 */
-    app.get('/employment-summary.html', function (req, res) {
-      res.render('employment-summary', {'assetPath' : assetPath });
+/* Med Bens v2 */
+    app.get('/mb2/mb2-start.html', function (req, res) {
+      res.render('mb2/mb2-start', {'assetPath' : assetPath });
     });
+      
+    app.get('/mb2/mb2-home', function (req, res) {
+        summaryAmounts();
+        res.render('mb2/mb2-home', {
+          'medBenOne' : medBenOne,
+          'medBenTwo' : medBenTwo,
+          'flag' : flag,
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb2/mb2-update', function (req, res) {
+        res.render('mb2/mb2-update', {
+            'assetPath' : assetPath,
+            'flag' : flag,
+            'medBen' : medBen
+        });
+    });
+      
+    app.get('/mb2/mb2-summary', function (req, res) {
+        res.render('mb2/mb2-summary', {
+            'assetPath' : assetPath,
+            'flag' : flag,
+            'medBen' : medBen
+        });
+    });
+      
+    app.get('/mb2/mb2-done', function (req, res) {
+        medBen = req.query.medBen;
+        res.render('mb2/mb2-done', {
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb2/mb2-remove', function (req, res) {
+        res.render('mb2/mb2-remove', {
+            'medBen' : medBen, 
+            'assetPath' : assetPath 
+        });
+    });
+
+      
+      
+      
+      
+      
+    app.get('/mb2/mb2-question.html', function (req, res) {
+        flag = req.query.flag;
+        flagCheck();
+        res.render('mb2/mb2-question', {
+          'assetPath' : assetPath, 
+          'flag' : flag, 
+          'medBen' : medBen 
+        });
+    });
+      
+    app.get('/mb2/mb2-question2.html', function (req, res) {
+      res.render('mb2/mb2-question2', {'assetPath' : assetPath });
+    });
+            
+    app.get('/mb2/mb2-question3.html', function (req, res) {
+      res.render('mb2/mb2-question3', {'assetPath' : assetPath });
+    });
+            
+    app.get('/mb2/mb2-question4.html', function (req, res) {
+      res.render('mb2/mb2-question4', {'assetPath' : assetPath });
+    });
+                  
+    app.get('/mb2/mb2-remove-benefit.html', function (req, res) {
+      res.render('mb2/mb2-remove-benefit', {'assetPath' : assetPath });
+    });
+         
+      
+      
+      
+      
+      
+    app.get('/mb2/mb2-remove-benefit2.html', function (req, res) {
+        medBen = req.query.amount;
+        res.render('mb2/mb2-remove-benefit2', {
+            'assetPath' : assetPath,
+            'medBen' : medBen,
+            'flag' : flag
+        });
+    });
+                 
+    app.get('/mb2/mb2-remove-done2.html', function (req, res) {
+      res.render('mb2/mb2-remove-done2', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb2/mb2-mybens-removed.html', function (req, res) {
+      res.render('mb2/mb2-mybens-removed', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb2/mb2-mybens-updated.html', function (req, res) {
+      res.render('mb2/mb2-mybens-updated', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb2/mb2-update-benefit.html', function (req, res) {
+      res.render('mb2/mb2-update-benefit', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb2/mb2-update-summary.html', function (req, res) {
+      res.render('mb2/mb2-update-summary', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb2/mb2-update-done.html', function (req, res) {
+      res.render('mb2/mb2-update-done', {'assetPath' : assetPath });
+    });
+      
+    app.get('/mb2/mb2-error.html', function (req, res) {
+      res.render('mb2/mb2-error', {'assetPath' : assetPath });
+    });
+
+    app.get('/test.html', function (req, res) {
+      res.render('test', {'assetPath' : assetPath });
+    });
+      
+    app.get('/user.html', function (req, res) {   
+        userName = req.query.userName;
+        res.render('user', {
+            'userName': userName,
+            'assetPath' : assetPath
+        });
+    });
+
       
   }
 };

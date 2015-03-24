@@ -1,0 +1,46 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <!--div class="inner"-->
+            <header class="page-header group">
+                    <h1 class="heading-xlarge">Update Medical Benefit</h1>
+            </header> 
+            <h2 class="heading-large">Summary</h2>
+            <div>
+                <h2 class="heading-small">Benefit details</h2>
+                <table class="details-summary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Provider</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Current ammount (£)</th>
+                            <th scope="col">New ammount (£)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Employment</td>
+                            <td>[employer name]</td>
+                            <td>200</td>
+                            <td>1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+            <!--/div><!-- end inner -->
+            <p>By updating this benefit it will be removed next financial year</p>
+                <div class="next-question">
+                    <a href="/mb2/v2update-done.html" class="button alertButton">Update this benefit</a>
+                </div>
+                <a href="/mb2/mb2-home.html">Cancel - your changes will not be saved</a>
+            </div><!-- end declaration -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

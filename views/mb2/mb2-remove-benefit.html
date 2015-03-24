@@ -1,0 +1,45 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Review and confirm</h1>
+                <p>Check the details you’ve entered are correct.</p>
+            </header> 
+            <div>
+                <h2 class="heading-small">Benefit details</h2>
+                <table class="mb-sum">
+                    <thead>
+                        <tr>
+                            <th scope="col">Provider</th>
+                            <th scope="col">Medical benefit (£)</th>
+                            <!--th scope="col">Date ended</th-->
+                            <th scope="col">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[employer’s name]</td>
+                            <td>200</td>
+                            <!--td>8 January 2015</td-->
+                            <td><a href="/mb2/mb2-home.html">Change this</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+            </div><!-- end inner -->
+                <div class="next-question">
+                    <a href="/mb2/v2remove-done.html" class="button alertButton">Remove this benefit</a>
+                </div>
+                <a href="/mb2/mb2-home.html">Cancel – your changes will not be saved</a>
+            </div><!-- end declaration -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

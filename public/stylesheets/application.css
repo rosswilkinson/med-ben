@@ -1235,7 +1235,7 @@ hr {
 
 .column-third {
   float: right;
-  width: 33.33333%; }
+  width: 30%; }
 
 .related {
   border-top: 10px solid #005ea5;
@@ -1364,3 +1364,24 @@ form.long-list .block-label {
   clear: none; }
   #dob .form-group .form-control {
     width: 65%; }
+
+/* med ben v2 */
+.bd-top {
+  border-top: 5px solid #005ea5;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  .bd-top tr td:first-child {
+    font-weight: bold; }
+  .bd-top table {
+    border-top: 1px solid #bfc1c3;
+    margin-top: 17px;
+    margin-bottom: 30px; }
+  .bd-top ul {
+    margin-top: 15px; }
+
+.panel-indent {
+  margin-bottom: 30px; }
+
+a.cancel {
+  margin-top: 15px;
+  display: block; }

@@ -112,7 +112,7 @@ hr {
 }
 .column-third {
     float: right;
-    width: $one-third;
+    width: 30%;
 }
 .related {
     border-top: 10px solid #005ea5;
@@ -271,4 +271,28 @@ form.long-list {
             width: 65%;
         }
     }
+}
+/* med ben v2 */
+.bd-top {
+    border-top: 5px solid $link-colour;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    tr td:first-child {
+        font-weight :bold;
+    }
+    table {
+        border-top: 1px solid #bfc1c3;
+        margin-top :17px;
+        margin-bottom: 30px;
+    }
+    ul {
+        margin-top: 15px;
+    }
+}
+.panel-indent {
+    margin-bottom: 30px;
+}
+a.cancel {
+    margin-top: 15px;
+    display: block;
 }
