@@ -311,7 +311,7 @@ module.exports = {
             'medBen' : medBen
         });
     });
-            
+      
     app.get('/mb/remove-benefit.html', function (req, res) {
       res.render('mb/remove-benefit', {'assetPath' : assetPath });
     });
@@ -326,7 +326,10 @@ module.exports = {
     });
            
     app.get('/mb/remove-done.html', function (req, res) {
-      res.render('mb/remove-done', {'assetPath' : assetPath });
+        medBen = req.query.medBen;
+        res.render('mb/remove-done', {
+            'assetPath' : assetPath 
+        });
     });
       
     app.get('/mb/remove-done2.html', function (req, res) {
@@ -354,7 +357,6 @@ module.exports = {
     });
       
     app.get('/mb/nr-remove.html', function (req, res) {
-        medBen = req.query.medBen;
         res.render('mb/nr-remove', {
             'medBen' : medBen, 
             'assetPath' : assetPath 
