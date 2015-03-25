@@ -407,7 +407,7 @@ module.exports = {
           'assetPath' : assetPath 
         });
     });
-      
+
     app.get('/mb2/mb2-update', function (req, res) {
         res.render('mb2/mb2-update', {
             'assetPath' : assetPath,
