@@ -1376,6 +1376,8 @@ form.long-list .block-label {
     border-top: 1px solid #bfc1c3;
     margin-top: 17px;
     margin-bottom: 30px; }
+    .bd-top table td {
+      width: 33%; }
   .bd-top ul {
     margin-top: 15px; }
 
