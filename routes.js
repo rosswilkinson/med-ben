@@ -3,8 +3,14 @@ var userName,
     medBenOne = 1000,
     medBenTwo,
     flag,
-    remove;
+    remove,
+    //mbv2
+    sbBen = 1000,
+    sbUpdate = 1000;
 
+var summaryFunction = function() {
+    sbBen = sbUpdate;
+};
 
 var flagCheck = function () {
     if (flag === 'true') {
@@ -399,33 +405,31 @@ module.exports = {
     });
       
     app.get('/mb2/mb2-home', function (req, res) {
-        summaryAmounts();
+        summaryFunction();
         res.render('mb2/mb2-home', {
-          'medBenOne' : medBenOne,
-          'medBenTwo' : medBenTwo,
-          'flag' : flag,
+          'sbBen' : sbBen,
+          'sbUpdate' : sbUpdate,
           'assetPath' : assetPath 
         });
     });
 
     app.get('/mb2/mb2-update', function (req, res) {
         res.render('mb2/mb2-update', {
+            'sbBen' : sbBen,
             'assetPath' : assetPath,
-            'flag' : flag,
-            'medBen' : medBen
         });
     });
       
     app.get('/mb2/mb2-summary', function (req, res) {
+        sbUpdate = req.query.update;
         res.render('mb2/mb2-summary', {
-            'assetPath' : assetPath,
-            'flag' : flag,
-            'medBen' : medBen
+            'sbBen' : sbBen,
+            'sbUpdate' : sbUpdate,
+            'assetPath' : assetPath
         });
     });
       
     app.get('/mb2/mb2-done', function (req, res) {
-        medBen = req.query.medBen;
         res.render('mb2/mb2-done', {
             'assetPath' : assetPath 
         });

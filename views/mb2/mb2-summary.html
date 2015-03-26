@@ -21,20 +21,22 @@
                         </tr>
                         <tr>
                             <td>Current amount (£)</td>
-                            <td>4000</td>
+                            <td>{{sbBen}}</td>
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
                             <td>Actual amount (£)</td>
-                            <td>500</td>
+                            <td>{{sbUpdate}}</td>
                             <td><a href="mb2-update">Change this amount</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>  
+        </div>
         <div class="next-question">
-            <a href="/mb2/mb2-done" class="button alertButton">Submit</a>
+            <form method="GET" action="mb2-done">
+                <input type="submit" value="Next" class="button"/>
+            </form>
         </div>
         <a class="cancel" href="/mb2/mb2-home">Cancel – your changes will not be saved</a>
     </div><!-- end inner block -->
