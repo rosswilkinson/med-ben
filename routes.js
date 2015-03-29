@@ -435,6 +435,12 @@ module.exports = {
         });
     });
       
+    app.get('/mb2/mb2-finish', function (req, res) {
+        res.render('mb2/mb2-finish', {
+            'assetPath' : assetPath 
+        });
+    });
+      
     app.get('/mb2/mb2-remove', function (req, res) {
         res.render('mb2/mb2-remove', {
             'medBen' : medBen, 
