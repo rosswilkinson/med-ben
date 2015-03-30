@@ -1,12 +1,12 @@
 $(document).ready(function() {
     
-    var FREForm = $('.long-list')
+    var FREForm = $('.long-list');
     var nextWindow = function(z) {
         window.open('/oc/' + z + '.html', '_self');    
     };
     
     var titleCheck = function(currentTitle) {
-    var nextURL = ("/oc/" + currentTitle + ".html");
+        var nextURL = ("/oc/" + currentTitle + ".html");
         nextInd.attr("href", nextURL);
         nextIndTwo.attr("href", nextURL);
     };
@@ -81,5 +81,27 @@ $(document).ready(function() {
             choiceNext.attr("href", "/mb/nr-remove.html?medBen=0");
         }
     });
-
+    
+    var sbTable = $('#sb-table'),
+        sbAmount = $('#sb-amount'),
+        sbAmountValue = sbAmount.text();
+    var ccTable = $('#cc-table'),
+        ccAmount = $('#cc-amount'),
+        noBens = $('#no-bens'),
+        myBens = $('#my-bens'),
+        ccAmountValue = ccAmount.text();
+    
+    if (sbAmountValue == 0) {
+        sbTable.hide();
+    };
+    
+    if (ccAmountValue == 0) {
+        ccTable.hide();
+    };
+    
+    if (ccAmountValue == 0 && ccAmountValue == 0) {
+        noBens.show();
+        myBens.hide();
+    };
+        
 });

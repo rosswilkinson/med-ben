@@ -3,7 +3,7 @@
 {{$content}}
 {{>hmrc_banner}}
 <main id="content" role="main">
-    <div class="inner-block">
+    <div class="inner-block" id="my-bens">
         <header class="page-header group">
             <h1 class="heading-xlarge">Update or remove a medical benefit</h1>
             <h2 class="heading-medium">Your medical benefits</h2>
@@ -20,7 +20,7 @@
                         </tr>
                         <tr>
                             <td>Amount (£)</td>
-                            <td id="sb-amount">5000</td>
+                            <td id="sb-amount">{{sbBen}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -44,7 +44,7 @@
                         </tr>
                         <tr>
                             <td>Amount (£)</td>
-                            <td id="cc-amount">1000</td>
+                            <td id="cc-amount">{{ccBen}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -56,7 +56,14 @@
                     <li><a href="mb2-remove?employer=Costa">Remove this benefit</a></li>
                 </ul>
             </div>
-        </div>        
+        </div>
+    </div><!-- end inner block -->
+    
+    <div class="inner-block" id="no-bens">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">You have no medical benefits</h1>
+            <a class="cancel" href="/" class="cancel">Sign out</a>
+        </header>
     </div><!-- end inner block -->
 </main>
 {{/content}}

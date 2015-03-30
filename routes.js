@@ -3,13 +3,36 @@ var userName,
     medBenOne = 1000,
     medBenTwo,
     flag,
+    displayFlag = 'false',
     remove,
     //mbv2
-    sbBen = 1000,
-    sbUpdate = 1000;
+    starBucks = 'Starbucks',
+    costaCoffee  = 'Costa Coffee',
+    sbBen = 5000,
+    ccBen = 1000,
+    employer,
+    currentValue,
+    tempValue;
+
+var resetFunction = function() {
+    sbBen = 5000;
+    ccBen = 1000;
+};
 
 var summaryFunction = function() {
-    sbBen = sbUpdate;
+    if (employer == 'Starbucks') {
+        currentValue = sbBen;
+    } else if (employer == 'Costa') {
+        currentValue = ccBen;
+    }
+};
+
+var updateFunction = function() {
+    if (employer == 'Starbucks') {
+        sbBen = tempValue;
+    } else if (employer == 'Costa') {
+        ccBen = tempValue;
+    }
 };
 
 var flagCheck = function () {
@@ -401,49 +424,84 @@ module.exports = {
       
 /* Med Bens v2 */
     app.get('/mb2/mb2-start.html', function (req, res) {
-      res.render('mb2/mb2-start', {'assetPath' : assetPath });
+        resetFunction();
+        res.render('mb2/mb2-start', {
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
     });
       
     app.get('/mb2/mb2-home', function (req, res) {
-        summaryFunction();
         res.render('mb2/mb2-home', {
-          'sbBen' : sbBen,
-          'sbUpdate' : sbUpdate,
           'assetPath' : assetPath 
         });
     });
-
+      
     app.get('/mb2/mb2-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
         res.render('mb2/mb2-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
             'sbBen' : sbBen,
+            'ccBen' : sbBen,
             'assetPath' : assetPath,
         });
     });
       
     app.get('/mb2/mb2-summary', function (req, res) {
-        sbUpdate = req.query.update;
+        tempValue = req.query.update;
         res.render('mb2/mb2-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'sbUpdate' : sbUpdate,
-            'assetPath' : assetPath
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
         });
     });
       
     app.get('/mb2/mb2-done', function (req, res) {
+        updateFunction();
         res.render('mb2/mb2-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
             'assetPath' : assetPath 
         });
     });
       
+    app.get('/mb2/mb2-home-updated', function (req, res) {
+        res.render('mb2/mb2-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath 
+        });
+    });
+      
     app.get('/mb2/mb2-finish', function (req, res) {
+        updateFunction();
         res.render('mb2/mb2-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
             'assetPath' : assetPath 
         });
     });
       
     app.get('/mb2/mb2-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
         res.render('mb2/mb2-remove', {
-            'medBen' : medBen, 
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
             'assetPath' : assetPath 
         });
     });

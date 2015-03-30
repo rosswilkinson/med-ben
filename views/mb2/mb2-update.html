@@ -9,9 +9,9 @@
         </header>
         <div class="grid-row group">
             <div class="column-two-thirds">
-                <p>How much did Starbucks pay for health insurance from 6 April 2015 to 5 April 2016?</p>
+                <p>How much did {{employer}} pay for health insurance from 6 April 2015 to 5 April 2016?</p>
                 <form id="mb-choice" method="GET" action="mb2-summary">
-                    <p>Curent amount £{{sbBen}}</p>
+                    <p>Current amount £{{currentValue}}</p>
                     <div class="form-group">
                         <label class="form-label" for="update">Actual amount (£)</label>
                         <input class="form-control" id="update" name="update" type="text">
@@ -24,7 +24,7 @@
                         <input type="submit" value="Next" class="button"/>
                     </div>
                 </form>
-                <a class="cancel" href="mb2-home">Cancel – your changes will not be saved</a>
+                <a class="cancel" href="mb2-home-updated">Cancel – your changes will not be saved</a>
             </div>
         </div>
     </div><!-- end inner block -->
