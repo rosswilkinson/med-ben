@@ -92,17 +92,15 @@ $(document).ready(function() {
         starFlag = 'true',
         costFlag = 'true',
         ccAmountValue = ccAmount.text();
-    alert(sbAmountValue);
-    alert(ccAmountValue);
     
     if (sbAmountValue == 0) {
         sbTable.hide();
-        var starFlag = 'false';
+        starFlag = 'false';
     };
     
     if (ccAmountValue == 0) {
         ccTable.hide();
-        var costFlag = 'false';
+        costFlag = 'false';
     };
     
     if (costFlag == 'false' && starFlag == 'false') {
