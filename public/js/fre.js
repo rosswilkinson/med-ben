@@ -89,17 +89,23 @@ $(document).ready(function() {
         ccAmount = $('#cc-amount'),
         noBens = $('#no-bens'),
         myBens = $('#my-bens'),
+        starFlag = 'true',
+        costFlag = 'true',
         ccAmountValue = ccAmount.text();
+    alert(sbAmountValue);
+    alert(ccAmountValue);
     
     if (sbAmountValue == 0) {
         sbTable.hide();
+        var starFlag = 'false';
     };
     
     if (ccAmountValue == 0) {
         ccTable.hide();
+        var costFlag = 'false';
     };
     
-    if (ccAmountValue == 0 && ccAmountValue == 0) {
+    if (costFlag == 'false' && starFlag == 'false') {
         noBens.show();
         myBens.hide();
     };
