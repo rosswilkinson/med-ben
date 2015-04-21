@@ -592,5 +592,89 @@ module.exports = {
     });
 
       
+/*mb3 */
+    app.get('/mb3/mb3-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb3/mb3-start', {
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb3/mb3-home', function (req, res) {
+        res.render('mb3/mb3-home', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb3/mb3-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb3/mb3-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb3/mb3-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb3/mb3-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb3/mb3-done', function (req, res) {
+        updateFunction();
+        res.render('mb3/mb3-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb3/mb3-home-updated', function (req, res) {
+        res.render('mb3/mb3-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb3/mb3-finish', function (req, res) {
+        updateFunction();
+        res.render('mb3/mb3-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb3/mb3-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb3/mb3-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
   }
 };

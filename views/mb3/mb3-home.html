@@ -1,0 +1,55 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Medical insurance received <br>6 April 2015 to 5 April 2016</h1>
+            <h2 class="heading-medium">Your medical insurance</h2>
+            <!--p>You currently receive these medical insurances.</p-->
+        </header>
+        <div class="grid-row group" id="sb-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Starbucks</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Amount paid by this employer</td>
+                            <td id="sb-amount">5000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this insurance</h3>
+                <ul>
+                    <li><a href="mb3-update?employer=Starbucks">Tell us that this medical insurance has ended</a></li>
+                    <li><a href="mb3-remove?employer=Starbucks">Remove this insurance</a></li>
+                </ul>
+            </div>
+        </div>  
+        <div class="grid-row group" id="cc-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Costa</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Amount paid by this employer</td>
+                            <td id="cc-amount">1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this insurance</h3>
+                <ul>
+                    <li><a href="mb3-update?employer=Costa">Tell us that this medical insurance has ended</a></li>
+                    <li><a href="mb3-remove?employer=Costa">Remove this insurance</a></li>
+                </ul>
+            </div>
+        </div>        
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

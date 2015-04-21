@@ -1390,3 +1390,41 @@ a.cancel {
 
 #no-bens {
   display: none; }
+
+.pound {
+  float: left;
+  margin-right: 15px; }
+
+#update {
+  float: left; }
+
+.important {
+  margin-bottom: 15px;
+  margin-top: 30px;
+  font-weight: bold;
+  padding: 0 0 0 50px;
+  background: #fff url('/public/images/icons/icon-important.png') no-repeat;
+  background-position: 0 top;
+  border-left: none;
+  clear: both; }
+  .important.first-important {
+    margin-top: 15px;
+    margin-bottom: 30px; }
+
+.done-box {
+  background-color: #26A197;
+  padding: 60px 30px;
+  margin: 15px 0; }
+  .done-box .heading-large {
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+
+.border {
+  margin: 15px 0 30px 0; }
+
+/*.tick {
+    background: url('/public/images/tick.png') no-repeat;
+    padding-left: 20px;
+}*/
