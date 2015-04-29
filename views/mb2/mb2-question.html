@@ -1,0 +1,54 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Update or remove a medical benefit</h1>
+            </header>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th scope="col">Provider</th>
+                        <th scope="col">Medical benefit (£)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[employer’s name]</td>
+                        <td>{{medBen}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="heading-medium">How do you want to update this benefit?</h2>
+            <p>I want to:</p>
+            <div class="group">
+                <form id="mb-choice">
+                    <!--label class="block-label" for="ended">
+                    <input id="ended" type="radio" name="radio-group" value="This benefit has ended, the amount is correct">
+                        Add an end date 
+                    </label-->
+                    <label class="block-label" for="changed">
+                    <input id="changed" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                        tell you I no longer get it and change the amount
+                    </label>
+                    <label class="block-label" for="remove">
+                    <input id="remove" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                        remove it – it was never paid with this job 
+                    </label>  
+                </form>
+            </div>
+            <br>
+            <div>
+                <a id="choice-next" class="button">Next</a>
+            </div>
+            <a href="/mb2/mb2-home.html">Back - no changes will be made</a>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

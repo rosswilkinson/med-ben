@@ -1,0 +1,79 @@
+  {{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">Your industry</h1>
+                </div>
+            </header>
+            <div class="page-content">
+                <h2 class="heading-small">Industry name</h2>
+            <div class="panel-indent error-block">
+                <p>Please choose an industry<br>
+                    If your industry is not listed you can <a href="/your-industry.html">choose from a list of industries</a></p>
+            </div>
+                <p class="form-hint">Start typing the name of your industry in the box below.</p>
+            <div class="dropdown">
+<form>
+    <select name="Industry" id="country-selector" autofocus="autofocus" autocorrect="off" autocomplete="off">
+        <option value="" selected="selected">Select Country</option>
+        <option value="Agriculture" id="agriculture" data-alternative-spellings="">Agriculture</option>
+        <!--option value="Airlines" id="Airlines" data-alternative-spellings="">Airlines</option-->
+        <option value="Aluminium" id="aluminium" data-alternative-spellings="">Aluminium</option>
+        <!--option value="Armed forces" data-alternative-spellings="">Armed forces</option-->
+        <option value="Banks and Building Societies" id="banks" data-alternative-spellings="">Banks and Building Societies</option>
+        <option value="Brass and Copper" validue="brass" data-alternative-spellings="">Brass and Copper</option>
+        <option value="Building" id="building" data-alternative-spellings="">Building</option>
+        <option value="Building Materials" id="materials" data-alternative-spellings="">Building Materials</option>
+        <option value="Clothing" id="clothing" data-alternative-spellings="">Clothing</option>
+        <option value="Constructional Engineering" value="construction" data-alternative-spellings="">Constructional Engineering</option>
+        <option value="Trades ancillary to engineering" id="engineering" data-alternative-spellings="">Trades ancillary to engineering</option>
+        <option value="Electrical and Electricity Supply" id="electrical" data-alternative-spellings="">Electrical and Electricity Supply</option>
+        <option value="Fire Service" id="fire" data-alternative-spellings="">Fire Service</option>
+        <option value="Food" id="food" data-alternative-spellings="">Food</option>
+        <option value="Forestry" id="forestry" data-alternative-spellings="">Forestry</option>
+        <option value="Glass" id="glass" data-alternative-spellings="">Glass</option>
+        <option value="Healthcare staff in the National Health Service, private hospitals and nursing homes" id="healthcare" data-alternative-spellings="">Healthcare staff in the National Health Service, private hospitals and nursing homes</option>
+        <option value="Heating" id="heating" data-alternative-spellings="">Heating</option>
+        <option value="Iron Mining" id="iron" data-alternative-spellings="">Iron Mining</option>
+        <option value="Iron and Steel" id="iron-steel" data-alternative-spellings="">Iron and Steel</option>
+        <option value="Leather" id="leather" data-alternative-spellings="">Leather</option>
+        <option value="Particular Engineering" id="particular-engineering" data-alternative-spellings="">Particular Engineering</option>
+        <option value="Police Force" id="police" data-alternative-spellings="">Police Force</option>
+        <option value="Precious Metals" id="metals" data-alternative-spellings="">Precious Metals</option>
+        <option value="Printing" id="printing" data-alternative-spellings="">Printing</option>
+        <option value="Prisons" id="prisons" data-alternative-spellings="">Prisons</option>
+        <option value="Public Service:Docks and Inland Waterways" id="docks" data-alternative-spellings="">Public Service - Docks and Inland Waterways</option>
+        <option value="Public Service:Public Transport" id="transport" data-alternative-spellings="">Public Service - Public Transport</option>
+        <option value="Quarrying" id="quarrying" data-alternative-spellings="">Quarrying</option>
+        <option value="Railways" id="railways" data-alternative-spellings="">Railways</option>
+        <option value="Retail" id="retail" data-alternative-spellings="">Retail</option>
+        <option value="Seamen" id="seamen" data-alternative-spellings="">Seamen</option>
+        <option value="Shipyards" id="shipyards" data-alternative-spellings="">Shipyards</option>
+        <option value="Textiles and Textile Printing" id="textiles" data-alternative-spellings="">Textiles and Textile Printing</option>
+        <option value="Vehicles" id="vehicles" data-alternative-spellings="">Vehicles</option>
+        <option value="Wood and Furniture" id="wood" data-alternative-spellings="">Wood and Furniture</option>
+        <option value="Other industry" id="other" data-alternative-spellings="">Other</option>
+    </select>
+    <input id="drop-submit" type="submit" value="Next" class="button">
+  </form>
+                
+                </div><!-- end dropdown --> 
+                <div class="ind-help">
+                    <details>
+                        <summary><span class="summary">Help</span></summary>
+                            <div class="panel-indent">
+                                <p>If your industry is not listed you can <a href="/your-industry.html">choose from a list of industries</a></p>
+                            </div>
+                    </details>
+                </div>               
+            </div><!-- page-content -->    
+        </div><!-- end inner -->    
+    </div><!-- end inner block -->    
+</main>
+{{/content}}
+{{/layout}}

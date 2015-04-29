@@ -1,0 +1,48 @@
+{{<layout}}            
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}            
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">Your occupation</h1>
+                    <p class="ind-choice">Your industry choice: Heating</p>
+                </div>
+            </header> 
+            <div class="page-content">
+                <h2 class="heading-small">Choose your occupation:</h2>
+                <div class="panel-indent error-block">
+                    <p>Please choose an occupation</p>
+                </div>
+                <form class="long-list">
+                    <fieldset>
+                        <div class="form-group form-group-compound">
+                            <label class="block-label" for="two">
+                            <input id="two"  type="radio" name="radio_group" value="Pipe fitters and plumbers">
+                                Pipe fitters and plumbers
+                            </label>
+                            <label class="block-label" for="three">
+                            <input id="three" type="radio" name="radio_group" value="Coverers, laggers, domestic glaziers, heating engineers and all their mates">
+                                Coverers, laggers, domestic glaziers, heating engineers and all their mates
+                            </label>
+                            <label class="block-label" for="one">
+                            <input id="one" type="radio" name="radio_group" value="All gas workers and all other workers">
+                                All gas workers and all other workers
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="next-question">
+                    <a id="next-occupation" href="#" class="button alertButton" >Next</a>
+                </div>
+                <div>
+                    <a href="/your-industry.html">Back</a>
+                </div>
+            </div><!-- end page-content -->    
+        </div><!-- end inner -->    
+    </div><!-- end inner block -->    
+</main>
+{{/content}}
+{{/layout}}

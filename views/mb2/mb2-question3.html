@@ -1,0 +1,45 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Update or remove a medical benefit</h1>
+            </header>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th scope="col">Provider</th>
+                        <th scope="col">Medical benefit (£)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[employer’s name]</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="heading-medium">How much did you receive?</h2>
+            <div class="group">
+                <form id="mb-choice">
+                    <div class="form-group">
+                        <label class="form-label" for="first-name-2">amount (£)</label>
+                        <input class="form-control" id="first-name-2" type="text">
+                      </div>
+                </form>
+            </div>
+            <br
+            <div>
+                <a id="choice-next" href="remove-benefit.html" class="button">Next</a>
+            </div>
+            <a href="/">Back - no changes will be made</a>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

@@ -1,0 +1,56 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">Claim job expenses</h1>
+                </div>
+            </header>
+            <div class="page-content">
+                <!--
+                <div class="alert-panel">
+				 The maximum expenses you can claim, based on your occupation are shown below.
+                </div>
+                -->
+                <form>
+                    <fieldset>
+                        <legend class="form-label-bold">
+                            <span class="form-hint">Question 3 of 3.</span>
+                            Which of the following expenses do you need to claim?
+                            <span class="form-hint">Select all of the expenses you have to pay for in this employment.</span>
+                            <br>
+                        </legend>
+                        <div class="form-group form-group-compound">
+                            <label class="block-label" for="option1">
+                            <input id="option1" type="radio" value="option1">
+                            Laundry £60&nbsp;
+                            </label>
+                            <label class="block-label" for="option2">
+                            <input id="option2" type="radio" value="Irish">
+                            Option 2 £60
+                            </label>
+                            <label class="block-label" for="option3" data-target="option3">
+                            <input id="option3" type="radio" value="option3">
+                            option 3 £60
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div><!-- end page-content -->
+            <div class="next-question">
+                <a href="/summary-view.html"class="button">Next</a>
+            </div>
+            <div>
+                <a href="/occupation-view.html">Back</a>
+            </div>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->        
+</main>
+{{/content}}
+{{/layout}}

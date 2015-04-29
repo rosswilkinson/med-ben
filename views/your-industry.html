@@ -1,0 +1,187 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+        <header class="page-header group">
+            <div>
+                <h1 class="heading-xlarge">Your industry</h1>
+            </div>
+        </header>
+        <div class="page-content">
+            <h2 class="heading-small">Choose your industry:</h2>
+            <div class="panel-indent error-block">
+                <p>Please choose an industry</p>
+            </div>
+            <a id="next-industry" class="button alertButton" >Next</a>
+            <form class="long-list">
+                <fieldset>
+                    <div class="form-group form-group-compound">
+                <label class="block-label" for="agriculture">
+                    <input id="agriculture" type="radio" name="radio_group" value="Agriculture">
+                    Agriculture
+                </label>
+                <!--label class="block-label" for="airlines">
+                    <input id="airlines" type="radio" name="radio_group" value="Airlines">
+                    Airlines
+                </label-->
+                <label class="block-label" for="aluminium">
+                    <input id="aluminium" type="radio" name="radio_group" value="Aluminium">
+                    Aluminium
+                </label>
+                <!--label class="block-label" for="armed_forces">
+                    <input id="armed_forces" type="radio" name="radio_group" value="Armed forces">
+                    Armed forces
+                </label-->
+                <label class="block-label" for="banks">
+                    <input id="banks" type="radio" name="radio_group" value="Banks and Building Societies">
+                    Banks and Building Societies
+                </label>
+                <label class="block-label" for="brass">
+                    <input id="brass" type="radio" name="radio_group" value="Brass and Copper">
+                    Brass and Copper
+                </label>
+                <label class="block-label" for="building">
+                    <input id="building" type="radio" name="radio_group" value="Building">
+                    Building
+                </label>
+                <label class="block-label" for="materials">
+                    <input id="materials" type="radio" name="radio_group" value="Building Materials">
+                    Building Materials
+                </label>
+                <label class="block-label" for="clothing">
+                    <input id="clothing" type="radio" name="radio_group" value="Clothing">
+                    Clothing
+                </label>
+                <label class="block-label" for="construction">
+                    <input id="construction" type="radio" name="radio_group" value="Constructional Engineering">
+                    Constructional Engineering
+                </label>
+                <label class="block-label" for="electrical">
+                    <input id="electrical" type="radio" name="radio_group" value="Electrical and Electricity Supply">
+                    Electrical and Electricity Supply
+                </label>
+                <label class="block-label" for="particular-engineering">
+                    <input id="particular-engineering" type="radio" name="radio_group" value="Particular Engineering">
+                    Engineering (Particular trade)
+                </label>
+                <label class="block-label" for="engineering">
+                    <input id="engineering" type="radio" name="radio_group" value="Engineering (Trades ancillary to engineering)">
+                    Engineering (Trades ancillary to engineering)
+                </label>
+                <label class="block-label" for="fire">
+                    <input id="fire" type="radio" name="radio_group" value="Fire Service">
+                    Fire Service
+                </label>
+                <label class="block-label" for="food">
+                    <input id="food" type="radio" name="radio_group" value="food">
+                    Food
+                </label>
+                <label class="block-label" for="forestry">
+                    <input id="forestry" type="radio" name="radio_group" value="Forestry">
+                    Forestry
+                </label>
+                <label class="block-label" for="glass">
+                    <input id="glass" type="radio" name="radio_group" value="Glass">
+                    Glass
+                </label>
+                <label class="block-label" for="healthcare">
+                    <input id="healthcare" type="radio" name="radio_group" value="Healthcare">
+                    Healthcare staff in the National Health Service, private hospitals and nursing homes
+                </label>
+                <label class="block-label" for="heating">
+                    <input id="heating" type="radio" name="radio_group" value="Heating">
+                    Heating
+                </label>
+                <label class="block-label" for="iron-mining">
+                    <input id="iron-mining" type="radio" name="radio_group" value="Iron Mining">
+                    Iron Mining
+                </label>
+                <label class="block-label" for="iron-steel">
+                    <input id="iron-steel" type="radio" name="radio_group" value="Iron and Steel">
+                    Iron and Steel
+                </label>
+                <label class="block-label" for="leather">
+                    <input id="leather" type="radio" name="radio_group" value="Leather">
+                    Leather
+                </label>
+                <label class="block-label" for="police">
+                    <input id="police" type="radio" name="radio_group" value="Police Force">
+                    Police Force
+                </label>
+                <label class="block-label" for="metals">
+                    <input id="metals" type="radio" name="radio_group" value="Precious Metals">
+                    Precious Metals
+                </label>
+                <label class="block-label" for="prison">
+                    <input id="prison" type="radio" name="radio_group" value="Prisons">
+                    Prisons
+                </label>
+                <label class="block-label" for="printing">
+                    <input id="printing" type="radio" name="radio_group" value="Printing">
+                    Printing
+                </label>
+                <label class="block-label" for="docks">
+                    <input id="docks" type="radio" name="radio_group" value="Public Service:Docks and Inland Waterways.">
+                    Public Service: Docks and Inland Waterways
+                </label>
+                 <label class="block-label" for="transport">
+                    <input id="transport" type="radio" name="radio_group" value="Public Service: Public Transport">
+                    Public Service: Public Transport
+                </label>
+                <label class="block-label" for="quarrying">
+                    <input id="quarrying" type="radio" name="radio_group" value="Quarrying">
+                    Quarrying
+                </label>
+                <label class="block-label" for="rail">
+                    <input id="rail" type="radio" name="radio_group" value="Railways">
+                    Railways
+                </label>
+                <!--label class="block-label" for="retail">
+                    <input id="retail" type="radio" name="radio_group" value="retail">
+                    Retail
+                </label-->
+                <label class="block-label" for="seamen">
+                    <input id="seamen" type="radio" name="radio_group" value="Seamen">
+                    Seamen
+                </label>
+                <label class="block-label" for="shipyards">
+                    <input id="shipyards" type="radio" name="radio_group" value="Shipyards">
+                    Shipyards
+                </label>
+                <label class="block-label" for="textile">
+                    <input id="textile" type="radio" name="radio_group" value="Textiles and Textile Printing">
+                    Textiles and Textile Printing
+                </label>
+                <label class="block-label" for="vehicles">
+                    <input id="vehicles" type="radio" name="radio_group" value="Vehicles">
+                    Vehicles
+                </label>
+                <label class="block-label" for="wood">
+                    <input id="wood" type="radio" name="radio_group" value="wood">
+                    Wood and Furniture
+                </label>
+                <label class="block-label" for="other">
+                    <input id="other" type="radio" name="radio_group" value="other">
+                    Other industry
+                </label>
+                    </div>
+                </fieldset>                
+                </form>
+                <div class="panel-indent error-block">
+                    <p>Please choose an industry</p>
+                </div>
+                <div class="next-question">
+                    <a id="next-industry-2" class="button alertButton">Next</a>
+                </div>
+                <div>
+                    <a id="next-industry-2" href="/your-employment.html">Back</a>
+                </div>
+            </div><!-- page-content -->    
+        </div><!-- end inner -->    
+    </div><!-- end inner block -->    
+</main>
+{{/content}}
+{{/layout}}

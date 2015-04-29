@@ -1,0 +1,33 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Tell us that your medical insurance<br>from {{employer}} has ended</h1>
+        </header>
+        <div class="grid-row group">
+            <div class="column-two-thirds">
+                <form id="mb-choice" method="GET" action="mb3-summary">
+                    <div class="form-group">
+                        <label class="form-label" for="update">How much did {{employer}} pay for medical insurance from 6 April 2015 to 5 April 2016?<span class="form-hint">The amount currently shown on your account is £{{currentValue}}</span></label>
+                        <div class="pound">
+                            <p>£</p>
+                        </div>
+                        <input class="form-control" id="update" name="update" type="text">
+                    </div>
+                    <div class="panel-indent">
+                        <p>Update the amount only if you no longer get this insurance from this employer. Don’t use this service to update the amount if it’s wrong and you still get this insurance. You must <a href="">contact us</a> instead.</p>
+                    </div>
+                    <div>
+                        <input type="submit" value="Next" class="button"/>
+                    </div>
+                </form>
+                <a class="cancel" href="mb3-home-updated">Cancel – your changes will not be saved</a>
+            </div>
+        </div>
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

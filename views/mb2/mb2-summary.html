@@ -1,0 +1,45 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Review and confirm</h1>
+            <p>Check the details you’ve entered are correct.</p>
+            <h2 class="heading-small">6 April 2015 to 5 April 2016</h2>
+        </header> 
+        <div class="grid-row group">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Health insurance</h3>
+                <table class="mb-sum">
+                    <tbody>
+                        <tr>
+                            <td>Provider</td>
+                            <td>{{employer}}</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Current amount (£)</td>
+                            <td>{{currentValue}}</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Actual amount (£)</td>
+                            <td>{{tempValue}}</td>
+                            <td><a href="mb2-update">Change this amount</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="next-question">
+            <form method="GET" action="mb2-done">
+                <input type="submit" value="Next" class="button"/>
+            </form>
+        </div>
+        <a class="cancel" href="mb2-home-updated">Cancel – your changes will not be saved</a>
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

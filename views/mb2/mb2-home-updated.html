@@ -1,0 +1,70 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block" id="my-bens">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Update or remove a medical benefit</h1>
+            <h2 class="heading-medium">Your medical benefits</h2>
+            <!--p>You currently receive these medical benefits.</p-->
+        </header>
+        <div class="grid-row group" id="sb-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Health insurance</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Provider</td>
+                            <td>Starbucks</td>
+                        </tr>
+                        <tr>
+                            <td>Amount (£)</td>
+                            <td id="sb-amount">{{sbBen}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this benefit</h3>
+                <ul>
+                    <li><a href="mb2-update?employer=Starbucks">Update this amount</a></li>
+                    <li><a href="mb2-remove?employer=Starbucks">Remove this benefit</a></li>
+                </ul>
+            </div>
+        </div>  
+        <div class="grid-row group" id="cc-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Health insurance</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Provider</td>
+                            <td>Costa Coffee</td>
+                        </tr>
+                        <tr>
+                            <td>Amount (£)</td>
+                            <td id="cc-amount">{{ccBen}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this benefit</h3>
+                <ul>
+                    <li><a href="mb2-update?employer=Costa">Update this amount</a></li>
+                    <li><a href="mb2-remove?employer=Costa">Remove this benefit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- end inner block -->
+    
+    <div class="inner-block" id="no-bens">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">You have no medical benefits</h1>
+            <a class="cancel" href="/" class="cancel">Sign out</a>
+        </header>
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

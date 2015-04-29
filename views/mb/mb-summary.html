@@ -1,0 +1,43 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner"-->
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Your medical benefits</h1>
+            </header>
+            <p>You currently receive these medical benefits.</p>
+            <table class="mb-sum">
+                <thead>
+                    <tr>
+                        <th scope="col">Provider</th>
+                        <th scope="col">Medical benefit (£)</th>
+                        <th scope="col">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[employer’s name]</td>
+                        <td>{{medBenOne}}</td>
+                        <td><a href="/mb/mb-question.html?flag=true">Update this amount or remove this benefit</a></td>
+                    </tr>
+                    <tr>
+                        <td>[employer’s name]</td>
+                        <td>{{medBenTwo}}</td>
+                        <td><a href="/mb/mb-question.html?flag=false">Update this amount or remove this benefit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="group">
+                <a href="/">Sign out</a>
+            </div>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

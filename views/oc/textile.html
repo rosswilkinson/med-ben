@@ -1,0 +1,44 @@
+{{<layout}}            
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}            
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">Your occupation</h1>
+                    <p class="ind-choice">Your industry choice: Textiles and Textile Printing</p>
+                </div>
+            </header> 
+            <div class="page-content">
+                <h2 class="heading-small">Choose your occupation:</h2>
+                <div class="panel-indent error-block">
+                    <p>Please choose an occupation</p>
+                </div>
+                <form class="long-list">
+                    <fieldset>
+                        <div class="form-group form-group-compound">
+                            <label class="block-label" for="one">
+                            <input id="one" type="radio" name="radio_group" value="Carders, carding engineers, overlookers and technicians in spinning mills">
+                                Carders, carding engineers, overlookers and technicians in spinning mills
+                            </label>
+                            <label class="block-label" for="two">
+                            <input id="two" type="radio" name="radio_group" value="All other workers">
+                                All other workers
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="next-question">
+                    <a id="next-occupation" href="#" class="button alertButton" >Next</a>
+                </div>
+                <div>
+                    <a href="/your-industry.html">Back</a>
+                </div>
+            </div><!-- end page-content -->    
+        </div><!-- end inner -->    
+    </div><!-- end inner block -->    
+</main>
+{{/content}}
+{{/layout}}

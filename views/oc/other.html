@@ -1,0 +1,43 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}            
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <div>
+                    <h1 class="heading-xlarge">Your expenses</h1>
+                </div>
+            </header> 
+            <div class="page-content">
+                <h2 class="heading-small">Confirm the expense you're claiming for:</h2>
+                <div class="panel-indent error-block">
+                    <p>Please confirm an expense</p>
+                </div>
+                    <form class="long-list">
+                        <fieldset>
+                            <div class="form-group form-group-compound">
+                                <label class="block-label" for="protective">
+                                <input id="protective" type="radio" name="radio_group" value="Other laundry including protective clothing">
+                                Laundry of a uniform or protective clothing 
+                                </label>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="alert-panel">
+                        <p>You can't claim uniform laundry expenses if you're in the Armed Forces</p>
+                    </div>
+                <div class="next-question">
+                    <a id="other-occupation"  class="button alertButton" >Next</a>
+                </div>
+                <div>
+                    <a href="#">Back</a>
+                </div>
+            </div><!-- end page-content -->    
+        </div><!-- end inner -->    
+    </div><!-- end inner block -->    
+</main>
+{{/content}}
+{{/layout}}

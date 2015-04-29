@@ -1,0 +1,55 @@
+{{<layout}}
+
+{{$pageTitle}}Index{{/pageTitle}}
+
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <div class="inner">
+            <header class="page-header group">
+                <h1 class="heading-xlarge">Add a medical benefit end date</h1>
+                <p>Tell us when the benefit ended.</p>
+            </header>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th scope="col">Provider</th>
+                        <th scope="col">Medical benefit (£)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[employer’s name]</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="dob" class="group">
+                <h2 class="heading-medium">What date did this benefit end?</h2>
+                <p class="form-hint">For example, 20 04 2016</p>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="day">Day</label>
+                        <input class="form-control" id="day" type="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="month">Month</label>
+                        <input class="form-control" id="month" type="text">
+                      </div>                
+                      <div class="form-group">
+                        <label class="form-label" for="year">Year</label>
+                        <input class="form-control" id="year" type="text">
+                      </div>                
+                </form>
+            </div>
+            <br>
+            <div>
+                <a id="choice-next" href="mb-question5.html" class="button">Next</a>
+            </div>
+            <a href="/">Back - no changes will be made</a>
+        </div><!-- end inner -->
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
