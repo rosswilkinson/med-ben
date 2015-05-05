@@ -676,6 +676,7 @@ module.exports = {
         });
     });
       
+<<<<<<< HEAD
       
       
       
@@ -776,3 +777,7 @@ module.exports = {
 /*mb4 */
 
  
+=======
+  }
+};
+>>>>>>> 2cd4be2d3f9f8f56cdeb316eea92bfc71054dbf5
