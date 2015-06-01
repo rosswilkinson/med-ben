@@ -1428,3 +1428,8 @@ a.cancel {
     background: url('/public/images/tick.png') no-repeat;
     padding-left: 20px;
 }*/
+h2.heading-medium-home {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25; }

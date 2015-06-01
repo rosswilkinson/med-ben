@@ -89,9 +89,14 @@ $(document).ready(function() {
         ccAmount = $('#cc-amount'),
         noBens = $('#no-bens'),
         myBens = $('#my-bens'),
-        starFlag = 'true',
+        starFlag = 'true', 
         costFlag = 'true',
         ccAmountValue = ccAmount.text();
+    var addTable = $('#add-table'),
+        addAmount = $('#add-amount'),
+        addAmountValue = addAmount.text(),
+        addFlag = 'false';
+        
     
     if (sbAmountValue == 0) {
         sbTable.hide();
@@ -103,9 +108,32 @@ $(document).ready(function() {
         costFlag = 'false';
     };
     
-    if (costFlag == 'false' && starFlag == 'false') {
+    if (addAmountValue == 0) {
+        addTable.hide();
+        addFlag = 'false';
+    }
+    
+    if (costFlag == 'false' && starFlag == 'false' && addFlag == 'false') {
         noBens.show();
         myBens.hide();
     };
         
 });
+
+
+
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
+}
+
+
+    $('.points').each(function(){
+    var v_pound = $(this).html();
+    v_pound = numberWithCommas(v_pound);
+
+    $(this).html(v_pound)
+        
+        })
+    
+    

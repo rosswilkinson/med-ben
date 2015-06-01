@@ -12,11 +12,15 @@ var userName,
     ccBen = 1000,
     employer,
     currentValue,
-    tempValue;
+    tempValue,
+    addedAmount,
+    addedEmployer;
 
 var resetFunction = function() {
     sbBen = 5000;
     ccBen = 1000;
+    addedEmployer = undefined;
+    addedAmount = 0;
 };
 
 var summaryFunction = function() {
@@ -675,6 +679,158 @@ module.exports = {
             'assetPath' : assetPath 
         });
     });
+      
+      
+      
+      /*mb4 */
+    app.get('/mb4/mb4-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb4/mb4-start', {
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb4/mb4-home', function (req, res) {
+        res.render('mb4/mb4-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+     app.get('/mb4/mb4-add', function (req, res) {
+        res.render('mb4/mb4-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb4/mb4-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb4/mb4-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    
+      
+      
+      
+    app.get('/mb4/mb4-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb4/mb4-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       app.get('/mb4/mb4-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb4/mb4-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb4/mb4-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb4/mb4-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb4/mb4-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb4/mb4-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb4/mb4-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb4/mb4-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb4/mb4-done', function (req, res) {
+        updateFunction();
+        res.render('mb4/mb4-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb4/mb4-home-updated', function (req, res) {
+        res.render('mb4/mb4-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb4/mb4-finish', function (req, res) {
+        updateFunction();
+        res.render('mb4/mb4-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb4/mb4-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb4/mb4-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+      
+      
       
   }
 };
