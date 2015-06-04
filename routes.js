@@ -713,6 +713,13 @@ module.exports = {
         });
     });
       
+          app.get('/mb4/mb4-exit-survey', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb4/mb4-exit-survey', {
+          'assetPath' : assetPath 
+        });
+    });
+      
     
       
       
