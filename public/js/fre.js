@@ -1,5 +1,9 @@
 $(document).ready(function() {
     
+       
+    
+         
+    
     var FREForm = $('.long-list');
     var nextWindow = function(z) {
         window.open('/oc/' + z + '.html', '_self');    
@@ -118,22 +122,61 @@ $(document).ready(function() {
         myBens.hide();
     };
         
+    
+    
+  
+    
+    
+    
+    var noboxHtml = $("#checknobox");
+    $("#help1 input[type=radio]").change(function() {
+        var checkbox = $(this);
+        if (checkbox.val() === "yes") {
+            noboxHtml.hide();
+        } else if (checkbox.val() === "no") {
+            noboxHtml.show();
+        }
+    });
+    
+    if ($("#radio-indent9-2").is(":checked")) {
+        noboxHtml.show();
+    } else {
+        noboxHtml.hide();
+    }
+    
+  
+    
+    
+    
+    
+      var yesboxHtml = $("#checkyesbox");
+    $("#help2 input[type=radio]").change(function() {
+        var checkbox = $(this);
+        if (checkbox.val() === "no") {
+            yesboxHtml.hide();
+        } else if (checkbox.val() === "yes") {
+            yesboxHtml.show();
+        }
+    });
+    
+    if ($("#radio-indent10-2").is(":checked")) {
+        yesboxHtml.show();
+    } else {
+        yesboxHtml.hide();
+    }
+    
+  
+    
+    
+    
+    
 });
 
-
-
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
-}
-
-
-    $('.points').each(function(){
-    var v_pound = $(this).html();
-    v_pound = numberWithCommas(v_pound);
-
-    $(this).html(v_pound)
         
-        })
-    
+        
+        
+
+
+
+
     
