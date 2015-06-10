@@ -167,7 +167,17 @@ $(document).ready(function() {
     
   
     
-    
+  $('.button1[target="boxone"]').click(function(){
+   
+    $('#boxone').toggle();
+});
+$('.summary[target="boxone"]').click(function(){
+    $('#boxone').hide();
+ 
+});
+
+
+
     
     
 });

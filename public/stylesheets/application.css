@@ -1433,3 +1433,42 @@ h2.heading-medium-home {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25; }
+
+
+/* display no dropdown box as default */
+.box1 {
+    
+    display: none;
+}
+
+
+/* styling that formats date boxes */
+
+
+
+
+
+.form-date .form-group {
+    clear: none;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: 56px;
+}
+
+.form-field, .form-field--inline {
+    float: left;
+    margin-bottom: 0.75em;
+    margin-top: 0;
+    width: 100%;
+}
+
+
+
+details .summary {
+    text-decoration: underline;
+}
+
+
+
+

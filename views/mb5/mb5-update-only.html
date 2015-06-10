@@ -1,0 +1,38 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Update your medical insurance<br>from {{employer}}</h1>
+            
+        
+        </header>
+        <div class="grid-row group">
+            <div class="column-two-thirds">
+                <form id="mb-choice" method="GET" action="mb4-summary-update-only">
+                    <div class="form-group">
+                        <label class="form-label" for="update">How much did {{employer}} pay for medical insurance from 6 April 2015 to 5 April 2016?<br><br>The amount you enter will be rounded down automatically to the nearest whole pound to calculate any tax due.  <span class="form-hint">The amount currently shown on your account is £{{currentValue}}</span></label>
+                        <div class="pound">
+                            <p>£</p>
+                        </div>
+                        <input class="form-control" id="update" name="update" type="text">
+                    </div>
+                   
+                   
+                <div class="next-question">
+                       <input type="submit" value="Next" class="button"/>
+                </div>
+            
+                    
+                    
+                    
+                </form>
+                <a class="cancel" href="mb4-home-updated">Cancel – your changes will not be saved</a>
+            </div>
+        </div>
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

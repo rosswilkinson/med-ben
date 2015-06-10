@@ -1,0 +1,118 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block" id="my-bens">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Medical insurance received <br>6 April 2015 to 5 April 2016</h1>
+           
+            
+            
+           
+            <!--<h2 class="heading-medium">Your medical insurance</h2>
+
+
+ </header>-->
+            
+            
+
+      
+            <!--p>You currently receive these medical insurances.</p-->
+        </header>
+        
+          <div class="grid-row">
+    <div class="column-two-thirds">
+     <h2 class="heading-medium-home">Your medical insurance</h2>
+    </div>
+    <div class="column-third">
+     <!--<a href="mb4-add">Add new insurance</a>-->
+    </div>
+  </div>
+        
+    
+
+    
+        <div class="grid-row group" id="sb-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Starbucks</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Amount paid by this employer</td>
+                            <td>£<span id="sb-amount">{{sbBen}}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this insurance</h3>
+                <ul>
+               <!-- <li><a href="mb4-update-only?employer=Starbucks">Update this insurance</a></li>-->
+                    <li><a href="mb5-update?employer=Starbucks">Tell us that this medical insurance has ended</a></li>
+                    <li><a href="mb5-remove?employer=Starbucks">Remove this insurance</a></li>
+                </ul>
+            </div>
+        </div>  
+        
+        
+        <div class="grid-row group" id="cc-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">Costa</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Amount paid by this employer</td>
+                            <td>£<span id="cc-amount">{{ccBen}}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this insurance</h3>
+                <ul>
+                  <!-- <li><a href="mb4-update-only?employer=Costa">Update this insurance</a></li>-->
+                    <li><a href="mb5-update?employer=Costa">Tell us that this medical insurance has ended</a></li>
+                    <li><a href="mb5-remove?employer=Costa">Remove this insurance</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        
+       <!--  <div class="grid-row group" id="add-table">
+            <div class="column-two-thirds bd-top">
+                <h3 class="heading-small">{{addedEmployer}}</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Amount paid by this employer</td>
+                            <td>£<span id="add-amount">{{addedAmount}}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column-third bd-top">
+                <h3 class="heading-small">Manage this insurance</h3>
+                <ul>
+                   <li><a href="">Update this insurance</a></li>
+                    <li><a href="">Tell us that this medical insurance has ended</a></li>
+                    <li><a href="">Remove this insurance</a></li>
+                </ul>
+            </div>
+        </div>-->
+             
+             
+             
+    </div><!-- end inner block -->
+    
+    <div class="inner-block" id="no-bens">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">You have no medical insurance</h1>
+            <p>If you get any medical insurance in the year from 6 April 2016 <a href="#">you must tell us.</a></p>
+            <a class="button" href="/" class="cancel">Sign out</a>
+        </header>
+    </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
