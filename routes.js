@@ -77,6 +77,11 @@ module.exports = {
         res.render('med-ben',
             {'assetPath' : assetPath});
     });
+      
+       app.get('/car-service', function (req, res) {
+        res.render('car-service',
+            {'assetPath' : assetPath});
+    });
 
     app.get('/sample', function (req, res) {
 
@@ -313,6 +318,17 @@ module.exports = {
     app.get('/employment-summary.html', function (req, res) {
       res.render('employment-summary', {'assetPath' : assetPath });
     });
+      
+      
+      
+      /* Car Service */
+    app.get('/car-service/car-1.html', function (req, res) {
+      res.render('car-service/car-1', {'assetPath' : assetPath });
+    });
+      
+      
+      
+      
       
 /* Med Bens */
     app.get('/mb/mb-start.html', function (req, res) {
