@@ -1424,15 +1424,23 @@ a.cancel {
 .border {
   margin: 15px 0 30px 0; }
 
+
+
 /*.tick {
-    background: url('/public/images/tick.png') no-repeat;
+    background: url('/public/images/tick.png') no-
+
+repeat;
     padding-left: 20px;
 }*/
+
 h2.heading-medium-home {
   font-family: "nta", Arial, sans-serif;
   font-size: 24px;
   font-weight: 700;
-  line-height: 1.25; }
+  line-height: 1.25; 
+    padding-bottom: 20px;
+
+}
 
 
 /* display no dropdown box as default */
@@ -1468,7 +1476,54 @@ h2.heading-medium-home {
 details .summary {
     text-decoration: underline;
 }
+ 
 
+
+.grid-row2 {
+    clear: both;
+        border-top: 5px solid #005ea5;
+    margin-bottom: 15px;
+
+    
+
+}
+
+
+/* med ben v5 */
+.bd-top2 {
+  /* border-top: 5px solid #005ea5; */
+  margin-top: 15px;
+  margin-bottom: 15px; }
+ /* .bd-top2 tr td:first-child {
+    font-weight: bold; }*/
+  .bd-top2 table {
+    border-top: 1px solid #fff;
+       border-bottom: 1px solid #fff;
+    margin-top: 17px;
+    margin-bottom: 30px; }
+    .bd-top2 table td {
+      width: 33%; }
+  .bd-top2 ul {
+    margin-top: 15px; }
+
+
+table.norule2 td {
+    border-bottom: 1px solid #fff;
+    font-size: 16px;
+}
+
+
+table.borderless th, table.borderless td {
+    font-size: 16px;
+    border-bottom: 0px solid #bfc1c3;
+    
+}
+
+
+table.borderless td:first-child {
+    font-weight: bold; 
+   
+  }
 
 
 

@@ -1009,10 +1009,190 @@ module.exports = {
         });
     });
 
-      
+       app.get('/mb5/mb5-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb5/mb5-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
    
    
      
+      
+      /*mb6 */
+    app.get('/mb6/mb6-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb6/mb6-start', {
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb6/mb6-home', function (req, res) {
+        res.render('mb6/mb6-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+     app.get('/mb6/mb6-add', function (req, res) {
+        res.render('mb6/mb6-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb6/mb6-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb6/mb6-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+          app.get('/mb6/mb6-exit-survey', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb6/mb6-exit-survey', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    
+      
+      
+      
+    app.get('/mb6/mb6-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb6/mb6-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       app.get('/mb6/mb6-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb6/mb6-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb6/mb6-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb6/mb6-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb6/mb6-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb6/mb6-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb6/mb6-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb6/mb6-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb6/mb6-done', function (req, res) {
+        updateFunction();
+        res.render('mb6/mb6-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb6/mb6-home-updated', function (req, res) {
+        res.render('mb6/mb6-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb6/mb6-finish', function (req, res) {
+        updateFunction();
+        res.render('mb6/mb6-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb6/mb6-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb6/mb6-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+       app.get('/mb6/mb6-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb6/mb6-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+   
+
+      
+      
     
    
       

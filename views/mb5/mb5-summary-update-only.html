@@ -8,19 +8,30 @@
             <h1 class="heading-xlarge">Review and confirm</h1>
             <p>Check the details you’ve entered are correct.</p>
         </header> 
-        <div class="grid-row group">
-            <div class="column-two-thirds bd-top">
-                <h3 class="heading-small">{{employer}}</h3>
-                <table class="mb-sum">
+       
+        
+        
+         <div class="grid-row group">
+            
+            <hr>
+            <div class="bd-top3">
+               <!-- <h3 class="heading-small">{{employer}}</h3>-->
+                <table class="mb-sum borderless">
                     <tbody>
                         <tr>
-                            <td>Amount paid by this employer</td>
+                            <td>{{employer}} </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Amount paid: </td>
                             <td>£{{tempValue}}</td>
-                            <td><a href="mb4-update-only">Change this amount</a></td>
+                            <td><a href="mb5-update">Change this amount</a></td>
                         </tr>
                         
                          <tr>
-                            <td>Previous amount</td>
+                            <td>Previous amount: </td>
                             <td>£{{currentValue}}</td>
                             <td></td>
                         </tr>
@@ -28,17 +39,22 @@
                         
                     </tbody>
                 </table>
-                <div class="important">
+                <hr>
+              
+               <!-- <div class="important">
                     Changes made apply only for the tax year to 5 April 2016. From 6 April 2016 you will have no medical insurance recorded. You must tell us if you have it in the tax year from 6 April 2016. 
-                </div>
+                </div>-->
             </div>
         </div>
+        
+        
+        
         <div class="next-question">
-            <form method="GET" action="mb4-done">
+            <form method="GET" action="mb5-done">
                 <input type="submit" value="Submit" class="button"/>
             </form>
         </div>
-        <a class="cancel" href="mb4-home-updated">Cancel – your changes will not be saved</a>
+        <a class="cancel" href="mb5-home-updated">Cancel – your changes will not be saved</a>
     </div><!-- end inner block -->
 </main>
 {{/content}}
