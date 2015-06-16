@@ -1514,3 +1514,15 @@ table.borderless th, table.borderless td {
     
    
   }*/
+h3.heading-medium-title2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-top: -10px;
+  padding-bottom: 5px;
+  display: block; }
+
+.job {
+  padding-bottom: 25px;
+  border-bottom: 2px solid #dee0e2; }
