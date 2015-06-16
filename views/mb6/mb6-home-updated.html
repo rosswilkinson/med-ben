@@ -6,9 +6,9 @@
     <div class="inner-block" id="my-bens">
         
        
-       
         <header class="page-header group">
-            <h1 class="heading-xlarge">Your medical insurance company <br> benefit for the tax year 6 April 2015 <br>to 5 April 2016</h1>
+            <h1 class="heading-xlarge2">Your medical insurance company benefit </h1>
+            <h3 class="heading-medium-title">for the tax year 6 April 2015 to 5 April 2016</h3>
            
             
             
@@ -41,66 +41,102 @@
         
         
         
-        <div class="grid-row2">
-        </div>
+       <!-- <div class="grid-row2">
+        </div>-->
         
-       <!-- <div class="grid-row">
-    <div class="column-two-thirds">
-     <h2 class="heading-medium-home">Your medical insurance</h2>
-    </div>
-    <div class="column-third">
-    <a href="mb4-add">Add new insurance</a>
-    </div>
-  </div>-->
+    
         
     
 
     
-     
-        
-        
-        
-           <table class="mb-sum borderless" id="cc-table">
+             <!--  starbucks table old styling -->
+             
+            <!-- <table class="mb-sum borderless" id="sb-table">
                 <thead>
                 <!--    <tr>
                         <th scope="col">Provider</th>
                         <th scope="col">Medical benefit (£)</th>
                         <th scope="col">&nbsp;</th>
                     </tr>-->
-                </thead>
+               <!-- </thead>
                 <tbody>
                     <tr>
-                        <td>Costa</td>
+                        <td>Starbucks</td>
                         
                          <td></td>
                        
-                        <td><a href="mb6-update?employer=Costa">I've stopped getting this benefit</a></td>
+                        <td><a href="mb6-update?employer=Starbucks">I've stopped getting this benefit</a></td>
                         
                     </tr>
                     <tr>
                         <td>Amount paid: </td>
                         
-                        <td>£<span id="cc-amount">{{ccBen}}</span></td>
+                        <td>£<span id="sb-amount">{{sbBen}}</span></td>
                         
                         
-                        <td><a href="mb6-remove?employer=Costa">I’ve never had this benefit in this tax year</a></td>
+                        <td><a href="mb6-remove?employer=Starbucks">I’ve never had this benefit in this tax year</a></td>
                     </tr>
                     
                     
                       <tr>
                         <td></td>
                         <td></td>
-                        <td><a href="mb6-remove-b?employer=Costa">I’ve never had this benefit</a></td>
+                        <td><a href="mb6-remove-b?employer=Starbucks">I’ve never had this benefit</a></td>
                     </tr>
                     
                     <!-- <tr>
                         <td></td>
                         <td></td>
+                        <td><a href="mb6-update-only?employer=Starbucks">Update this benefit</a></td>
+                    </tr>-->
+                    
+               <!-- </tbody>
+            </table>-->
+             
+             
+       
+        
+             
+               <table class="mb-sum borderless" id="cc-table">
+                <thead>
+              <h3 class="heading-medium">Costa</h3>
+                   <div class="grid-row2">
+             </div>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td>Amount paid:</td>
+                        <td>£<span id="cc-amount">{{ccBen}}</span></td>
+                       
+                        <td><a href="mb6-update?employer=Costa">I've stopped getting this benefit</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="mb6-remove?employer=Costa">I’ve never had this benefit in this tax year</a></td>
+                    </tr>
+                    
+                       <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="mb6-remove-b?employer=Costa">I’ve never had this benefit</a></td>
+                    </tr>
+                    
+              <!--   <tr>
+                        <td></td>
+                        <td></td>
                         <td><a href="mb6-update-only?employer=Costa">Update this benefit</a></td>
                     </tr>-->
                     
+                    
                 </tbody>
             </table>
+             
+             
+             
+        
+           
         
         
        
@@ -113,52 +149,43 @@
       
         
         
-         <!--    <div class="grid-row2">
-        </div>
-            
-            
-      
-           <table class="mb-sum borderless" id="add-table">
+          <!--
+
+  <table class="mb-sum borderless" id="add-table">
                 <thead>
-               </thead>
-               
-               
+              <h3 class="heading-medium">{{addedEmployer}}</h3>
+                   <div class="grid-row2">
+             </div>
+                </thead>
                 <tbody>
-                    
-                    
                     <tr>
-                        <td>{{addedEmployer}}</td>
-                        
-                         <td></td>
-                       
-                        <td><a href="">I've stopped getting this benefit</a></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Amount paid: </td>
-                        
+                       <td>Amount paid:</td>
                         <td>£<span id="add-amount">{{addedAmount}}</span></td>
+                       
+                        <td><a href="mb6-update?employer=Costa">I've stopped getting this benefit</a></td>
                         
-                        
-                        <td><a href="">I’ve never had this benefit in this tax year</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="mb6-remove?employer=Costa">I’ve never had this benefit in this tax year</a></td>
                     </tr>
                     
-                      <tr>
+                       <tr>
                         <td></td>
                         <td></td>
-                        <td><a href="">I’ve never had this benefit</a></td>
+                        <td><a href="mb6-remove-b?employer=Costa">I’ve never had this benefit</a></td>
                     </tr>
                     
-                     <tr>
+             <!--  <tr>
                         <td></td>
                         <td></td>
-                        <td><a href="/">Update this benefit</a></td>
-                    </tr>
+                        <td><a href="mb6-update-only?employer=Costa">Update this benefit</a></td>
+                    </tr>-->
                     
                     
-                </tbody>
-              
-            </table> -->
+               <!-- </tbody>
+            </table>-->
         
         
         
@@ -173,7 +200,11 @@
     
         <header class="page-header group">
         
-            <h1 class="heading-xlarge">Your medical insurance company <br>benefit for the tax year 6 April 2015 <br>to 5 April 2016</h1>
+            <header class="page-header group">
+            <h1 class="heading-xlarge2">Your medical insurance company benefit </h1>
+            <h3 class="heading-medium-title">for the tax year 6 April 2015 to 5 April 2016</h3>
+               
+                <br><br>
             
              <div class="column-two-thirds">
                  

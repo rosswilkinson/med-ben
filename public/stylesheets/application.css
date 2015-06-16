@@ -1437,6 +1437,23 @@ h2.heading-medium-home {
   line-height: 1.25;
   padding-bottom: 20px; }
 
+h3.heading-medium-title {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding-top: -15px;
+  display: block; }
+
+.heading-xlarge2 {
+  margin-bottom: 0px;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.04167;
+  text-transform: none;
+  margin-top: 0.625em; }
+
 /* display no dropdown box as default */
 .box1 {
   display: none; }
@@ -1461,8 +1478,8 @@ details .summary {
 .grid-row2 {
   clear: both;
   border-top: 5px solid #005ea5;
-  margin-bottom: 25px;
-  margin-top: 15px; }
+  margin-bottom: 15px;
+  margin-top: -5px; }
 
 /* med ben v5 */
 .bd-top2 {
@@ -1492,5 +1509,8 @@ table.borderless th, table.borderless td {
   font-size: 16px;
   border-bottom: 0px solid #bfc1c3; }
 
-table.borderless td:first-child {
-  font-weight: bold; }
+/*table.borderless td:first-child {
+    font-weight: bold; 
+    
+   
+  }*/
