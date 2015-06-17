@@ -1507,6 +1507,10 @@ table.norule2 td {
   border-bottom: 1px solid #fff;
   font-size: 16px; }
 
+table.borderless1 th, table.borderless1 td {
+  font-size: 16px;
+  border-bottom: 0px solid #bfc1c3; }
+
 table.borderless th, table.borderless td {
   font-size: 16px;
   border-bottom: 0px solid #bfc1c3;
