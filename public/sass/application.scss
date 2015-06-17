@@ -219,9 +219,14 @@ form.long-list {
         background: $link-colour;
     }
 }
-#proposition-name {
+
+/*#proposition-name {
     display: none;
 }
+
+*/
+
+
 #proposition-links {
     float: right;
     li a {
@@ -452,7 +457,15 @@ table.norule2 td {
 table.borderless th, table.borderless td {
     font-size: 16px;
     border-bottom: 0px solid #bfc1c3;
-    
+    padding: 10px 100px 5px 0;
+   
+}
+
+
+   
+
+.mb-sum.borderless td:last-child {
+        text-align: left;
 }
 
 

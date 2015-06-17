@@ -9,7 +9,7 @@ var userName,
     starBucks = 'Starbucks',
     costaCoffee  = 'Costa Coffee',
     sbBen = 5000,
-    ccBen = 1000,
+    ccBen = 600,
     employer,
     currentValue,
     tempValue,
@@ -18,7 +18,7 @@ var userName,
 
 var resetFunction = function() {
     sbBen = 5000;
-    ccBen = 1000;
+    ccBen = 600;
     addedEmployer = undefined;
     addedAmount = 0;
 };
