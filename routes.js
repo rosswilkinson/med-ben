@@ -1062,23 +1062,40 @@ module.exports = {
         });
     });
       
-        app.get('/mb6/mb6-question-a', function (req, res) {
-        addedEmployer = req.query.addedEmployer;
-        res.render('mb6/mb6-question-a', {
-          'assetPath' : assetPath 
-        });
-    });
+       
       
-        app.get('/mb6/mb6-question-b', function (req, res) {
-        addedEmployer = req.query.addedEmployer;
-        res.render('mb6/mb6-question-b', {
-          'assetPath' : assetPath 
-        });
-    });
+    
       
       
       
     
+         
+    app.get('/mb6/mb6-question-a', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb6/mb6-question-a', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb6/mb6-question-b', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb6/mb6-question-b', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
       
       
       

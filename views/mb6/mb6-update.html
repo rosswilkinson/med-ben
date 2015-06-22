@@ -6,7 +6,7 @@
     <div class="inner-block">
       
         <header class="page-header group">
-            <h1 class="heading-xlarge">You’ve stopped getting this benefit</h1>
+            <h1 class="heading-xlarge">You stopped getting this <br>benefit on or after 6 April 2015</h1>
                 
         </header>
         
@@ -20,7 +20,7 @@
                 
   <div class="panel-indent">
     <p>
-    If your company benefit stopped on or after 6 April 2015, you’ll need to ask your employer how much they’d paid from 6 April 2015 until the date it stopped.
+   If you stopped getting this company benefit on or after 6 April 2015, you may need to ask your employer how much they’d paid for it from 6 April 2015 until the date it stopped.
     </p>
   </div>
 
@@ -28,30 +28,60 @@
                 
                 <form id="mb-choice" method="GET" action="mb6-summary">
                     <div class="form-group">
-                        <label class="form-label" for="update">The amount of medical insurance benefit currently showing on our records for {{employer}} is £{{currentValue}}. <br/><br/>
+                        <label class="form-label" for="update">Our records show that {{employer}} have given you private medical insurance benefit with a cash value
+                            of £{{currentValue}} since 6 April 2015. <br/><br/>
                             
-                            Confirm how much {{employer}} paid from 6 April 2015 until the date it stopped.
+                            Is this amount correct?
                             
-                            <span class="form-hint">The amount you enter will be rounded down to the nearest British pound to calculate any tax due.   </span></label>
+                           </label>
                         
                         <br/>
                         
                         
                         
-                        
+                          <input type="hidden" name="Employer" value="{{employer}}">
+            
+            <fieldset class="questions">
+                
+                
+                  <div id="paid1" class="form-group form-group-compound">
+                        <fieldset class="inline">
+                                <label class="block-label"  for="radio-indent9-1">Yes
+                                <input id="radio-indent9-1" name="radio-indent-group9" value="yes" type="radio">
+                                  
+                                    </label>
+                                <label class="block-label" for="radio-indent9-2">No
+                                <input id="radio-indent9-2" name="radio-indent-group9" value="no" type="radio">
+                                   
+                                </label>
+                      </fieldset>
+   
+                            </div>
+                
+                  
+             </fieldset>
+                   
+                       <div class="panel-indent" id="paidnobox">
+                           <p>Actual amount paid by {{employer}}</p>
+                        <span class="form-hint">The amount you enter will be rounded down when used in any future tax calculations.</span>
+                     <br>
                         <div class="pound">
                             <p>£</p>
                         </div>
+                        
+             
+                        
                         <input class="form-control" id="update" name="update" type="text">
                     </div>
-                  
+                        </div>
                     
                     
-                    <div>
-                        <input type="submit" value="Next" class="button"/>
-                    </div>
+                    
+                 
+                        <input type="submit" value="Continue" class="button"/>
+                    </div> 
                 </form>
-                <a class="cancel" href="mb6-home-updated">Cancel – your changes will not be saved</a>
+                <a class="cancel" href="mb6-home">Cancel – your changes will not be saved</a>
             </div>
         </div>
        </div><!-- end inner block -->

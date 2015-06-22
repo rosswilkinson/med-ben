@@ -1,9 +1,5 @@
 $(document).ready(function() {
-    
-       
-    
-         
-    
+
     var FREForm = $('.long-list');
     var nextWindow = function(z) {
         window.open('/oc/' + z + '.html', '_self');    
@@ -147,6 +143,23 @@ $(document).ready(function() {
   
     
     
+     var noboxHtml = $("#paidnobox");
+    $("#paid1 input[type=radio]").change(function() {
+        var checkbox = $(this);
+        if (checkbox.val() === "yes") {
+            noboxHtml.hide();
+        } else if (checkbox.val() === "no") {
+            noboxHtml.show();
+        }
+    });
+    
+    if ($("#radio-indent9-2").is(":checked")) {
+        noboxHtml.show();
+    } else {
+        noboxHtml.hide();
+    }
+    
+    
     
     
       var yesboxHtml = $("#checkyesbox");
@@ -177,6 +190,81 @@ $('.summary[target="boxone"]').click(function(){
 });
 
 
+    
+    $("#question-submit").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-1").is(":checked")) {
+            url = "/mb6/mb6-remove?employer=" + employer;
+        } else if ($("#radio-2").is(":checked")) {
+            url = "/mb6/mb6-update?employer=" + employer;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+     $("#question-submit2").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb6/mb6-remove?employer=" + employer;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb6/mb6-home" ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+      $("#question-submit3").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb6/mb6-finish" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb6/mb6-question-a?employer=" + employer ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+      $("#question-submit4").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb6/mb6-finish" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb6/mb6-home";
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+   
+    
+    
+    
 
     
     

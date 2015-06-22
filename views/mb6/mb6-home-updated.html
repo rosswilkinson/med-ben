@@ -25,6 +25,12 @@
         </header>
         
          <div class="column-two-thirds">
+             
+             <div class="panel-indent">
+                 <p>
+                    If you’ve started working for a new employer, the cash value of your company benefit may have been carried over from your old employer.
+                </p>
+            </div>
         
    <!--    <table class="mb-sum borderless">
                                 <tbody>
@@ -40,9 +46,9 @@
             </table>-->
         
         
-        
-       <!-- <div class="grid-row2">
-        </div>-->
+     
+        <div class="grid-row2">
+        </div>
         
     
         
@@ -94,8 +100,11 @@
             </table>-->
              
              
-       <br><br>
-        
+     
+             
+             
+             
+        <!-- old table format table 
              <div class="job">
                <table class="mb-sum borderless" id="cc-table">
                 <thead>
@@ -111,19 +120,15 @@
                        <td>Amount paid:</td>
                         <td>£<span id="cc-amount">{{ccBen}}</span></td>
                        
-                        <td><a href="mb6-update?employer=Costa">I've stopped getting this benefit</a></td>
+                        <td><a href="mb6-question-a?employer=Costa">You've stopped getting this benefit</a></td>
                         
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="mb6-remove?employer=Costa">I’ve never had this benefit in this tax year</a></td>
-                    </tr>
+                   
                     
                        <tr>
                         <td></td>
                         <td></td>
-                        <td><a href="mb6-remove-b?employer=Costa">I’ve never had this benefit</a></td>
+                        <td><a href="mb6-question-b?employer=Costa">You've never had this benefit</a></td>
                     </tr>
                     
               <!--   <tr>
@@ -133,13 +138,49 @@
                     </tr>-->
                     
                     
-                </tbody>
-            </table></div>
+              <!--  </tbody>
+            </table></div>-->
              
              
              
         
-           
+           <div class="job-wrapper">
+            
+
+             
+                   
+                    
+                     <h3 class="heading-medium-title2">Costa</h3>
+                    
+              
+            
+                <div class="dash-info">
+                       You told us you don’t get this benefit anymore.<br>
+                        The amount paid from 6 April 2015 until the date it stopped was £<span id="cc-amount">{{ccBen}}</span>.
+    
+                </div>
+                    
+                       
+                 <div class="dash-nav">
+                     <div class="nav-styling">
+                         <a href="mb6-update?employer=Costa">Edit the amount paid</a></div>
+                   
+                       
+                        <!--<td><a href="mb6-update?employer=Costa">You've stopped getting this benefit</a></td>-->
+                        
+                                        </div>
+                    
+                    
+                    
+              <!--   <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="mb6-update-only?employer=Costa">Update this benefit</a></td>
+                    </tr>-->
+                    
+                
+             </div>
+             
         
         
        
@@ -211,7 +252,7 @@
             
              <div class="column-two-thirds">
                  
-            <p>You don’t have any medical insurance benefit currently showing on our records.</p>
+            <p>You don’t have any private medical insurance company benefit showing on our records.</p>
            <div class="grid-row2">
         </div>
             <a class="button" href="/" class="cancel">Sign out</a>

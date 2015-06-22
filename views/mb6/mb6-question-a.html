@@ -14,45 +14,53 @@
              
         <div class="grid-row group">
             
-            
       
-                
                 
   <div class="panel-indent">
     <p>
-    If your company benefit stopped on or after 6 April 2015, you’ll need to ask your employer how much they’d paid from 6 April 2015 until the date it stopped.
+  If you stopped getting your private medical insurance benefit on or after 6 April 2015, you’ll need to ask your employer how much they’d paid for it from 6 April 2015 until the date it stopped.
     </p>
   </div>
 
+            
+            <p>When did you stop getting this benefit from {{employer}}?</p>
                 
-            <fieldset class="inline">
-    <legend>
-      <span class="form-label">
-        Do you know their National Insurance number?
-      </span>
-    </legend>
-    <div class="form-group form-group-compound">
-      <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
-        <input id="radio-indent-1" name="radio-indent-group" value="Yes" type="radio">
-        Yes
-      </label>
-      <label class="block-label" for="radio-indent-2">
-        <input id="radio-indent-2" name="radio-indent-group" value="No" type="radio">
-        No
-      </label>
-    </div>
-   
-  </fieldset>
+            <input type="hidden" name="Employer" value="{{employer}}">
+            
+            <fieldset class="questions">
+                
+            <label class="block-label" for="radio-1">
+                <input id="radio-1" name="radio-group" value="Before 6 April 2015" type="radio">
+                Before 6 April 2015
+            </label>
+            <label class="block-label" for="radio-2">
+                <input id="radio-2" name="radio-group" value="On or after 6 April 2015" type="radio">
+               On or after 6 April 2015
+            </label>
                   
-                    
-                    
-              <a href="/" class="button">Next</a>
+             </fieldset>
+                   
+         
+            
+          
+            
+              <a id="question-submit" href="/" class="button">Continue</a>
             
             
             
                   
              
-                <a class="cancel" href="mb6-home-updated">Cancel – your changes will not be saved</a>
+                <a class="cancel" href="mb6-home">Cancel – your changes will not be saved</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             </div>
         </div>
        </div><!-- end inner block -->

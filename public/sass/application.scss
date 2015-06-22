@@ -502,6 +502,40 @@ h3.heading-medium-title2 {
     border-bottom: 2px solid #dee0e2;
 }
 
+.job-wrapper {
+   padding-bottom: 120px;
+    border-bottom: 2px solid #dee0e2;
+}
+
+
+.dash-nav {
+    
+    text-align: left;
+    font-size: 16px; 
+    float: right; 
+  
+    
+}
+
+.nav-styling{
+    
+    padding-bottom: 15px;
+  
+    
+}
+
+
+
+.dash-info {
+    
+    font-size: 16px;
+    width: 350px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    float: left;
+}
+
+
 
 
 .no-block-label{
@@ -525,6 +559,15 @@ label {
     text-transform: none;
 }
 
+
+fieldset.questions {
+    clear: none;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+   
+    
+}
 
 
 
