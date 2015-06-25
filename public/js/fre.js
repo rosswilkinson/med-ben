@@ -178,6 +178,24 @@ $(document).ready(function() {
         yesboxHtml.hide();
     }
     
+    
+    
+     var yesbox1Html = $("#checkyesbox1");
+    $("#help22 input[type=radio]").change(function() {
+        var checkbox = $(this);
+        if (checkbox.val() === "yes") {
+            yesbox1Html.hide();
+        } else if (checkbox.val() === "no") {
+            yesbox1Html.show();
+        }
+    });
+    
+    if ($("#radio-indent9-2").is(":checked")) {
+        yesbox1Html.show();
+    } else {
+        yesbox1Html.hide();
+    }
+    
   
     
   $('.button1[target="boxone"]').click(function(){
