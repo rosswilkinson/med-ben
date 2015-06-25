@@ -6,8 +6,8 @@
     <div class="inner-block">
         <div class="column-two-thirds">
         <header class="page-header group">
-            <h1 class="heading-xlarge">Review and confirm</h1>
-            <p>Check the amount is correct.</p>
+            <h1 class="heading-xlarge">Check and confirm</h1>
+            <p>Check the value is correct.</p>
         </header> 
         <div class="grid-row group">
             
@@ -26,7 +26,7 @@
                                                <tr>
                             <td>Amount paid:    £{{tempValue}}</td>
                             
-                            <td><a href="mb6-update">Change this amount</a></td>
+                            <td><a href="mb6-update?employer=Costa">Change this amount</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -45,10 +45,10 @@
       
         <div class="next-question">
             <form method="GET" action="mb6-done">
-                <input type="submit" value="Submit" class="button"/>
+                <input type="submit" value="Confirm" class="button"/>
             </form>
         </div>
-        <a class="cancel" href="mb6-home">Cancel – your changes will not be saved</a>
+        <a class="cancel" href="mb6-update?employer=Costa">Back</a>
         </div>  </div><!-- end inner block -->
 </main>
 {{/content}}

@@ -3,10 +3,29 @@
 {{$content}}
 {{>hmrc_banner}}
 <main id="content" role="main">
+    
+  <!-- scipt for comma function on value page -->
+    <script type="text/javascript">
+            function format(input)
+            {
+                var nStr = input.value + '';
+                nStr = nStr.replace( /\,/g, "");
+                x = nStr.split( '.' );
+                x1 = x[0];
+                x2 = x.length > 1 ? '.' + x[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while ( rgx.test(x1) ) {
+                    x1 = x1.replace( rgx, '$1' + ',' + '$2' );
+                }
+                input.value = x1 + x2;
+            }
+        </script>
+    
+    
     <div class="inner-block">
       
         <header class="page-header group">
-            <h1 class="heading-xlarge">You stopped getting this <br>benefit on or after 6 April 2015</h1>
+            <h1 class="heading-xlarge">Confirm the value of this benefit</h1>
                 
         </header>
         
@@ -20,7 +39,7 @@
                 
   <div class="panel-indent">
     <p>
-   If you stopped getting this company benefit on or after 6 April 2015, you may need to ask your employer how much they’d paid for it from 6 April 2015 until the date it stopped.
+   You may need to ask your employer how much they’d paid for your benefit from 6 April 2015 until the date it stopped.	
     </p>
   </div>
 
@@ -28,10 +47,9 @@
                 
                 <form id="mb-choice" method="GET" action="mb6-summary">
                     <div class="form-group">
-                        <label class="form-label" for="update">Our records show that {{employer}} have given you private medical insurance benefit with a cash value
-                            of £{{currentValue}} since 6 April 2015. <br/><br/>
+                        <label class="form-label" for="update">Our records show that {{employer}} have given you medical insurance benefit with a value of                          £{{currentValue}} since 6 April 2015. <br/><br/>
                             
-                            Is this amount correct?
+                            Is this value correct?
                             
                            </label>
                         
@@ -62,7 +80,7 @@
              </fieldset>
                    
                        <div class="panel-indent" id="paidnobox">
-                           <p>Actual amount paid by {{employer}}</p>
+                           <p>Actual value paid for by {{employer}}</p>
                         <span class="form-hint">The amount you enter will be rounded down when used in any future tax calculations.</span>
                      <br>
                         <div class="pound">
@@ -71,17 +89,15 @@
                         
              
                         
-                        <input class="form-control" id="update" name="update" type="text" value="600">
+                        <input class="form-control" id="update" name="update" type="text" value="{{currentValue}}" onkeyup="format(this)">
                     </div>
                         </div>
                     
                     
-                    
-                 
-                        <input type="submit" value="Continue" class="button"/>
+                        <input type="submit" value="Confirm" class="button"/>
                     </div> 
                 </form>
-                <a class="cancel" href="mb6-home">Cancel – your changes will not be saved</a>
+                <a class="cancel" href="mb6-question-a?employer=Costa">Back</a>
             </div>
         </div>
        </div><!-- end inner block -->
