@@ -288,7 +288,8 @@ $('.summary[target="boxone"]').click(function(){
          
         var url = "";
         if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
-            url = "/mb6/mb6-summary?employer=" + employer + "&update=" + updatedVal;
+            url = "/mb6/mb6-s
+            ummary?employer=" + employer + "&update=" + updatedVal;
         } else if ($("#radio-indent9-1").is(":checked")) {
             url = "/mb6/mb6-done";
         }
