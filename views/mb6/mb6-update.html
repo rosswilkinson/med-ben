@@ -22,31 +22,31 @@
         </script>
     
     
-    <div class="inner-block">
-      
-        <header class="page-header group">
-            <h1 class="heading-xlarge">Confirm the value of this benefit</h1>
-                
-        </header>
-        
-         <div class="column-two-thirds">
-             
-        <div class="grid-row group">
+            <div class="inner-block">
+
+                <header class="page-header group">
+                    <h1 class="heading-xlarge">Confirm the value of this benefit</h1>
+
+                </header>
+
+                    <div class="column-two-thirds">
+
+                    <div class="grid-row group">
             
             
       
                 
                 
-  <div class="panel-indent">
-    <p>
-   You may need to ask your employer how much they’d paid for your benefit from 6 April 2015 until the date it stopped.	
-    </p>
-  </div>
+                    <div class="panel-indent">
+                        <p>
+                        You may need to ask your employer how much they’d paid for your benefit from 6 April 2015 until the date it stopped.	
+                        </p>
+                    </div>
 
                 
                 
-                <form id="mb-choice" method="GET" action="mb6-summary">
-                    <div class="form-group">
+                    <form id="mb-choice" method="GET" action="mb6-summary">
+                        <div class="form-group">
                         <label class="form-label" for="update">Our records show that {{employer}} have given you medical insurance benefit with a value of                          £{{currentValue}} since 6 April 2015. <br/><br/>
                             
                             Is this value correct?
@@ -55,46 +55,56 @@
                         
                         <br/>
                         
-                        
-                        
+                     
                           <input type="hidden" name="Employer" value="{{employer}}">
+                           
             
-            <fieldset class="questions">
+                            <fieldset class="questions">
                 
                 
-                  <div id="paid1" class="form-group form-group-compound">
-                        <fieldset class="inline">
-                                <label class="block-label"  for="radio-indent9-1">Yes
-                                <input id="radio-indent9-1" name="radio-indent-group9" value="yes" type="radio">
+                                <div id="paid1" class="form-group form-group-compound">
+                                    <fieldset class="inline">
+                                    <label class="block-label"  for="radio-indent9-1">Yes
+                                        <input id="radio-indent9-1" name="radio-indent-group9" value="yes" type="radio">
                                   
                                     </label>
                                 <label class="block-label" for="radio-indent9-2">No
                                 <input id="radio-indent9-2" name="radio-indent-group9" value="no" type="radio">
                                    
                                 </label>
-                      </fieldset>
+                                    </fieldset>
    
                             </div>
-                
+                 
                   
-             </fieldset>
-                   
+                            </fieldset>
+                        
+                        
+                        
+                   <!-- show if slects no -->
                        <div class="panel-indent" id="paidnobox">
-                           <p>Actual value paid for by {{employer}}</p>
+                           <p>Actual value paid by {{employer}}</p>
                         <span class="form-hint">The amount you enter will be rounded down when used in any future tax calculations.</span>
-                     <br>
+                        <br>
                         <div class="pound">
                             <p>£</p>
                         </div>
                         
              
                         
-                        <input class="form-control" id="update" name="update" type="text" value="{{currentValue}}" onkeyup="format(this)">
-                    </div>
+                        <input class="form-control" id="update" name="update" type="text" onkeyup="format(this)">
+                            </div>
                         </div>
                     
                     
-                        <input type="submit" value="Confirm" class="button"/>
+                      
+                        
+                        
+                     <div >
+                         <a id="question-submit5" href="/" class="button">Confirm</a>
+                        </div>
+                    
+                    
                     </div> 
                 </form>
                 <a class="cancel" href="mb6-question-a?employer=Costa">Back</a>

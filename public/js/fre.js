@@ -279,6 +279,24 @@ $('.summary[target="boxone"]').click(function(){
     });
     
     
+    
+     $("#question-submit5").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var updatedVal = $('#update').val();
+         
+        var url = "";
+        if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
+            url = "/mb6/mb6-summary?employer=" + employer + "&update=" + updatedVal;
+        } else if ($("#radio-indent9-1").is(":checked")) {
+            url = "/mb6/mb6-done";
+        }
+        
+        if (url.length > 0) {
+           window.location = url;
+        }
+    });
    
     
     

@@ -26,7 +26,7 @@
                                                <tr>
                             <td>Amount paid:    £{{tempValue}}</td>
                             
-                            <td><a href="mb6-update?employer=Costa">Change this amount</a></td>
+                            <td><a href="mb6-update-b-1?employer=Costa">Change this amount</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -44,7 +44,9 @@
            
       
         <div class="next-question">
-            <a href="mb6-done?amount={{tempValue}}" class="button">Confirm</a>
+            <form method="GET" action="mb6-done">
+                <input type="submit" value="Confirm" class="button"/>
+            </form>
         </div>
         <a class="cancel" href="mb6-update?employer=Costa">Back</a>
         </div>  </div><!-- end inner block -->

@@ -1111,6 +1111,21 @@ module.exports = {
         });
     });
       
+      
+      app.get('/mb6/mb6-update-b-1', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb6/mb6-update-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
        app.get('/mb6/mb6-update-only', function (req, res) {
         employer = req.query.employer;
         summaryFunction();
@@ -1136,6 +1151,21 @@ module.exports = {
             'assetPath' : assetPath,
         });
     });
+      
+      
+        app.get('/mb6/mb6-summary-b-1', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb6/mb6-summary-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
       
       
        app.get('/mb6/mb6-summary-add', function (req, res) {
@@ -1166,7 +1196,10 @@ module.exports = {
     });
       
     app.get('/mb6/mb6-done', function (req, res) {
-        updateFunction();
+        if (req.query.amount) {
+            tempValue = req.query.amount;
+            updateFunction();
+        }
         res.render('mb6/mb6-done', {
             'employer' : employer,
             'currentValue' : currentValue,
