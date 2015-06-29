@@ -180,6 +180,25 @@ $(document).ready(function() {
     
     
     
+          var yesboxHtml = $("#checkyesbox");
+    $("#help2 input[type=radio]").change(function() {
+        var checkbox = $(this);
+        if (checkbox.val() === "Don't know") {
+            yesboxHtml.hide();
+        } else if (checkbox.val() === "yes") {
+            yesboxHtml.show();
+        }
+    });
+    
+    if ($("#radio-indent10-3").is(":checked")) {
+        yesboxHtml.show();
+    } else {
+        yesboxHtml.hide();
+    }
+    
+    
+    
+    
      var yesbox1Html = $("#checkyesbox1");
     $("#help22 input[type=radio]").change(function() {
         var checkbox = $(this);
