@@ -390,6 +390,12 @@ h3.heading-medium-title {
 }
 
 
+.box2 {
+    
+    display: none;
+}
+
+
 /* styling that formats date boxes */
 
 
@@ -569,6 +575,113 @@ fieldset.questions {
     
 }
 
+
+
+.numbers {
+    list-style-type: none;
+  
+    padding-left: 0;
+    float:left;
+}
+
+
+
+
+
+
+.car-qs {
+   
+    margin-left: 20px;
+    margin-top: -30px;
+    padding-left: 15px;
+    padding-bottom:25px;
+    width: 100%;
+    float: left;
+    clear: none;
+}
+
+
+
+table.car-table th, table.car-table td {
+  font-size: 16px; 
+}
+
+
+
+table.car-table  {
+  font-size: 16px;
+   border-bottom: 3px solid #a1acb2;
+    margin-bottom: 30px;}
+
+
+
+.content__body.width-3-4 {
+    width: 75%;
+}
+
+
+.highlighted-event .confirmation::before {
+    background-image: url("../images/tick.png");
+    background-size: 100% auto;
+    content: " ";
+    display: inline-block;
+    height: 0.74em;
+    margin-right: 0.33em;
+    width: 1em;
+}
+.highlighted-event h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+
+.highlighted-event #new-tax-code {
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+
+.spacing-bottom {
+    margin-bottom: 28px;
+}
+.spacing-top {
+    margin-top: 28px;
+}
+.highlighted-event {
+    margin: 0;
+    padding: 1.45em;
+}
+.highlight-answer, .highlighted-event {
+    background-color: #28a197;
+    color: #fff;
+    padding-top:40px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+   
+    text-align: center;
+}
+
+
+
+.spacing-bottom-smaller {
+    margin-bottom: 10px;
+}
+.spacing-top-smaller {
+    margin-top: 10px;
+}
+
+.grey--bottom {
+    border-bottom: 1px solid #bfc1c3;
+}
+
+
+.form-date {
+    display: inline-block;
+    width: 100%;
+}
 
 
 

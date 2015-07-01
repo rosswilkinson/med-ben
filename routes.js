@@ -327,6 +327,58 @@ module.exports = {
     });
       
       
+      app.get('/car-service/car-2.html', function (req, res) {
+      res.render('car-service/car-2', {'assetPath' : assetPath });
+    });
+      
+       app.get('/car-service/car-3.html', function (req, res) {
+      res.render('car-service/car-3', {'assetPath' : assetPath });
+    });
+      
+      
+       app.get('/car-service/car-4.html', function (req, res) {
+      res.render('car-service/car-4', {'assetPath' : assetPath });
+    });
+      
+      
+      app.get('/car-service/car-5.html', function (req, res) {
+      res.render('car-service/car-5', {'assetPath' : assetPath });
+    });
+      
+       app.get('/car-service/car-6.html', function (req, res) {
+      res.render('car-service/car-6', {'assetPath' : assetPath });
+    });
+      
+             app.get('/car-service/car-7.html', function (req, res) {
+      res.render('car-service/car-7', {'assetPath' : assetPath });
+    });
+      
+      
+             app.get('/car-service/car-8.html', function (req, res) {
+      res.render('car-service/car-8', {'assetPath' : assetPath });
+    });
+      
+      
+             app.get('/car-service/car-9.html', function (req, res) {
+      res.render('car-service/car-9', {'assetPath' : assetPath });
+    });
+      
+      app.get('/car-service/car-10.html', function (req, res) {
+      res.render('car-service/car-10', {'assetPath' : assetPath });
+    });
+      
+      
+      app.get('/car-service/car-11.html', function (req, res) {
+      res.render('car-service/car-11', {'assetPath' : assetPath });
+    });
+      
+      
+      app.get('/car-service/car-12.html', function (req, res) {
+      res.render('car-service/car-12', {'assetPath' : assetPath });
+    });
+      
+      
+      
       
       
       

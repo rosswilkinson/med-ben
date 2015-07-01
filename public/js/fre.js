@@ -225,6 +225,16 @@ $('.summary[target="boxone"]').click(function(){
     $('#boxone').hide();
  
 });
+    
+    
+      $('.button1[target="boxtwo"]').click(function(){
+   
+    $('#boxtwo').toggle();
+});
+$('.summary[target="boxtwo"]').click(function(){
+    $('#boxtwo').hide();
+ 
+});
 
 
     
