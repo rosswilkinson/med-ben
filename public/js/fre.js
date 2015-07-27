@@ -130,18 +130,18 @@ $(document).ready(function() {
         
     
     
- // if (sbAmountValue != 400 && sbAmountValue != 0) {
-     //   sbEndBens.show();
-     //  sbTable.hide();
+  if (sbAmountValue != 400 && sbAmountValue != 0 && sbAmountValue != 5000) {
+        sbEndBens.show();
+       sbTable.hide();
        
-   // };
+    };
     
     
- //   if (ccAmountValue != 600 && ccAmountValue != 0) {
-    //    ccEndBens.show();
-     //  ccTable.hide();
+    if (ccAmountValue != 600 && ccAmountValue != 0 && ccAmountValue != 1000)  {
+        ccEndBens.show();
+       ccTable.hide();
        
-  //  };
+    };
     
     
     
