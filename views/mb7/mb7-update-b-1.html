@@ -1,0 +1,91 @@
+{{<layout}}
+{{$pageTitle}}Confirm the value of this benefit{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    
+  <!-- scipt for comma function on value page -->
+    <script type="text/javascript">
+            function format(input)
+            {
+                var nStr = input.value + '';
+                nStr = nStr.replace( /\,/g, "");
+                x = nStr.split( '.' );
+                x1 = x[0];
+                x2 = x.length > 1 ? '.' + x[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while ( rgx.test(x1) ) {
+                    x1 = x1.replace( rgx, '$1' + ',' + '$2' );
+                }
+                input.value = x1 + x2;
+            }
+        </script>
+    
+    
+    <div class="inner-block">
+      
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Confirm the value of this benefit</h1>
+                
+        </header>
+        
+         <div class="column-two-thirds">
+             
+        <div class="grid-row group">
+            
+            
+      
+                
+                
+  
+
+                
+                
+                <form id="mb-choice" method="GET" action="mb7-summary-b-1">
+                    <div class="form-group">
+                        <label class="form-label" for="update">Our records show that {{employer}} have given you medical insurance benefit with a value of                          £{{currentValue}} since 6 April 2015. <br/><br/>
+                            
+                          
+                           </label>
+                        
+                       
+                       
+                        
+                        
+                          <input type="hidden" name="Employer" value="{{employer}}">
+            
+                        
+                        
+              
+                
+                           <p>Actual value (paid by {{employer}})<span class="form-hint">The amount you enter will be rounded down when used in any future tax calculations.</span></p>
+                        
+                   
+                        <div class="pound">
+                            <p>£</p>
+                        </div>
+                        
+             
+                        
+                        <input class="form-control" id="update" name="update" type="text" onkeyup="format(this)">
+                
+                        </div>
+                    
+                    
+                    
+                     <div class="next-question">
+            <form method="GET" action="mb7-done">
+               <input type="submit" value="Submit" class="button"/>
+            </form>
+        </div>
+                    
+                    
+                    </div> 
+                </form>
+                <a class="cancel" href="mb7-home-updated">Back</a>
+            </div>
+        </div>
+       </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

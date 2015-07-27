@@ -85,9 +85,14 @@ $(document).ready(function() {
     var sbTable = $('#sb-table'),
         sbAmount = $('#sb-amount'),
         sbAmountValue = sbAmount.text();
+     var nfTable = $('#nf-table'),
+        nfAmount = $('#nf-amount'),
+        nfAmountValue = nfAmount.text();
     var ccTable = $('#cc-table'),
         ccAmount = $('#cc-amount'),
         noBens = $('#no-bens'),
+        sbEndBens = $('#sb-end-bens'),
+        ccEndBens = $('#cc-end-bens'),
         myBens = $('#my-bens'),
         starFlag = 'true', 
         costFlag = 'true',
@@ -103,24 +108,40 @@ $(document).ready(function() {
         starFlag = 'false';
     };
     
+    
+    
     if (ccAmountValue == 0) {
         ccTable.hide();
+         ccEndBens.hide();
         costFlag = 'false';
     };
     
-    if (addAmountValue == 0) {
-        addTable.hide();
-        addFlag = 'false';
-    }
+  
+    
+    
+    
+    
     
     if (costFlag == 'false' && starFlag == 'false' && addFlag == 'false') {
         noBens.show();
         myBens.hide();
+       
     };
         
     
     
-  
+  if (sbAmountValue != 400 && sbAmountValue != 0) {
+        sbEndBens.show();
+       sbTable.hide();
+       
+    };
+    
+    
+    if (ccAmountValue != 600 && ccAmountValue != 0) {
+        ccEndBens.show();
+       ccTable.hide();
+       
+    };
     
     
     
@@ -237,6 +258,7 @@ $('.summary[target="boxtwo"]').click(function(){
 });
 
 
+    //v6 radio routing questions 
     
     $("#question-submit").click(function(e) {
         e.preventDefault();
@@ -327,6 +349,96 @@ $('.summary[target="boxtwo"]').click(function(){
         }
     });
    
+    
+    
+      //v7 radio routing questions 
+       $("#question-submit-v7").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-1").is(":checked")) {
+            url = "/mb7/mb7-remove?employer=" + employer;
+        } else if ($("#radio-2").is(":checked")) {
+            url = "/mb7/mb7-update?employer=" + employer;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+      $("#question-submit2-v7").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb7/mb7-remove?employer=" + employer;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb7/mb7-home" ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+      $("#question-submit3-v7").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb7/mb7-finish" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb7/mb7-question-a?employer=" + employer ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+      $("#question-submit4-v7").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb7/mb7-finish" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb7/mb7-home";
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+     $("#question-submit5-v7").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var updatedVal = $('#update').val();
+         
+        var url = "";
+        if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
+            url = "/mb7/mb7-summary?employer=" + employer + "&update=" + updatedVal;
+        } else if ($("#radio-indent9-1").is(":checked")) {
+            url = "/mb7/mb7-done";
+        }
+        
+        if (url.length > 0) {
+           window.location = url;
+        }
+    });
     
     
     

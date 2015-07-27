@@ -1393,6 +1393,12 @@ a.cancel {
 #no-bens {
   display: none; }
 
+#sb-end-bens {
+  display: none; }
+
+#cc-end-bens {
+  display: none; }
+
 .pound {
   float: left;
   margin-right: 15px; }
@@ -1551,6 +1557,10 @@ h3.heading-medium-title2 {
 
 .nav-styling {
   padding-bottom: 15px; }
+
+.nav-styling2 {
+  padding-bottom: 15px;
+  padding-right: 26px; }
 
 .dash-info {
   font-size: 16px;

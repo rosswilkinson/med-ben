@@ -1,0 +1,52 @@
+{{<layout}}
+{{$pageTitle}}Report when you stopped getting this benefit{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+       <div class="column-two-thirds">
+        <header class="page-header group">
+            
+            <h1 class="heading-xlarge">Report when you stopped getting this benefit </h1>
+                
+        </header>
+  
+        <div class="grid-row group">
+ 
+                
+          
+ 
+            
+            <p>When did you stop getting this benefit from {{employer}}?</p>
+                
+            <input type="hidden" name="Employer" value="{{employer}}">
+            
+            <fieldset class="questions">
+                
+            <label class="block-label" for="radio-1">
+                <input id="radio-1" name="radio-group" value="Before 6 April 2015" type="radio">
+                Before 6 April 2015
+            </label>
+            <label class="block-label" for="radio-2">
+                <input id="radio-2" name="radio-group" value="On or after 6 April 2015" type="radio">
+               On or after 6 April 2015
+            </label>
+                  
+             </fieldset>
+               
+            
+              <a id="question-submit-v7" href="/" class="button">Continue</a>
+            
+            
+             
+                <a class="cancel" href="mb7-home">Back</a>
+            
+            
+            
+            
+            </div>
+        </div>
+       </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

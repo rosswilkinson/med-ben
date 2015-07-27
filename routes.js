@@ -8,7 +8,7 @@ var userName,
     //mbv2
     starBucks = 'Starbucks',
     costaCoffee  = 'Costa Coffee',
-    sbBen = 5000,
+    sbBen = 400,
     ccBen = 600,
     employer,
     currentValue,
@@ -17,7 +17,7 @@ var userName,
     addedEmployer;
 
 var resetFunction = function() {
-    sbBen = 5000;
+    sbBen = 400;
     ccBen = 600;
     addedEmployer = undefined;
     addedAmount = 0;
@@ -1310,7 +1310,248 @@ module.exports = {
    
 
       
+    
       
+      
+      
+      
+      
+      /*mb7 */
+      
+      
+      
+    app.get('/mb7/mb7-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb7/mb7-start', {
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7/mb7-home', function (req, res) {
+        res.render('mb7/mb7-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+     app.get('/mb7/mb7-add', function (req, res) {
+        res.render('mb7/mb7-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7/mb7-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb7/mb7-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+          app.get('/mb7/mb7-exit-survey', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb7/mb7-exit-survey', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+       
+      
+    
+      
+      
+      
+    
+         
+    app.get('/mb7/mb7-question-a', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7/mb7-question-a', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb7/mb7-question-b', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7/mb7-question-b', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+    app.get('/mb7/mb7-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7/mb7-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      app.get('/mb7/mb7-update-b-1', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7/mb7-update-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+       app.get('/mb7/mb7-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7/mb7-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb7/mb7-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7/mb7-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+        app.get('/mb7/mb7-summary-b-1', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7/mb7-summary-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb7/mb7-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb7/mb7-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb7/mb7-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7/mb7-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb7/mb7-done', function (req, res) {
+        if (req.query.amount) {
+            tempValue = req.query.amount;
+            updateFunction();
+        }
+        res.render('mb7/mb7-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7/mb7-home-updated', function (req, res) {
+        res.render('mb7/mb7-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb7/mb7-finish', function (req, res) {
+        updateFunction();
+        res.render('mb7/mb7-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7/mb7-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb7/mb7-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+       app.get('/mb7/mb7-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb7/mb7-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : sbBen,
+            'assetPath' : assetPath 
+        });
+    });
+   
+
     
    
       
