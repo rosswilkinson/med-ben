@@ -1668,3 +1668,58 @@ table.car-table {
 .form-date {
   display: inline-block;
   width: 100%; }
+
+#global-breadcrumb {
+  background-color: #fff;
+  border-top: 2px solid #eee;
+  margin: 0 auto;
+  max-width: 1020px;
+  z-index: 50; }
+
+.group::before, .group::after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.group::after {
+  clear: both; }
+
+.group::before, .group::after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+#global-breadcrumb ol {
+  margin: 0;
+  max-width: 960px;
+  padding: 0.75em 0 0.55em; }
+
+
+ul, ol {
+  list-style-type: none; }
+
+menu, ol, ul {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 0; }
+
+#global-breadcrumb ol li {
+  background-image: url("https://assets.digital.cabinet-office.gov.uk/static/separator-73822610794bc3a64871f144d93d6526.png");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  float: left;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  list-style: outside none none;
+  margin-bottom: 0.4em;
+  margin-left: 0;
+  margin-right: 0.5em;
+  padding-right: 1em;
+  text-transform: none; }
+
+ul li, ol li {
+  margin-bottom: 5px; }
