@@ -1,0 +1,72 @@
+{{<layout}}
+{{$pageTitle}}Check and confirm{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        
+        
+                <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="">Income Tax</a>
+</li>
+    <li>
+<a href="">Tax estimate</a>
+</li>
+       <li>
+<a href="/mb6-5/mb6-5-home">Your medical insurance</a>
+</li>
+    
+<li>I've stopped getting this benefit</li>
+</ol>
+</div>
+        
+        
+        <div class="column-two-thirds">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Check and confirm</h1>
+            <p>Check the value is correct.</p>
+        </header> 
+        <div class="grid-row group">
+            
+            
+             
+            <div class="grid-row2"></div>
+            
+            <h4 class="heading-small">{{employer}}</h4>
+            
+                       
+           <div class="job">
+            <div class="bd-top3">
+               <!-- <h3 class="heading-small">{{employer}}</h3>-->
+                <table class="mb-sum borderless">
+                    <tbody>
+                                               <tr>
+                            <td>Actual value:    £{{tempValue}}</td>
+                            
+                            <td><a href="mb6-5-update?employer=Costa">Change this value</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+               </div>
+               </div>
+                
+                
+                <br>
+                
+                
+              
+               <!-- <div class="important">
+                    Changes made apply only for the tax year to 5 April 2016. From 6 April 2016 you will have no medical insurance recorded. You must tell us if you have it in the tax year from 6 April 2016. 
+                </div>-->
+           
+      
+        <div class="next-question">
+            <a href="mb6-5-done?amount={{tempValue}}" class="button">Confirm</a>
+        </div>
+        <a class="cancel" href="mb6-5-update?employer=Costa">Back</a>
+        </div>  </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
