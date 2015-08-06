@@ -1,0 +1,71 @@
+{{<layout}}
+{{$pageTitle}}Index{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        
+        <div class="column-two-thirds">
+            
+            
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Review and confirm</h1>
+            <p>Check the details you’ve entered are correct.</p>
+        </header> 
+       
+        
+        
+         <div class="grid-row group">
+            
+            <div class="grid-row2">
+        </div>
+             
+             
+            <div class="bd-top3">
+               <!-- <h3 class="heading-small">{{employer}}</h3>-->
+                <table class="mb-sum borderless">
+                    <tbody>
+                        <tr>
+                            <td>{{employer}} </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Amount paid: </td>
+                            <td>£{{tempValue}}</td>
+                            <td><a href="mb6-update">Change this amount</a></td>
+                        </tr>
+                        
+                         <tr>
+                            <td>Previous amount: </td>
+                            <td>£{{currentValue}}</td>
+                            <td></td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+              
+                <br><br>
+                <!--<div class="grid-row2">
+        </div> -->
+              
+               <!-- <div class="important">
+                    Changes made apply only for the tax year to 5 April 2016. From 6 April 2016 you will have no medical insurance recorded. You must tell us if you have it in the tax year from 6 April 2016. 
+                </div>-->
+            </div>
+        </div>
+        
+        
+        
+        <div class="next-question">
+            <form method="GET" action="mb6-done">
+                <input type="submit" value="Submit" class="button"/>
+            </form>
+        </div>
+        <a class="cancel" href="mb6-home-updated">Cancel – your changes will not be saved</a>
+        </div> </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

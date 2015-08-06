@@ -6,9 +6,8 @@
     <div class="inner-block">
         
          <div class="inner-block">
-                
-                
-                 <div id="global-breadcrumb" class="header-context">
+        
+              <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
 <li>
 <a href="">Income Tax</a>
@@ -17,20 +16,14 @@
 <a href="">Tax estimate</a>
 </li>
        <li>
-<a href="/mb7/mb7-home">Your medical insurance</a>
+<a href="/mb6-5-vb/mb6-5-home-updated-vb">Your medical insurance</a>
 </li>
     
-    <li>
-<a href="/mb7/mb7-question-a?employer={{employer}}">I've stopped getting this benefit</a>
-</li>
-    
-    
-    
-<li>Check and confirm </li>
+<li>Confirm the value of this benefit</li>
 </ol>
 </div>
-        
-        
+             
+             
         <div class="column-two-thirds">
         <header class="page-header group">
             <h1 class="heading-xlarge">Check and confirm</h1>
@@ -42,7 +35,7 @@
              
             <div class="grid-row2"></div>
             
-            <h4 class="heading-small">{{employer}}</h4>
+            <h3 class="heading-medium-title2">{{employer}}</h3>
             
                        
            <div class="job">
@@ -51,9 +44,9 @@
                 <table class="mb-sum borderless">
                     <tbody>
                                                <tr>
-                            <td>Actual value:    £{{tempValue}}</td>
+                            <td>Amount paid:    £{{tempValue}}</td>
                             
-                            <td><a href="mb7-update?employer={{employer}}">Change this value</a></td>
+                            <td><a href="mb6-5-update-b-1-vb?employer=Costa">Change this amount</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -69,11 +62,18 @@
                     Changes made apply only for the tax year to 5 April 2016. From 6 April 2016 you will have no medical insurance recorded. You must tell us if you have it in the tax year from 6 April 2016. 
                 </div>-->
            
-      
-        <div class="next-question">
-            <a href="mb7-done?amount={{tempValue}}" class="button">Confirm</a>
+      <div class="next-question">
+            <a href="mb6-5-done-vb?amount={{tempValue}}" class="button">Confirm</a>
         </div>
-        <a class="cancel" href="mb7-update?employer={{employer}}">Back</a>
+            
+            
+            
+      <!-- old button  <div class="next-question">
+            <form method="GET" action="mb6-done">
+                <input type="submit" value="Confirm" class="button"/>
+            </form>
+        </div> -->
+        <a class="cancel" href="mb6-5-update-b-1-vb?employer=Costa">Back</a>
         </div>  </div><!-- end inner block -->
 </main>
 {{/content}}

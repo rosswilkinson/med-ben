@@ -453,6 +453,99 @@ $('.summary[target="boxtwo"]').click(function(){
     
     
     
+     //v6.1-b radio routing questions 
+    
+    $("#question-submit-6-5-vb").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-1").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-remove-vb?employer=" + employer;
+        } else if ($("#radio-2").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-update-vb?employer=" + employer;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+     $("#question-submit2-6-5-vb").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-vb-remove?employer=" + employer;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-home-vb" ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+      $("#question-submit3-6-5-vb").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-finish-vb" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-question-a-vb?employer=" + employer ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+      $("#question-submit4-6-5-vb").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-finish-vb" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-home-vb";
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+     $("#question-submit5-6-5-vb").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var updatedVal = $('#update').val();
+         
+        var url = "";
+        if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
+            url = "/mb6-5-vb/mb6-5-summary-vb?employer=" + employer + "&update=" + updatedVal;
+        } else if ($("#radio-indent9-1").is(":checked")) {
+            url = "/mb6-5-vb/mb6-5-done-vb";
+        }
+        
+        if (url.length > 0) {
+           window.location = url;
+        }
+    });
+    
+    
+    
     
     
       //v7 radio routing questions 
