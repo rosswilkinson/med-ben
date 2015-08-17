@@ -1723,3 +1723,32 @@ menu, ol, ul {
 
 ul li, ol li {
   margin-bottom: 5px; }
+
+.phase-banner-beta {
+  padding-bottom: 10px; }
+
+.phase-banner-beta {
+  border-bottom: 1px solid #bfc1c3;
+  padding: 10px 0 0px; }
+
+.phase-banner-beta .phase-tag {
+  font-size: 16px;
+  line-height: 1.25; }
+
+.phase-banner-beta .phase-tag {
+  vertical-align: baseline; }
+
+.phase-banner-beta .phase-tag {
+  background-color: #f47738;
+  color: #fff;
+  display: inline-block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.14286;
+  margin: 0 8px 0 0;
+  padding: 2px 5px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top; }
