@@ -1752,3 +1752,116 @@ ul li, ol li {
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: top; }
+
+.uLined {
+  margin-top: 30px; }
+
+.tax-section-teal {
+  margin-bottom: 30px; }
+
+.grid {
+  float: left;
+  width: 100%; }
+
+.grid-2-3 {
+  width: 66.6667%; }
+
+.grid-1-3 {
+  width: 33.3333%; }
+
+article table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em -1em 2em 0;
+  width: 100%; }
+
+article table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em -1em 2em 0;
+  width: 100%; }
+
+details, summary {
+  display: block; }
+
+.panel-indent::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.panel-indent {
+  padding-left: 20px; }
+
+.panel-indent {
+  border-left: 5px solid #dee0e2;
+  clear: both;
+  margin: 30px 15px 45px 0;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-top: 10px; }
+
+.alert-success {
+  background-color: #e9f5f4;
+  border-left: 4px solid #28a197; }
+
+.alert {
+  margin-bottom: 20px;
+  padding: 0.4em 0.5em 0.3em 0.8em; }
+
+.tax-data-teal {
+  color: #108095;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.04167;
+  text-decoration: none;
+  text-transform: none; }
+
+.tile-right-b {
+  float: right;
+  width: 85%; }
+
+.h3-tax-data {
+  margin-bottom: 1.05263em;
+  margin-top: 0.26316em; }
+
+.bold-small, .h3-tax-data, .h3-action-link {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.31579;
+  text-transform: none; }
+
+.tax-section-teal > h2 {
+  border-bottom: 5px solid #108095;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  text-transform: none; }
+
+.tes-1 {
+  min-height: 400px;
+  background-image: url(../images/tes1.jpg);
+  background-repeat: no-repeat;
+  background-size: 650px 500px; }
+
+.tes-2 {
+  min-height: 160px;
+  background-image: url(../images/tes2.jpg);
+  background-repeat: no-repeat;
+  background-size: 260px 140px;
+  margin-left: 30px; }
+
+.row-sum {
+  font-weight: 700; }
+
+.right-col, .text-right {
+  text-align: right; }
+
+.col-sum {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 75px;
+  font-weight: 700; }

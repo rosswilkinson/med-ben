@@ -378,6 +378,13 @@ module.exports = {
     });
       
       
+      /* TES SERVICE */
+      
+         app.get('/mb7/mb7-income-tax.html', function (req, res) {
+      res.render('mb7/mb7-income-tax', {'assetPath' : assetPath });
+    });
+      
+      
       
       
       
