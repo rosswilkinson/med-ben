@@ -1843,13 +1843,13 @@ details, summary {
 
 .tes-1 {
   min-height: 400px;
-  background-image: url(../images/tes1.jpg);
+  background-image: url(../images/tes1.png);
   background-repeat: no-repeat;
   background-size: 650px 500px; }
 
 .tes-2 {
   min-height: 160px;
-  background-image: url(../images/tes2.jpg);
+  background-image: url(../images/tes2.png);
   background-repeat: no-repeat;
   background-size: 260px 140px;
   margin-left: 30px; }
