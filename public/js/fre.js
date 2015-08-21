@@ -101,6 +101,8 @@ $(document).ready(function() {
         addAmount = $('#add-amount'),
         addAmountValue = addAmount.text(),
         addFlag = 'false';
+    var changeVal = $('#change-val'),
+        noChangeVal = $('#no-change-val');
         
     
     if (sbAmountValue == 0) {
@@ -116,18 +118,34 @@ $(document).ready(function() {
         costFlag = 'false';
     };
     
-  
-    
-    
-    
-    
-    
     if (costFlag == 'false' && starFlag == 'false' && addFlag == 'false') {
         noBens.show();
         myBens.hide();
        
     };
         
+    
+    
+    
+    if (ccAmountValue !== "600")  {
+        changeVal.show();
+       noChangeVal.hide();
+    
+       
+  };
+    
+    
+     if (ccAmountValue !== "600")  {
+        changeVal.show();
+       noChangeVal.hide();
+    
+       
+  };
+    
+      
+ 
+    
+    
     
     //code that hide first table on dash v7 and shows ended table on home-updated page
  // if (sbAmountValue != 400 && sbAmountValue != 0 && sbAmountValue != 5000) {

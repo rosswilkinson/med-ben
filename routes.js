@@ -1833,7 +1833,7 @@ module.exports = {
         resetFunction();
         res.render('mb7/mb7-start', {
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath 
         });
     });
@@ -1881,7 +1881,7 @@ module.exports = {
             'employer' : employer,
             'currentValue' : currentValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1894,7 +1894,7 @@ module.exports = {
             'employer' : employer,
             'currentValue' : currentValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1910,7 +1910,7 @@ module.exports = {
             'employer' : employer,
             'currentValue' : currentValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1923,7 +1923,7 @@ module.exports = {
             'employer' : employer,
             'currentValue' : currentValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1937,7 +1937,7 @@ module.exports = {
             'employer' : employer,
             'currentValue' : currentValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1951,7 +1951,7 @@ module.exports = {
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1964,7 +1964,7 @@ module.exports = {
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -1979,7 +1979,7 @@ module.exports = {
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
             'addedEmployer' : addedEmployer,
             'addedAmount' : addedAmount
@@ -1994,7 +1994,7 @@ module.exports = {
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath,
         });
     });
@@ -2009,7 +2009,7 @@ module.exports = {
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath 
         });
     });
@@ -2031,7 +2031,7 @@ module.exports = {
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath 
         });
     });
@@ -2043,7 +2043,7 @@ module.exports = {
             'employer' : employer,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath 
         });
     });
@@ -2055,7 +2055,7 @@ module.exports = {
             'employer' : employer,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
-            'ccBen' : sbBen,
+            'ccBen' : ccBen,
             'assetPath' : assetPath 
         });
     });
