@@ -1871,3 +1871,13 @@ details, summary {
   margin-top: 50px;
   padding-left: 16px;
   background: url(/public/images/back-chevron.png) no-repeat 0% 50%; }
+
+.heading-xlarge-start {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 10px; }
