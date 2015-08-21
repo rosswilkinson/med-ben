@@ -639,9 +639,6 @@ $('.summary[target="boxtwo"]').click(function(){
     
     
     
-
-    
-    
 });
 
         

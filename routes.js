@@ -2061,6 +2061,28 @@ module.exports = {
     });
    
 
+      
+        app.get('/mb7/mb7-income-tax-updated', function (req, res) {
+        res.render('mb7/mb7-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+           app.get('/mb7/mb7-ended-amend', function (req, res) {
+        res.render('mb7/mb7-ended-amend', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
     
    
       

@@ -5,21 +5,32 @@
 <main id="content" role="main">
     
   <!-- scipt for comma function on value page -->
-    <script type="text/javascript">
-            function format(input)
-            {
-                var nStr = input.value + '';
-                nStr = nStr.replace( /\,/g, "");
-                x = nStr.split( '.' );
-                x1 = x[0];
-                x2 = x.length > 1 ? '.' + x[1] : '';
-                var rgx = /(\d+)(\d{3})/;
-                while ( rgx.test(x1) ) {
-                    x1 = x1.replace( rgx, '$1' + ',' + '$2' );
-                }
-                input.value = x1 + x2;
-            }
+ <script type="text/javascript">
+            function CommaFormatted(amount) {
+	var delimiter = ","; // replace comma if desired
+	//var a = amount.split('.',2)
+	//var d = a[1];
+	var i = amount;
+	if(isNaN(i)) { return ''; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	var n = new String(i);
+	var a = [];
+	while(n.length > 3) {
+		var nn = n.substr(n.length-3);
+		a.unshift(nn);
+		n = n.substr(0,n.length-3);
+	}
+	if(n.length > 0) { a.unshift(n); }
+	n = a.join(delimiter);
+	amount = n;
+	amount = minus + amount;
+	return amount;
+}
         </script>
+
+
     
     
     <div class="inner-block">
@@ -61,7 +72,7 @@
                 
                 <form id="mb-choice" method="GET" action="mb7-summary-b-1">
                     <div class="form-group">
-                        <label class="form-label" for="update">Our records show that {{employer}} have given you medical insurance benefit with a value of                          £{{currentValue}} since 6 April 2015. <br/><br/>
+                        <label class="form-label" for="update">Our records show that {{employer}} have given you medical insurance benefit with a value of                          £<script>var total={{currentValue}}; document.write(CommaFormatted(total))</script> since 6 April 2015. <br/><br/>
                             
                           
                            </label>
@@ -85,7 +96,7 @@
                         
              
                         
-                        <input class="form-control" id="update" name="update" type="text" onkeyup="format(this)">
+                        <input class="form-control" id="update" name="update" type="text">
                 
                         </div>
                     

@@ -2,14 +2,41 @@
 {{$pageTitle}}Your medical insurance benefit{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
+
+
+<script type="text/javascript">
+            function CommaFormatted(amount) {
+	var delimiter = ","; // replace comma if desired
+	//var a = amount.split('.',2)
+	//var d = a[1];
+	var i = amount;
+	if(isNaN(i)) { return ''; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	var n = new String(i);
+	var a = [];
+	while(n.length > 3) {
+		var nn = n.substr(n.length-3);
+		a.unshift(nn);
+		n = n.substr(0,n.length-3);
+	}
+	if(n.length > 0) { a.unshift(n); }
+	n = a.join(delimiter);
+	amount = n;
+	amount = minus + amount;
+	return amount;
+}
+        </script>
+
+
+
+
 <main id="content" role="main">
     <div class="inner-block" id="my-bens">
         
-  <div id="global-breadcrumb" class="header-context">
+        <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
-    <li>
-<a href="">Account home</a>
-</li>
 <li>
 <a href="">Income Tax</a>
 </li>
@@ -17,17 +44,19 @@
 <a href="">Tax estimate</a>
 </li>
     
-<li>Update medical insurance</li>
+<li>Your medical benefit</li>
 </ol>
 </div>
+           
         
         
-        
-       
         <header class="page-header group">
             <h1 class="heading-xlarge2">Your medical insurance benefit</h1>
             <h3 class="heading-medium-title">for 6 April 2015 to 5 April 2016</h3>
-      
+           
+            
+            
+          
         </header>
         
          <div class="column-two-thirds">
@@ -38,166 +67,60 @@
                 </p>
             </div>
         
-   <!--    <table class="mb-sum borderless">
-                                <tbody>
-                    <tr>
-                        <td></td>
-                         <td></td>
-                       
-                        <td><a href="mb6-add">Add new insurance</a></td>
-                        
-                    </tr>
-                    
-                </tbody>
-            </table>-->
+  
         
-        
-     <h3 class="heading-medium-title2">Your Employers</h3>
+     <h3 class="heading-medium-title2">Employer</h3>
         <div class="grid-row2">
         </div>
         
     
+        
+              
+        
+           <div class="job-wrapper">
+            
+
              
-        <!--    <div class="job-wrapper" id="sb-table">
-     <h4 class="heading-small">Starbucks</h4>
-           <div class="dash-info">
-           Benefit value: £<span id="sb-amount">{{sbBen}}</span>
-             </div>
-                    
-                       
-                 <div class="dash-nav">
-                     <div class="nav-styling">
-                         <a href="mb7-question-a?employer=Starbucks">I've stopped getting this benefit</a>
-                     </div>
                    
-                     <div class="nav-styling">
-                         <a href="mb7-remove-b?employer=Starbucks">I've never had this benefit</a>
-                     </div>
-                 </div>
+               
+                     <h4 class="heading-small">Costa</h4>
                     
-                   
-                
-             </div> -->
-             
-             
-             
-             <!-- show if there has been a change in starbucks value-->
-             <div id="sb-end-bens">
-               <div class="job-wrapper" id="sb-table">
-     <h4 class="heading-small">Starbucks</h4>
-           <div class="dash-info">
-            You told us you don’t get this benefit anymore.<br><br>
-                        Benefit value: £<span id="sb-amount">{{sbBen}}</span>
-             </div>
-                    
-                       
-                 <div class="dash-nav">
-                     <div class="nav-styling2">
-                         <a href="mb7-update-b-1?employer=Starbucks">Edit the value of this benefit</a></div>
-                 </div>
-                
-                
-             </div> 
-           </div>
-             <!-- end of change in starbucks -->
-             
-             
-             
-         <!--    
-<div class="job-wrapper" id="cc-table">
-     <h4 class="heading-small">Costa</h4>
-           <div class="dash-info">
-           Benefit value: £<span id="cc-amount">{{ccBen}}</span>
-             </div>
-                    
-                       
-                 <div class="dash-nav">
-                     <div class="nav-styling">
-                         <a href="mb7-question-a?employer=Costa">I've stopped getting this benefit</a>
-                     </div>
-                   
-                     <div class="nav-styling">
-                         <a href="mb7-remove-b?employer=Costa">I've never had this benefit</a>
-                     </div>
-                 </div>
-                    
-                   
-                
-             </div> -->
-             
-             
-             <!-- show if change in Costa value -->
-      <!--  <div id="cc-end-bens">-->
-           <div class="job-wrapper" id="cc-table">
-               <h4 class="heading-small">Costa</h4>
-               <div class="dash-info">
+              
+            
+                <div class="dash-info">
                        You told us you don’t get this benefit anymore.<br><br>
                         Benefit value: £<span id="cc-amount">{{ccBen}}</span>
+    
                 </div>
-                   
+                    
+                       
                  <div class="dash-nav">
-                     <div class="nav-styling2">
+                     <div class="nav-styling">
                          <a href="mb7-update-b-1?employer=Costa">Edit the value of this benefit</a></div>
-                   
-                       </div>
+       
+                        
+                                        </div>
                     
                     
-                
              </div>
-           <!-- </div>-->
-             <!-- end of costa table-->
              
         
-             <br>
-        
-   
-        
-          <!--
-
-  <table class="mb-sum borderless" id="add-table">
-                <thead>
-              <h3 class="heading-medium">{{addedEmployer}}</h3>
-                   <div class="grid-row2">
-             </div>
-                </thead>
-                <tbody>
-                    <tr>
-                       <td>Amount paid:</td>
-                        <td>£<span id="add-amount">{{addedAmount}}</span></td>
-                       
-                        <td><a href="mb6-update?employer=Costa">I've stopped getting this benefit</a></td>
-                        
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="mb6-remove?employer=Costa">I’ve never had this benefit in this tax year</a></td>
-                    </tr>
-                    
-                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="mb6-remove-b?employer=Costa">I’ve never had this benefit</a></td>
-                    </tr>
-                    
-             <!--  <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="mb6-update-only?employer=Costa">Update this benefit</a></td>
-                    </tr>-->
-                    
-                    
-               <!-- </tbody>
-            </table>-->
-        
-        
-        </div>  
+             
+            <p class="back-to-previous">   
+    <a href="/mb7/mb7-income-tax-updated">This is correct, back to account home</a></p>  
     
-    </div><!-- end inner block -->
+      
+      </div>
+        
+        
+             
+             
+             
+        </div>  </div><!-- end inner block -->
     
     <div class="inner-block" id="no-bens">
         
-         <div id="global-breadcrumb" class="header-context">
+        <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
 <li>
 <a href="">Income Tax</a>
@@ -205,10 +128,8 @@
     <li>
 <a href="">Tax estimate</a>
 </li>
-       <li>
-Your medical insurance
-</li>
     
+<li>Your medical benefit</li>
 </ol>
 </div>
     
@@ -225,10 +146,12 @@ Your medical insurance
             <p>You don’t have any medical insurance benefits showing on our records.</p>
            <div class="grid-row2">
         </div>
-          
+                 
+                 <p class="back-to-previous">   
+    <a href="/mb7/mb7-income-tax-updated">Back to account home</a></p>
+         
         </header>
-        </div> 
-            </div><!-- end inner block -->
+        </div> </div><!-- end inner block -->
 </main>
 {{/content}}
 {{/layout}}
