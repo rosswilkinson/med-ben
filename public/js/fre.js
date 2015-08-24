@@ -633,7 +633,7 @@ $('.summary[target="boxtwo"]').click(function(){
         if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
             url = "/mb7/mb7-summary?employer=" + employer + "&update=" + updatedVal;
         } else if ($("#radio-indent9-1").is(":checked")) {
-            url = "/mb7/mb7-done";
+            url = "/mb7/mb7-done?amount=600";
         }
         
         if (url.length > 0) {
