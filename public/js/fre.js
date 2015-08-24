@@ -91,8 +91,7 @@ $(document).ready(function() {
     var ccTable = $('#cc-table'),
         ccAmount = $('#cc-amount'),
         noBens = $('#no-bens'), 
-      //  sbEndBens = $('#sb-end-bens'),
-       // ccEndBens = $('#cc-end-bens'),
+     
         myBens = $('#my-bens'),
         starFlag = 'true', 
         costFlag = 'true',
@@ -125,7 +124,7 @@ $(document).ready(function() {
     };
         
     
-    
+    /* show if costa value is not 600 */
     
     if (ccAmountValue !== "600")  {
         changeVal.show();
@@ -135,7 +134,8 @@ $(document).ready(function() {
   };
     
     
-     if (ccAmountValue !== "600")  {
+    /* show if costa value is equal to 600 */ 
+     if (ccAmountValue = "600")  {
         changeVal.show();
        noChangeVal.hide();
     
@@ -144,24 +144,6 @@ $(document).ready(function() {
     
       
  
-    
-    
-    
-    //code that hide first table on dash v7 and shows ended table on home-updated page
- // if (sbAmountValue != 400 && sbAmountValue != 0 && sbAmountValue != 5000) {
-  //      sbEndBens.show();
-  //     sbTable.hide();
-       
-   // };
-    
-    
-  //  if (ccAmountValue != 600 && ccAmountValue != 0 && ccAmountValue != 1000)  {
-  //      ccEndBens.show();
-  //     ccTable.hide();
-       
-  //  };
-    
-    
     
     
     
