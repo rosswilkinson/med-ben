@@ -122,25 +122,29 @@ $(document).ready(function() {
         myBens.hide();
        
     };
-        
+    
+    function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+    
+    var ccDone = getParameterByName('amount');
     
     /* show if costa value is not 600 */
-    
-    if (ccAmountValue !== "600")  {
+    if (ccDone !== "600")  {
         changeVal.show();
-       noChangeVal.hide();
-    
-       
-  };
+        noChangeVal.hide();
+    };
     
     
     /* show if costa value is equal to 600 */ 
-     if (ccAmountValue = "600")  {
-        changeVal.show();
-       noChangeVal.hide();
     
-       
-  };
+    if (ccDone == "600")  {
+        changeVal.hide();
+        noChangeVal.show();
+    };
     
       
  
