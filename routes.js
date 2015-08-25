@@ -384,8 +384,29 @@ module.exports = {
       res.render('mb7/mb7-income-tax', {'assetPath' : assetPath });
     });
       
+         app.get('/mb7/mb7-about-a-change.html', function (req, res) {
+      res.render('mb7/mb7-about-a-change', {'assetPath' : assetPath });
+    });
       
-     
+        
+       app.get('/mb7-2/mb7-2-income-tax.html', function (req, res) {
+      res.render('mb7-2/mb7-2-income-tax', {'assetPath' : assetPath });
+    });
+      
+         app.get('/mb7-2/mb7-2-about-a-change.html', function (req, res) {
+      res.render('mb7-2/mb7-2-about-a-change', {'assetPath' : assetPath });
+    });
+      
+      
+      
+        app.get('/mb7-3/mb7-3-income-tax.html', function (req, res) {
+      res.render('mb7-3/mb7-3-income-tax', {'assetPath' : assetPath });
+    });
+      
+         app.get('/mb7-3/mb7-3-about-a-change.html', function (req, res) {
+      res.render('mb7-3/mb7-3-about-a-change', {'assetPath' : assetPath });
+    });
+      
       
       
       
@@ -1801,6 +1822,7 @@ module.exports = {
             'tempValue' : tempValue,
             'sbBen' : sbBen,
             'ccBen' : sbBen,
+            'ccBen' : sbBen,
             'assetPath' : assetPath 
         });
     });
@@ -2076,6 +2098,18 @@ module.exports = {
     });
       
       
+      
+      
+       app.get('/mb7/mb7-income-tax-updated', function (req, res) {
+        res.render('mb7/mb7-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
   
       
       
@@ -2092,9 +2126,610 @@ module.exports = {
       
       
       
+           app.get('/mb7/mb7-about-a-change-amended', function (req, res) {
+        res.render('mb7/mb7-about-a-change-amended', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
       
       
     
+      
+      
+      
+      
+      
+      
+      
+      
+      /*mb7-2 */
+      
+      
+      
+    app.get('/mb7-2/mb7-2-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb7-2/mb7-2-start', {
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-2/mb7-2-home', function (req, res) {
+        res.render('mb7-2/mb7-2-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+     app.get('/mb7-2/mb7-2-add', function (req, res) {
+        res.render('mb7-2/mb7-2-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-2/mb7-2-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb7-2/mb7-2-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+          app.get('/mb7-2/mb7-2-exit-survey', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb7-2/mb7-2-exit-survey', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+       
+      
+    
+      
+      
+      
+    
+         
+    app.get('/mb7-2/mb7-2-question-a', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-2/mb7-2-question-a', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb7-2/mb7-2-question-b', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-2/mb7-2-question-b', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+    app.get('/mb7-2/mb7-2-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-2/mb7-2-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      app.get('/mb7-2/mb7-2-update-b-1', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-2/mb7-2-update-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+       app.get('/mb7-2/mb7-2-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-2/mb7-2-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb7-2/mb7-2-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7-2/mb7-2-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+        app.get('/mb7-2/mb7-2-summary-b-1', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7-2/mb7-2-summary-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb7-2/mb7-2-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb7-2/mb7-2-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb7-2/mb7-2-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7-2/mb7-2-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb7-2/mb7-2-done', function (req, res) {
+        if (req.query.amount) {
+            tempValue = req.query.amount;
+            updateFunction();
+        }
+        res.render('mb7-2/mb7-2-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-2/mb7-2-home-updated', function (req, res) {
+        res.render('mb7-2/mb7-2-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb7-2/mb7-2-finish', function (req, res) {
+        updateFunction();
+        res.render('mb7-2/mb7-2-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-2/mb7-2-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb7-2/mb7-2-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+       app.get('/mb7-2/mb7-2-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb7-2/mb7-2-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+   
+
+      
+        app.get('/mb7-2/mb7-2-income-tax-updated', function (req, res) {
+        res.render('mb7-2/mb7-2-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb7-2/mb7-2-income-tax-updated', function (req, res) {
+        res.render('mb7-2/mb7-2-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+  
+      
+      
+      
+           app.get('/mb7-2/mb7-2-ended-amend', function (req, res) {
+        res.render('mb7-2/mb7-2-ended-amend', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+           app.get('/mb7-2/mb7-2-about-a-change-amended', function (req, res) {
+        res.render('mb7-2/mb7-2-about-a-change-amended', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+
+      
+      
+      
+      
+      
+      
+      
+      
+      /*mb7-3 */
+      
+      
+      
+    app.get('/mb7-3/mb7-3-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb7-3/mb7-3-start', {
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-3/mb7-3-home', function (req, res) {
+        res.render('mb7-3/mb7-3-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+     app.get('/mb7-3/mb7-3-add', function (req, res) {
+        res.render('mb7-3/mb7-3-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-3/mb7-3-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb7-3/mb7-3-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+          app.get('/mb7-3/mb7-3-exit-survey', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb7-3/mb7-3-exit-survey', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+       
+      
+    
+      
+      
+      
+    
+         
+    app.get('/mb7-3/mb7-3-question-a', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-3/mb7-3-question-a', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb7-3/mb7-3-question-b', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-3/mb7-3-question-b', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+    app.get('/mb7-3/mb7-3-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-3/mb7-3-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      app.get('/mb7-3/mb7-3-update-b-1', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-3/mb7-3-update-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+       app.get('/mb7-3/mb7-3-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb7-3/mb7-3-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb7-3/mb7-3-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7-3/mb7-3-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+        app.get('/mb7-3/mb7-3-summary-b-1', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7-3/mb7-3-summary-b-1', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb7-3/mb7-3-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb7-3/mb7-3-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb7-3/mb7-3-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb7-3/mb7-3-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb7-3/mb7-3-done', function (req, res) {
+        if (req.query.amount) {
+            tempValue = req.query.amount;
+            updateFunction();
+        }
+        res.render('mb7-3/mb7-3-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-3/mb7-3-home-updated', function (req, res) {
+        res.render('mb7-3/mb7-3-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb7-3/mb7-3-finish', function (req, res) {
+        updateFunction();
+        res.render('mb7-3/mb7-3-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb7-3/mb7-3-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb7-3/mb7-3-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+       app.get('/mb7-3/mb7-3-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb7-3/mb7-3-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+   
+
+      
+        app.get('/mb7-3/mb7-3-income-tax-updated', function (req, res) {
+        res.render('mb7-3/mb7-3-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb7-3/mb7-3-income-tax-updated', function (req, res) {
+        res.render('mb7-3/mb7-3-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+  
+      
+      
+      
+           app.get('/mb7-3/mb7-3-ended-amend', function (req, res) {
+        res.render('mb7-3/mb7-3-ended-amend', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+           app.get('/mb7-3/mb7-3-about-a-change-amended', function (req, res) {
+        res.render('mb7-3/mb7-3-about-a-change-amended', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+
    
       
       

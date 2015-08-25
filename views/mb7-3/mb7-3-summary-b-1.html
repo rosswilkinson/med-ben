@@ -1,0 +1,107 @@
+{{<layout}}
+{{$pageTitle}}Check and confirm{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+
+<script type="text/javascript">
+            function CommaFormatted(amount) {
+	var delimiter = ","; // replace comma if desired
+	//var a = amount.split('.',2)
+	//var d = a[1];
+	var i = amount;
+	if(isNaN(i)) { return ''; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	var n = new String(i);
+	var a = [];
+	while(n.length > 3) {
+		var nn = n.substr(n.length-3);
+		a.unshift(nn);
+		n = n.substr(0,n.length-3);
+	}
+	if(n.length > 0) { a.unshift(n); }
+	n = a.join(delimiter);
+	amount = n;
+	amount = minus + amount;
+	return amount;
+}
+        </script>
+
+
+
+
+<main id="content" role="main">
+    <div class="inner-block">
+        
+         <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="/mb7-3/mb7-3-income-tax-updated">Income Tax</a>
+</li>
+    <li>
+<a href="/mb7-3/mb7-3-income-tax-updated">Tax estimate</a>
+</li>
+       <li>
+<a href="/mb7-3/mb7-3-home-updated">Your medical insurance</a>
+</li>
+    
+<li>I've stopped getting this benefit</li>
+</ol>
+</div>
+        
+        
+        <div class="column-two-thirds">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Check and confirm</h1>
+            <p>Check the value is correct.</p>
+        </header> 
+        <div class="grid-row group">
+            
+            
+             
+            <div class="grid-row2"></div>
+            
+            <h3 class="heading-medium-title2">{{employer}}</h3>
+            
+                       
+           <div class="job">
+            <div class="bd-top3">
+               <!-- <h3 class="heading-small">{{employer}}</h3>-->
+                <table class="mb-sum borderless">
+                    <tbody>
+                                               <tr>
+                            <td>Amount paid:    £<script>var total= {{tempValue}}; document.write(CommaFormatted(total))</script></td>
+                            
+                            <td><a href="mb7-3-update-b-1?employer=Costa">Change this amount</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+               </div>
+               </div>
+                
+                
+                <br>
+                
+                
+              
+               <!-- <div class="important">
+                    Changes made apply only for the tax year to 5 April 2016. From 6 April 2016 you will have no medical insurance recorded. You must tell us if you have it in the tax year from 6 April 2016. 
+                </div>-->
+           
+      <div class="next-question">
+            <a href="mb7-3-done?amount={{tempValue}}" class="button">Confirm</a>
+        </div>
+            
+            
+            
+      <!-- old button  <div class="next-question">
+            <form method="GET" action="mb6-done">
+                <input type="submit" value="Confirm" class="button"/>
+            </form>
+        </div> -->
+        <a class="cancel" href="mb7-3-update-b-1?employer=Costa">Back</a>
+        </div>  </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}

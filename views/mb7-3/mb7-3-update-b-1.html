@@ -1,0 +1,120 @@
+{{<layout}}
+{{$pageTitle}}Confirm the value of this benefit{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    
+  <!-- scipt for comma function on value page -->
+ <script type="text/javascript">
+            function CommaFormatted(amount) {
+	var delimiter = ","; // replace comma if desired
+	//var a = amount.split('.',2)
+	//var d = a[1];
+	var i = amount;
+	if(isNaN(i)) { return ''; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	var n = new String(i);
+	var a = [];
+	while(n.length > 3) {
+		var nn = n.substr(n.length-3);
+		a.unshift(nn);
+		n = n.substr(0,n.length-3);
+	}
+	if(n.length > 0) { a.unshift(n); }
+	n = a.join(delimiter);
+	amount = n;
+	amount = minus + amount;
+	return amount;
+}
+        </script>
+
+
+    
+    
+    <div class="inner-block">
+        
+         <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="/mb7-3/mb7-3-income-tax-updated">Income Tax</a>
+</li>
+    <li>
+<a href="/mb7-3/mb7-3-income-tax-updated">Tax estimate</a>
+</li>
+       <li>
+<a href="/mb7-3/mb7-3-home-updated">Your medical insurance</a>
+</li>
+    
+<li>I've stopped getting this benefit</li>
+</ol>
+</div>
+        
+        
+      
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Confirm the value of this benefit</h1>
+                
+        </header>
+        
+         <div class="column-two-thirds">
+             
+        <div class="grid-row group">
+            
+            
+      
+                
+                
+  
+
+                
+                
+                <form id="mb-choice" method="GET" action="mb7-3-summary-b-1">
+                    <div class="form-group">
+                        <label class="form-label" for="update">Our records show that {{employer}} have given you medical insurance benefit with a value of                          £<script>var total={{currentValue}}; document.write(CommaFormatted(total))</script> since 6 April 2015. <br/><br/>
+                            
+                          
+                           </label>
+                        
+                       
+                       
+                        
+                        
+                          <input type="hidden" name="Employer" value="{{employer}}">
+            
+                        
+                        
+              
+                
+                           <p>Actual value (paid by {{employer}})<span class="form-hint">The amount you enter will be rounded down when used in any future tax calculations.</span></p>
+                        
+                   
+                        <div class="pound">
+                            <p>£</p>
+                        </div>
+                        
+             
+                        
+                        <input class="form-control" id="update" name="update" type="text">
+                
+                        </div>
+                    
+                    
+                    
+                     <div class="next-question">
+            <form method="GET" action="mb7-3-done">
+               <input type="submit" value="Submit" class="button"/>
+            </form>
+        </div>
+                    
+                    
+                    </div> 
+                </form>
+                <a class="cancel" href="mb7-3-home-updated">Back</a>
+            </div>
+        </div>
+       </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
