@@ -189,29 +189,29 @@
                     </tbody>
                     </table>
                     </div>
-                    <div class="grid grid-1-3">
-                    <div class="tile-right-b">
-                    <h4 class="h3-tax-data">Your tax free income</h4>
-                    <div class="tax-data-teal bold-xlarge"> £10,600 </div>
-                    </div>
-                    </div>
-                    </div>
-            
-            <div class="grid tax-section-teal">
+                    <div class="grid tax-section-teal">
                     <h2>Your tax estimate</h2>
                 <div class="grid grid-2-3">
                     
-                        <div class="tes-1">
-                        
-                        </div>
+                    <p class="bold-small">How much tax may be due.</p>
+                    <p> Tax is collected throughout the year from your pay, pension or from your bank or building society. Your estimate includes any <a href="#">tax relief</a> you may be entitled to. </p>
+                    
+                      <!--  <div class="tes-1"></div>-->
             </div>
                 
                 
                  <div class="grid grid-1-3">
-                   
-                    <div class="tes-2">
-                        
-                        </div>
+                   <div class="tile-right-b">
+                    
+                    <h4 class="h3-tax-data">Your tax estimate</h4>
+                    <div class="tax-data-teal bold-xlarge">
+                     £<script>var total = 0.20 * (20000 - 10600 + {{ccBen}})   ; document.write(CommaFormatted(total))</script>
+                    </div>
+                    
+
+                </div>
+                   <!-- <div class="tes-2">                     
+                        </div>-->
                    
                     </div>
                 
