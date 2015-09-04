@@ -1,0 +1,157 @@
+{{<layout}}
+{{$pageTitle}}Your medical insurance benefit{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+
+
+<script type="text/javascript">
+            function CommaFormatted(amount) {
+	var delimiter = ","; // replace comma if desired
+	//var a = amount.split('.',2)
+	//var d = a[1];
+	var i = amount;
+	if(isNaN(i)) { return ''; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	var n = new String(i);
+	var a = [];
+	while(n.length > 3) {
+		var nn = n.substr(n.length-3);
+		a.unshift(nn);
+		n = n.substr(0,n.length-3);
+	}
+	if(n.length > 0) { a.unshift(n); }
+	n = a.join(delimiter);
+	amount = n;
+	amount = minus + amount;
+	return amount;
+}
+        </script>
+
+
+ 
+
+<main id="content" role="main">
+    <div class="inner-block" id="my-bens">
+        
+        <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="/mb8/mb8-income-tax-updated">Income Tax</a>
+</li>
+    <li>
+<a href="/mb8/mb8-income-tax-upated">Tax estimate</a>
+</li>
+    
+<li>Your medical benefit</li>
+</ol>
+</div>
+           
+        
+        
+        <header class="page-header group">
+            <h1 class="heading-xlarge2">Your medical insurance benefit</h1>
+            <h3 class="heading-medium-title">for 6 April 2015 to 5 April 2016</h3>
+           
+            
+            
+          
+        </header>
+        
+         <div class="column-two-thirds">
+             
+             <div class="panel-indent">
+                 <p>
+                    You pay tax on the value of this benefit. 	 
+                </p>
+            </div>
+        
+  
+        
+     <h3 class="heading-medium-title2">Employer</h3>
+        <div class="grid-row2">
+        </div>
+        
+    
+        
+              
+        
+           <div class="job-wrapper">
+            
+
+             
+                   
+               
+                                     
+                    
+         
+             
+             
+           
+    <h4 class="heading-small">Costa</h4>
+    <div class="dash-info">
+        Benefit value: £<span id="cc-amount">{{ccBen}}</span>
+     </div>
+         
+         <div class="dash-nav">
+             <div class="nav-styling">
+                 <a href="mb8-question-a?employer=Costa">I've stopped getting this benefit</a>
+             </div>
+         <!--<td><a href="mb6-update?employer=Costa">You've stopped getting this benefit</a></td>-->
+             <div class="nav-styling">
+                 <a href="mb8-remove-b?employer=Costa">I've never had this benefit</a>
+             </div>
+        </div>
+                    
+               </div>
+        
+             
+             <p style="padding-top:20px; font-size:19px;">If you’re happy that this information is correct, <a href="/mb8/mb8-income-tax.html">check your Income Tax estimate</a> to see how much tax may be due on your income.</p> 
+    
+      
+      </div>
+        
+        
+             
+             
+             
+        </div>  </div><!-- end inner block -->
+    
+    <div class="inner-block" id="no-bens">
+        
+        <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="">Income Tax</a>
+</li>
+    <li>
+<a href="">Tax estimate</a>
+</li>
+    
+<li>Your medical benefit</li>
+</ol>
+</div>
+    
+        <header class="page-header group">
+        
+            <header class="page-header group">
+            <h1 class="heading-xlarge2">Your medical insurance benefit </h1>
+            <h3 class="heading-medium-title">for 6 April 2015 to 5 April 2016</h3>
+               
+                <br><br>
+            
+             <div class="column-two-thirds">
+                 
+            <p>You don’t have any medical insurance benefits showing on our records.</p>
+           <div class="grid-row2">
+        </div>
+                 
+                 <p class="back-to-previous">   
+    <a href="/mb7/mb7-income-tax-updated">Back</a></p>
+         
+        </header>
+        </div> </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
