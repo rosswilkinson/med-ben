@@ -377,6 +377,10 @@ module.exports = {
       res.render('car-service/car-12', {'assetPath' : assetPath });
     });
       
+        app.get('/car-service/splash-page.html', function (req, res) {
+      res.render('car-service/splash-page', {'assetPath' : assetPath });
+    });
+      
       
       /* TES SERVICE */
       
