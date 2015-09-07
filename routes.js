@@ -421,7 +421,9 @@ module.exports = {
     });
       
       
-      
+        app.get('/mb8/mb8-error.html', function (req, res) {
+      res.render('mb8/mb8-error', {'assetPath' : assetPath });
+    });
       
       
       
