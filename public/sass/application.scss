@@ -21,12 +21,17 @@
 }
 .service-info__help {
     float: right;
-    width: 50%;
+    width: 40%;
     margin-top: 15px;
+    min-width:400px;
+    color: #6f777b;
+    display: block;
+   
+    
 }
 .hmrc-banner {
     border-left: 2px solid #009390;
-    width: 45%;
+    width: 50%;
     float: left;
     font-family: Helvetica, Arial;
     font-size: 19px;
@@ -36,6 +41,8 @@
     padding: 3px 0 2px 8px;
     text-decoration: none;
     text-transform: none;
+    min-width:400px;
+  
 }
 .hmrc-crest {
     height: 28px;
@@ -710,7 +717,7 @@ table.car-table  {
     background-color: #fff;
     border-top: 2px solid #eee;
     margin: 0 auto;
-    max-width: 1020px;
+    max-width: 960px;
     z-index: 50;
 }
 
@@ -1002,4 +1009,76 @@ details, summary {
     border-bottom: 5px solid #108095;
     
 }
+
+
+
+.error {
+    color: #df3034;
+    display: block;
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 8px; 
+}
+
+
+
+.report-a-problem-container .form-group.form-group-error {
+    border-left: 3px solid #df3034;
+    padding: 14px 0px 14px 19px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+}
+
+
+
+.report-a-problem-container .form-group .form-control {
+    width: 100%;
+}
+
+
+
+.eng-welsh-toggle {
+    float: right;
+    margin-top: -45px;
+    
+}
+
+
+
+
+
+
+
+
+.report-a-problem-toggle a {
+    color: #6f777b;
+    font-size: 16px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .eng-welsh-toggle {
+        display: none !important;
+    }
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .service-info__help {
+        display: none !important;
+    }
+}
+
+
+
+@media screen and (max-width: 640px) {
+    #global-breadcrumb ol li {
+       font-size: 16px !important;
+    }
+}
+
+
 

@@ -173,6 +173,21 @@ $(document).ready(function() {
     
   
     
+    //toggle for problem with this page
+    
+    $('#toggle2').click(function() {
+
+    $('.toggle2').toggle();
+
+    return false;
+
+});
+    
+
+  
+
+
+    
     
      var noboxHtml = $("#paidnobox");
     $("#paid1 input[type=radio]").change(function() {
@@ -922,6 +937,9 @@ $('.summary[target="boxtwo"]').click(function(){
     
     
     
+    
+ 
+
     
     
 });
