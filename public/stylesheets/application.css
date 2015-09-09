@@ -1920,6 +1920,30 @@ details, summary {
   color: #6f777b;
   font-size: 16px; }
 
+.section--branded.hmrc h2 {
+  border-bottom-color: #009390; }
+
+.section--branded h2, .section--branded .h2-heading {
+  border-bottom: 5px solid #005ea5;
+  margin-top: 0 !important;
+  margin-bottom: 0.65em;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 1.2em 0 0.4em 0;
+  padding-top: 40px; }
+
+.link-colour {
+  color: #009390; }
+
+.text--right {
+  text-align: right !important; }
+
+.table__row--bold td, .table__row--bold th {
+  font-weight: 700; }
+
+.row-sum td {
+  font-weight: 700; }
+
 @media screen and (max-width: 1024px) {
   .eng-welsh-toggle {
     display: none !important; } }

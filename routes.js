@@ -412,8 +412,16 @@ module.exports = {
     });
       
       
-         app.get('/mb8/mb8-income-tax.html', function (req, res) {
-      res.render('mb8/mb8-income-tax', {'assetPath' : assetPath });
+         app.get('/mb8/mb8-tax-on-income.html', function (req, res) {
+      res.render('mb8/mb8-tax-on-income', {'assetPath' : assetPath });
+    });
+      
+        app.get('/mb8/mb8-check-income-tax.html', function (req, res) {
+      res.render('mb8/mb8-check-income-tax', {'assetPath' : assetPath });
+    });
+      
+      app.get('/mb8/mb8-tax-codes.html', function (req, res) {
+      res.render('mb8/mb8-tax-codes', {'assetPath' : assetPath });
     });
       
          app.get('/mb8/mb8-about-a-change.html', function (req, res) {
@@ -2964,8 +2972,8 @@ module.exports = {
    
 
       
-        app.get('/mb8/mb8-income-tax-updated', function (req, res) {
-        res.render('mb8/mb8-income-tax-updated', {
+        app.get('/mb8/mb8-tax-on-income-updated', function (req, res) {
+        res.render('mb8/mb8-tax-on-income-updated', {
           'sbBen' : sbBen,
           'ccBen' : ccBen,
           'assetPath' : assetPath,
@@ -2977,8 +2985,8 @@ module.exports = {
       
       
       
-       app.get('/mb8/mb8-income-tax-updated', function (req, res) {
-        res.render('mb8/mb8-income-tax-updated', {
+       app.get('/mb8/mb8-check-income-tax-updated', function (req, res) {
+        res.render('mb8/mb8-check-income-tax-updated', {
           'sbBen' : sbBen,
           'ccBen' : ccBen,
           'assetPath' : assetPath,
@@ -3014,6 +3022,29 @@ module.exports = {
     });
       
       
+      
+      
+       
+           app.get('/mb8/mb8-tax-on-income', function (req, res) {
+        res.render('mb8/mb8-tax-on-income', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb8/mb8-tax-codes-updated', function (req, res) {
+        res.render('mb8/mb8-tax-codes-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
       
 
    

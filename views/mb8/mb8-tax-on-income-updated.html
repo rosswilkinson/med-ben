@@ -38,7 +38,7 @@
 <a href="">Account home</a>
 </li>
 <li>
-<a href="">Income Tax</a>
+<a href="/mb8/mb8-check-income-tax-updated">Income Tax</a>
 </li>
     
 
@@ -48,10 +48,10 @@
         <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
             
         <header class="page-header group">
-            <h1 class="heading-xlarge2">Your Income Tax estimate</h1>
+            <h1 class="heading-xlarge2">Tax on your income</h1>
             <h3 class="heading-medium-title">6 April 2015 to 5 April 2016</h3>
             
-            
+             
            
         </header>
         
@@ -64,49 +64,89 @@
                     <div class="grid grid-2-3">
                     <p class="bold-small">This income figure may be different to your gross income.</p>
                     <p class="short">This does not include deductions such as company pensions, student loans or charity donations. </p>
-                    <table>
+                        
+                        
+                         <table>
                     <thead>
                     <tr>
                     <th>Income</th>
                     <th class="right-col">Amount (£)</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    
+                        <tbody>
+        
+            
+                <tr class="income-data">
+                    
+                        <td class="break-word">Current
+                            employer: Costa
+                        </td>
+                    
+                    <td class="text--right">20,000</td>
+                </tr>
+            
+        
+
+        
+            
+        
+  
+            
+        
+    </tbody>
+                        
+                  
+                        <tfoot>
+            <tr class="row-sum">
+                <td>Total</td>
+                <td class="text--right">20,000</td>
+            </tr>
+        </tfoot>
+                        
+              </table>
+                        
+                        
+                        
+                        
+                        <table>
+                        
+                        <thead>
                     <tr>
+                    <th>Employment benefits</th>
+                    <th class="right-col">Amount (£)</th>
+                    </tr>
+                    </thead>
+                        <tbody>
+               <tr id="cc-table">
                     <td>
                     <details>
-                    <summary>Current employer: Costa</summary>
+                    <summary>Medical benefit</summary>
                     <div class="panel-indent">
-                    <p>Start date: 1 September 2014</p>
+                    <p>The value of accommodation provided by your employer(s).</p>
                     </div>
                     </details>
                     </td>
-                    <td class="right-col">20,000</td>
+                <td class="right-col"><span id="cc-amount">{{ccBen}}</span></td>
                     </tr>
                         
-                         <tr id="cc-table">
-                    <td >
-                    Medical benefit
-                    </td>
+                      
+                     
+                 <tr id="cc-table">
+                    <td class="row-sum">Total</td>
                     <td class="right-col"><span id="cc-amount">{{ccBen}}</span></td>
-                    </tr>
-                        
-                        
-                        <tr>
-                    <td class="row-sum">Total</td>
-                    <td class="right-col row-sum" ><script>var total = 20000 + {{ccBen}}; document.write(CommaFormatted(total))</script></td>
-                    </tr>
-                        
-                        </tbody></table>
-                        
-                        
-                    
-                   <table><tr>
-                    <td class="row-sum">Total</td>
-                    <td class="right-col row-sum" ><script>var total = 20000 + {{ccBen}}; document.write(CommaFormatted(total))</script></td>
                     </tr>
                     </tbody>
                     </table>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                   
                     <p class="alert alert-success">
                                         <a href="/mb8/mb8-about-a-change-amended">Tell us about a change</a>
                  
@@ -175,12 +215,20 @@
                 </div>
                    <!-- <div class="tes-2">                     
                         </div>-->
-                   
+                    
                     </div>
                 
                 
         
         </article>
+                        
+                         <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="/mb8/mb8-check-income-tax-updated">Back to income tax</a></p>
+                        
+                        <!-- end of link -->
+                        
+                        
     
                         
                         
