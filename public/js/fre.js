@@ -91,7 +91,8 @@ $(document).ready(function() {
     var ccTable = $('#cc-table'),
         ccAmount = $('#cc-amount'),
         noBens = $('#no-bens'), 
-     
+        zeroBens = $('#zero-bens'),
+
         myBens = $('#my-bens'),
         starFlag = 'true', 
         costFlag = 'true',
@@ -102,7 +103,7 @@ $(document).ready(function() {
         addFlag = 'false';
     var changeVal = $('#change-val'),
         noChangeVal = $('#no-change-val');
-        
+    
     
     if (sbAmountValue == 0) {
         sbTable.hide();

@@ -2,6 +2,18 @@
 {{$pageTitle}}Tell us about a change{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
+
+<script>
+    $(document).ready(function() {
+        var ccBen = {{ccBen}};
+        if(ccBen === 0){
+            $('#zero-bens').hide();
+        }
+    });
+    //var ccBen = {{ccBen}};
+    //console.log($('#zero-bens'));
+</script>
+
 <main id="content" role="main">
     <div class="inner-block">
         
@@ -40,7 +52,7 @@
             <ul class="list-bullet">
               
               <li><a href="#">update your income</a></li>
-                <li><a href="/mb8/mb8-ended-amend">change the value of the Medical Benefit provided by your employer</a></li>
+                <li id="zero-bens"><a href="/mb8/mb8-ended-amend">change the value of the Medical Benefit provided by your employer</a></li>
             </ul>
             <br>
             </section>
