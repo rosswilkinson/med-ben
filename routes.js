@@ -381,6 +381,10 @@ module.exports = {
       res.render('car-service/splash-page', {'assetPath' : assetPath });
     });
       
+       app.get('/car-service/sprint-31-confirmation-page.html', function (req, res) {
+      res.render('car-service/sprint-31-confirmation-page', {'assetPath' : assetPath });
+    });
+      
       
       /* TES SERVICE */
       
