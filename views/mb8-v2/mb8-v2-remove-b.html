@@ -1,26 +1,25 @@
 {{<layout}}
-{{$pageTitle}}Your information has been submitted{{/pageTitle}}
+{{$pageTitle}}Confirm you’ve never had this benefit{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
 <main id="content" role="main">
     <div class="inner-block">
         
-         <div id="global-breadcrumb" class="header-context">
+        
+    <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
-<li>
+
+    <li>
 <a href="">Account home</a>
 </li>
 <li>
-<a href="/mb8/mb8-check-income-tax-updated">Income Tax</a>
+<a href="/mb8-v2/mb8-v2-income-tax-updated">Income Tax</a>
+</li>
+    <li>
+<a href="/mb8-v2/mb8-v2-income-tax-updated">Tax estimate</a>
 </li>
     
-     <li>
-<a href="/mb8/mb8-tax-on-income-updated">Tax on income</a>
-</li>
-<a href="/mb8/mb8-home-updated">Your medical benefit </a>
-</li>
-    
-
+<li><a href="/mb8-v2/mb8-v2-home">Your medical benefit</a></li>
     
 
 </ol>
@@ -30,35 +29,84 @@
         
         
         
-        
+      <div class="column-two-thirds">
         <header class="page-header group">
-            <div class="grid-row group">
-                <div class="column-two-thirds">
-                    <div class="done-box">
-                        <h1 class="heading-large tick">Your information has been submitted and your <br>record has been updated</h1> 
-                    </div>
-                </div>
+            <h1 class="heading-xlarge">Confirm you’ve never had this benefit</h1>
+            
+            
+             
+            <div class="panel-indent">
+                <p>If you’ve never had this benefit, it’ll be removed from your record for the tax year 6 April 2015 to 5 April 2016.</p>
             </div>
-        </header>
+
+
+            
+        </header> 
         <div class="grid-row group">
-            <div class="column-two-thirds">
-          
+           
                 
-          
-              
-               <p>HM Revenue and Customs will contact you if your tax code has changed.</p>
-                
-               
-                
-                
-                
-                
-                 <a href="/mb8/mb8-tax-on-income-updated" class="button">Check the Tax on your income</a>
-                 
-            </div>
+            <p>Is it correct that you’ve never had this medical insurance benefit from {{employer}}?</p>
             
             
-            <!-- start of anythign wrong link-->
+        </div>  
+            
+        <!--confirm box   <label class="form-checkbox" for="checkbox-telephone-number">
+    <input id="checkbox-telephone-number" value="checkbox-telephone-number" type="checkbox">
+    I confirm that these changes are correct
+  </label>-->
+            
+          
+              <input type="hidden" name="Employer" value="{{employer}}">
+            
+            <fieldset class="questions">
+                
+                
+                
+  <fieldset class="inline">
+    <label class="block-label" for="radio-inline-1">
+      <input id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
+      Yes
+    </label>
+    <label class="block-label" for="radio-inline-2">
+      <input id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
+      No
+    </label>
+  </fieldset>
+
+
+                
+                
+                
+           
+                  
+             </fieldset>
+                   
+         
+            
+          
+            <div class="next-question">
+              <a id="question-submit4-v8-v2" href="/" class="button">Confirm</a>
+                </div>
+          
+          
+          <!--old submit button 
+        <div class="next-question">
+            <a href="/mb6/mb6-finish" class="button alertButton">Confirm and remove</a>
+        </div>-->
+       
+          
+          
+          
+           <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="/mb8-v2/mb8-v2-home">Back to your medical benefit</a></p>
+                        
+                        <!-- end of link -->
+          
+          
+        </div>
+        
+        <!-- start of anythign wrong link-->
         
          <div class="column-two-thirds">
              
@@ -96,15 +144,7 @@
              <!-- end of anything wrong link -->
     
     
-        </div>
-        
-        
-    
-        
     </div>
-    
-    
-    
-</main> 
+</main>
 {{/content}}
 {{/layout}}

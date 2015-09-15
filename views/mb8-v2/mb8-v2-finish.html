@@ -1,5 +1,5 @@
 {{<layout}}
-{{$pageTitle}}Your information has been submitted{{/pageTitle}}
+{{$pageTitle}}This benefit has been removed{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
 <main id="content" role="main">
@@ -7,27 +7,23 @@
         
          <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
-<li>
+
+    <li>
 <a href="">Account home</a>
 </li>
 <li>
-<a href="/mb8/mb8-check-income-tax-updated">Income Tax</a>
+<a href="/mb8-v2/mb8-v2-income-tax-updated">Income Tax</a>
+</li>
+    <li>
+<a href="/mb8-v2/mb8-v2-check-income-tax-updated">Tax estimate</a>
 </li>
     
-     <li>
-<a href="/mb8/mb8-tax-on-income-updated">Tax on income</a>
-</li>
-<a href="/mb8/mb8-home-updated">Your medical benefit </a>
-</li>
-    
-
+<li><a href="/mb8-v2/mb8-v2-home-updated">Your medical benefit</a></li>
     
 
 </ol>
 </div>
-        
-            <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
-        
+         <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
         
         
         
@@ -35,30 +31,38 @@
             <div class="grid-row group">
                 <div class="column-two-thirds">
                     <div class="done-box">
-                        <h1 class="heading-large tick">Your information has been submitted and your <br>record has been updated</h1> 
+                        <h1 class="heading-large tick">This benefit has been <br>removed from your record
+
+                        </h1> 
                     </div>
                 </div>
             </div>
         </header>
-        <div class="grid-row group">
+     
+        
+        
+        
+         <div class="grid-row group">
             <div class="column-two-thirds">
-          
+               <!-- <p class="">Your change has been submitted. Our records have been updated.</p>-->
+               <!-- <hr class="border"> --> <br>
+           <p>HM Revenue and Customs will contact you if your tax code has changed.</p>
                 
-          
-              
-               <p>HM Revenue and Customs will contact you if your tax code has changed.</p>
-                
-               
+                  <a href="/mb8-v2/mb8-v2-tax-on-income-updated" class="button">Check the Tax on your income</a>
                 
                 
-                
-                
-                 <a href="/mb8/mb8-tax-on-income-updated" class="button">Check the Tax on your income</a>
-                 
+                    
             </div>
+             
             
-            
-            <!-- start of anythign wrong link-->
+             
+             
+        </div>
+        
+        
+          
+        
+        <!-- start of anythign wrong link-->
         
          <div class="column-two-thirds">
              
@@ -94,17 +98,8 @@
                     </div>
                 </div> 
              <!-- end of anything wrong link -->
-    
-    
-        </div>
-        
-        
-    
         
     </div>
-    
-    
-    
-</main> 
+</main>
 {{/content}}
 {{/layout}}

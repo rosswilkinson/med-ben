@@ -1036,10 +1036,11 @@ details, summary {
 }
 
 
-
+//css for welsh toggle - currnetly hidden because service not available
 .eng-welsh-toggle {
     float: right;
     margin-top: -45px;
+    display: none;
     
 }
 
@@ -1091,6 +1092,14 @@ details, summary {
     font-weight: 700;
 }
 
+
+.heading-small2{
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-weight:700;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
 
 @media screen and (max-width: 1024px) {
     .eng-welsh-toggle {

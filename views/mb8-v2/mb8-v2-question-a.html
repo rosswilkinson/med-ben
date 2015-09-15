@@ -1,64 +1,81 @@
 {{<layout}}
-{{$pageTitle}}Your information has been submitted{{/pageTitle}}
+{{$pageTitle}}Report when you stopped getting this benefit{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
 <main id="content" role="main">
     <div class="inner-block">
         
-         <div id="global-breadcrumb" class="header-context">
+        <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
-<li>
+  <li>
 <a href="">Account home</a>
 </li>
 <li>
-<a href="/mb8/mb8-check-income-tax-updated">Income Tax</a>
+<a href="/mb8/mb8-check-income-tax.html">Income Tax</a>
 </li>
     
      <li>
-<a href="/mb8/mb8-tax-on-income-updated">Tax on income</a>
-</li>
-<a href="/mb8/mb8-home-updated">Your medical benefit </a>
+<a href="/mb8/mb8-tax-on-income.html">Tax on income</a>
 </li>
     
-
+<li><a href="/mb8/mb8-home">Your medical benefit</a></li>
     
 
 </ol>
 </div>
         
-            <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
+         <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
         
         
-        
-        
+       <div class="column-two-thirds">
         <header class="page-header group">
-            <div class="grid-row group">
-                <div class="column-two-thirds">
-                    <div class="done-box">
-                        <h1 class="heading-large tick">Your information has been submitted and your <br>record has been updated</h1> 
-                    </div>
-                </div>
-            </div>
+            
+            <h1 class="heading-xlarge">Report when you stopped getting this benefit </h1>
+                
         </header>
+  
         <div class="grid-row group">
-            <div class="column-two-thirds">
-          
+ 
                 
           
-              
-               <p>HM Revenue and Customs will contact you if your tax code has changed.</p>
+ 
+            
+            <p>When did you stop getting this benefit from {{employer}}?</p>
                 
+            <input type="hidden" name="Employer" value="{{employer}}">
+            
+            <fieldset class="questions">
+                
+            <label class="block-label" for="radio-1">
+                <input id="radio-1" name="radio-group" value="Before 6 April 2015" type="radio">
+                Before 6 April 2015
+            </label>
+            <label class="block-label" for="radio-2">
+                <input id="radio-2" name="radio-group" value="On or after 6 April 2015" type="radio">
+               On or after 6 April 2015
+            </label>
+                  
+             </fieldset>
                
-                
-                
-                
-                
-                 <a href="/mb8/mb8-tax-on-income-updated" class="button">Check the Tax on your income</a>
-                 
+            
+              <a id="question-submit-v8-v2" href="/" class="button">Continue</a>
+            
+            
+             
+           
+            
+            
+             <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="/mb8-v2/mb8-v2-home">Back to your medical benefit</a></p>
+                        
+                        <!-- end of link -->
+            
             </div>
-            
-            
-            <!-- start of anythign wrong link-->
+        </div>
+        
+        
+        <!-- start of anythign wrong link-->
         
          <div class="column-two-thirds">
              
@@ -94,17 +111,10 @@
                     </div>
                 </div> 
              <!-- end of anything wrong link -->
-    
-    
-        </div>
-        
-        
-    
-        
-    </div>
+       </div><!-- end inner block -->
     
     
     
-</main> 
+</main>
 {{/content}}
 {{/layout}}

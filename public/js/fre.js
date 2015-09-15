@@ -944,6 +944,97 @@ $('.summary[target="boxtwo"]').click(function(){
     
     
     
+    //v8-v2 radio routing questions 
+       $("#question-submit-v8-v2").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-1").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-remove?employer=" + employer;
+        } else if ($("#radio-2").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-update?employer=" + employer;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+      $("#question-submit2-v8-v2").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-remove?employer=" + employer;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-home" ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+      $("#question-submit3-v8-v2").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-finish" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-question-a?employer=" + employer ;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+      $("#question-submit4-v8-v2").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-inline-1").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-finish" ;
+        } else if ($("#radio-inline-2").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-home";
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+     $("#question-submit5-v8-v2").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var updatedVal = $('#update').val();
+         
+        var url = "";
+        if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
+            url = "/mb8-v2/mb8-v2-summary?employer=" + employer + "&update=" + updatedVal;
+        } else if ($("#radio-indent9-1").is(":checked")) {
+            url = "/mb8-v2/mb8-v2-done?amount=400";
+        }
+        
+        if (url.length > 0) {
+           window.location = url;
+        }
+    });
+
+    
+    
  
 
     
