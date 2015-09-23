@@ -1,0 +1,128 @@
+{{<layout}}
+{{$pageTitle}}Tell us about a change{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+
+<script>
+    $(document).ready(function() {
+        var ccBen = {{ccBen}};
+        if(ccBen === 0){
+            $('#zero-bens').hide();
+        }
+    });
+    //var ccBen = {{ccBen}};
+    //console.log($('#zero-bens'));
+</script>
+
+<main id="content" role="main">
+    <div class="inner-block">
+        
+         <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+
+    <li>
+<a href="">Account home</a>
+</li>
+<li>
+<a href="/mb9/mb9-check-income-tax-updated">Income Tax</a>
+</li>
+
+     <li>
+<a href="/mb9/mb9-tax-on-income-updated">Tax on your income</a>
+</li>
+
+</ol>
+</div>
+        
+        <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
+        
+        
+        <header class="page-header group">
+            <div class="grid-row group"></header>
+                <div class="column-two-thirds">
+                    
+              <h1 class="heading-xlarge text" style="margin-bottom:0">Tell us about a change</h1>
+                
+              
+           <section>
+            <h2 class="teal-underline" style="margin-top:0; margin-bottom:25px; margin-top:25px;">If your details are wrong you may be able to change them</h2>
+               
+
+            <p>You can:</p>
+            <ul class="list-bullet">
+              
+              <li><a href="#">update your income</a></li>
+                <li id="zero-bens"><a href="/mb9/mb9-ended-amend">change the value of the Medical Benefit provided by your employer</a></li>
+            </ul>
+            <br>
+            </section>
+
+             <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="/mb9/mb9-tax-on-income-updated">Back to tax on income</a></p>
+                        
+                        <!-- end of link -->
+      
+                    
+            </div>
+             
+            
+             
+            
+              <!-- start of anythign wrong link-->
+        
+         <div class="column-two-thirds">
+             
+             
+         
+                    <p class="report-a-problem-toggle" style="padding:50px 0 0 0; margin-bottom:-100px">
+                        <a href="#" id="toggle2">Is there anything wrong with this page?</p></a>
+                    </p>
+            
+             
+             
+<div  class="toggle2" style="display:none; padding:80px 0 0 0;">
+                <div class="report-a-problem-container">
+                    <div class="report-a-problem-inner">
+                        <div class="report-a-problem-content" >
+                            <h2 class="heading-medium">Help us improve GOV.UK</h2>
+                            <p style="font-size:19px">Don't include personal or financial information, eg your National Insurance number or credit card details.</p>
+                            <form accept-charset="UTF-8" id="help-improve-form" novalidate="novalidate" _lpchecked="1">
+
+                                <div class="form-group form-group-error">
+                                    <label for="what_doing" class="form-label">What you were doing</label>
+                                    <label for="what_doing" class="error">Please enter details of what you were doing.</label><input id="what_doing" class="form-control" name="what_doing" type="text" required="" aria-required="true" aria-invalid="true">
+                                </div>
+                                <div class="form-group form-group-error">
+                                    <label for="went_wrong" class="form-label">What went wrong</label>
+                                    <label for="went_wrong" class="error">Please enter details of what went wrong.</label><input id="went_wrong" class="form-control" name="went_wrong" type="text" required="" aria-required="true">
+                                </div>
+                                <div class="button-wrapper">
+                                    <button name="commit" type="submit" class="button">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+             <!-- end of anything wrong link -->
+        
+    
+    
+             
+        </div>
+        
+        
+          
+        
+        
+        
+    </div>
+</main>
+
+<script>
+var my_title = document.getElementById("proposition-name");
+    my_title.innerHTML = "Check your Income Tax"
+</script>
+
+{{/content}}
+{{/layout}}
