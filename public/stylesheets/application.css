@@ -1923,6 +1923,10 @@ details, summary {
   margin-top: -45px;
   display: none; }
 
+.eng-welsh-toggle2 {
+  float: right;
+  margin-top: -45px; }
+
 .report-a-problem-toggle a {
   color: #6f777b;
   font-size: 16px;
