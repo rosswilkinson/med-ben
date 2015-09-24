@@ -1872,15 +1872,11 @@ details, summary {
 
 .back-to-previous {
   clear: both;
-  margin-top: 50px;
-  padding-left: 16px;
-  background: url(/public/images/back-chevron.png) no-repeat 0% 50%; }
+  margin-top: 50px; }
 
 .back-to-previous2 {
   clear: both;
-  margin-top: 5px;
-  padding-left: 16px;
-  background: url(/public/images/back-chevron.png) no-repeat 0% 50%; }
+  margin-top: 5px; }
 
 .heading-xlarge-start {
   font-family: "nta", Arial, sans-serif;
