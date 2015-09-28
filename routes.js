@@ -389,6 +389,21 @@ module.exports = {
       res.render('car-service/sprint-31-confirmation-page-standalone', {'assetPath' : assetPath });
     });
       
+       app.get('/car-service/service-breadcrumb.html', function (req, res) {
+      res.render('car-service/service-breadcrumb', {'assetPath' : assetPath });
+    });
+      
+       app.get('/car-service/integrated-breadcrumb.html', function (req, res) {
+      res.render('car-service/integrated-breadcrumb', {'assetPath' : assetPath });
+    });
+      
+       app.get('/car-service/service-breadcrumb-journey.html', function (req, res) {
+      res.render('car-service/service-breadcrumb-journey', {'assetPath' : assetPath });
+    });
+      
+       app.get('/car-service/integrated-breadcrumb-journey.html', function (req, res) {
+      res.render('car-service/integrated-breadcrumb-journey', {'assetPath' : assetPath });
+    });
       
       
       
