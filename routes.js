@@ -516,6 +516,10 @@ module.exports = {
         app.get('/mb9/mb9-error.html', function (req, res) {
       res.render('mb9/mb9-error', {'assetPath' : assetPath });
     });
+      
+       app.get('/mb9/mb9-time-out.html', function (req, res) {
+      res.render('mb9/mb9-time-out', {'assetPath' : assetPath });
+    });
 
       
       
