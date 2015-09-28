@@ -1959,6 +1959,21 @@ details, summary {
   margin-top: -20px;
   padding-bottom: 20px; }
 
+.car-home {
+  min-height: 2630px;
+  background-image: url(../images/car-home.jpg);
+  background-repeat: no-repeat;
+  background-size: 1000px 2620px;
+  margin-top: 40px;
+  margin-left: -5px; }
+
+.car-journey {
+  min-height: 630px;
+  background-image: url(../images/car-journey.jpg);
+  background-repeat: no-repeat;
+  background-size: 650px 520px;
+  margin-top: 40px; }
+
 @media screen and (max-width: 1024px) {
   .eng-welsh-toggle {
     display: none !important; } }
