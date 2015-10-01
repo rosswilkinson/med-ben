@@ -522,6 +522,22 @@ module.exports = {
     });
 
       
+      app.get('/mb9v2/mb9v2-tax-on-income.html', function (req, res) {
+      res.render('mb9v2/mb9v2-tax-on-income', {'assetPath' : assetPath });
+    });
+      
+        app.get('/mb9v2/mb9v2-check-income-tax.html', function (req, res) {
+      res.render('mb9v2/mb9v2-check-income-tax', {'assetPath' : assetPath });
+    });
+      
+      app.get('/mb9v2/mb9v2-tax-codes.html', function (req, res) {
+      res.render('mb9v2/mb9v2-tax-codes', {'assetPath' : assetPath });
+    });
+      
+         app.get('/mb9v2/mb9v2-about-a-change.html', function (req, res) {
+      res.render('mb9v2/mb9v2-about-a-change', {'assetPath' : assetPath });
+    });
+
       
       
       
@@ -2943,6 +2959,7 @@ module.exports = {
       
       
       
+      
        app.get('/mb8/mb8-update-only', function (req, res) {
         employer = req.query.employer;
         summaryFunction();
@@ -4027,6 +4044,294 @@ module.exports = {
       
 
       
+      
+        /*mb9v2 */
+      
+      
+      
+    app.get('/mb9v2/mb9v2-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb9v2/mb9v2-start', {
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb9v2/mb9v2-home', function (req, res) {
+        res.render('mb9v2/mb9v2-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+     app.get('/mb9v2/mb9v2-add', function (req, res) {
+        res.render('mb9v2/mb9v2-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb9v2/mb9v2-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb9v2/mb9v2-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+       
+      
+    
+      
+      
+      
+    
+         
+    app.get('/mb9v2/mb9v2-question-a', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb9v2/mb9v2-question-a', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb9v2/mb9v2-question-b', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb9v2/mb9v2-question-b', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+    app.get('/mb9v2/mb9v2-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb9v2/mb9v2-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+      
+       app.get('/mb9v2/mb9v2-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb9v2/mb9v2-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb9v2/mb9v2-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb9v2/mb9v2-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       
+      
+      
+      
+       app.get('/mb9v2/mb9v2-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb9v2/mb9v2-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb9v2/mb9v2-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb9v2/mb9v2-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb9v2/mb9v2-done', function (req, res) {
+        if (req.query.amount) {
+            tempValue = req.query.amount;
+            updateFunction();
+        }
+        res.render('mb9v2/mb9v2-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb9v2/mb9v2-home-updated', function (req, res) {
+        res.render('mb9v2/mb9v2-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb9v2/mb9v2-finish', function (req, res) {
+        updateFunction();
+        res.render('mb9v2/mb9v2-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb9v2/mb9v2-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb9v2/mb9v2-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+       app.get('/mb9v2/mb9v2-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb9v2/mb9v2-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+   
+
+      
+        app.get('/mb9v2/mb9v2-tax-on-income-updated', function (req, res) {
+        res.render('mb9v2/mb9v2-tax-on-income-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb9v2/mb9v2-check-income-tax-updated', function (req, res) {
+        res.render('mb9v2/mb9v2-check-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+  
+      
+      
+      
+           app.get('/mb9v2/mb9v2-ended-amend', function (req, res) {
+        res.render('mb9v2/mb9v2-ended-amend', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+           app.get('/mb9v2/mb9v2-about-a-change-amended', function (req, res) {
+        res.render('mb9v2/mb9v2-about-a-change-amended', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+      
+       
+           app.get('/mb9v2/mb9v2-tax-on-income', function (req, res) {
+        res.render('mb9v2/mb9v2-tax-on-income', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb9v2/mb9v2-tax-codes-updated', function (req, res) {
+        res.render('mb9v2/mb9v2-tax-codes-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+
+      
+
 
       
       

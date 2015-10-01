@@ -3,19 +3,6 @@
 {{$content}}
 {{>hmrc_banner}}
 
-<script>
-    $(document).ready(function() {
-        var ccBen = {{ccBen}};
-        if(ccBen === 0){
-            $('#zero-bens').hide();
-        }
-    });
-    //var ccBen = {{ccBen}};
-    //console.log($('#zero-bens'));
-</script>
-
-
-
 <script type="text/javascript">
             function CommaFormatted(amount) {
 	var delimiter = ","; // replace comma if desired
@@ -51,7 +38,7 @@
 <a href="">Account home</a>
 </li>
 <li>
-<a href="/mb9/mb9-check-income-tax-updated">Income Tax</a>
+<a href="/mb9v2/mb9v2-check-income-tax-updated">Income Tax</a>
 </li>
     
 
@@ -92,10 +79,10 @@
               <tr class="income-data">
                     
                         <td class="break-word">Current
-                            employer: John Lewis
+                            employer: Waitrose
                         </td>
                     
-                    <td class="text--right">20,000</td>
+                    <td class="text--right">15,000</td>
                 </tr>
             
         
@@ -103,8 +90,8 @@
         
                 <tr class="income-data">
                     
-                        <td class="break-word">Previous
-                            employer: Costa
+                        <td class="break-word">Current
+                            employer: Starbucks
                         </td>
                     
                     <td class="text--right">10,000</td>
@@ -124,19 +111,16 @@
                         <tfoot>
             <tr class="row-sum">
                 <td>Total</td>
-                <td class="text--right">30,000</td>
+                <td class="text--right">25,000</td>
             </tr>
         </tfoot>
                         
               </table>
                         
                         
-                            <p class="alert alert-success">
-                                        You can <a href="">update your income</a> to make this estimate more accurate.
-                 
-                    </p>
                         
-                        <table id="cc-table">
+                        
+                        <table id="sb-table">
                         
                         <thead>
                     <tr>
@@ -145,20 +129,18 @@
                     </tr>
                     </thead>
                         <tbody>
-               <tr id="cc-table">
+               <tr id="sb-table">
                     <td>
-                    Medical benefit
-                    
-                    
+                    Medical benefit (<a href="/mb9v2/mb9v2-ended-amend">check or update</a>)
                     </td>
-                <td class="right-col"><span id="cc-amount">{{ccBen}}</span></td>
+                <td class="right-col"><span id="sb-amount">{{sbBen}}</span></td>
                     </tr>
                         
                       
                      
                  <tr >
                     <td class="row-sum">Total</td>
-                    <td class="right-col"><span id="cc-amount">{{ccBen}}</span></td>
+                    <td class="right-col"><span id="sb-amount">{{sbBen}}</span></td>
                     </tr>
                     </tbody>
                     </table>
@@ -167,26 +149,18 @@
                         
                         
                         
-                        <div id="zero-bens">
-                           <div class="alert alert-success">
-                        <p>You can check or update your:</p>
-                            <ul class="list-bullet"><li>
-  <a href="/mb9/mb9-ended-amend">medical insurance benefit</a></li>
-   
-  </ul>
-                          
-                 
-                    </p></div></div>
+                        
+                        
                         
                    
-                   
+               
                         
                         
                         </div>
                     <div class="grid grid-1-3">
                     <div class="tile-right-b">
                     <h4 class="h3-tax-data">Your income and benefits</h4>
-                    <div class="tax-data-teal bold-xlarge">£<script>var total = 30000 + {{ccBen}}; document.write(CommaFormatted(total))</script></div>
+                    <div class="tax-data-teal bold-xlarge">£<script>var total = 25000 + {{sbBen}}; document.write(CommaFormatted(total))</script></div>
                     </div>
                     </div>
                     </div>
@@ -237,7 +211,7 @@
                     
                     <h4 class="h3-tax-data">Your tax estimate</h4>
                     <div class="tax-data-teal bold-xlarge">
-                     £<script>var total = 0.20 * (30000 - 10600 + {{ccBen}})   ; document.write(CommaFormatted(total))</script>
+                     £<script>var total = 0.20 * (25000 - 10600 + {{sbBen}})   ; document.write(CommaFormatted(total))</script>
                     </div>
                     
 
@@ -253,7 +227,7 @@
                         
                          <!-- back to previous page link -->
                                           
-                       <p class="back-to-previous"><a href="/mb9/mb9-check-income-tax-updated">Back</a></p>
+                       <p class="back-to-previous"><a href="/mb9v2/mb9v2-check-income-tax-updated">Back</a></p>
                         
                         <!-- end of link -->
                         

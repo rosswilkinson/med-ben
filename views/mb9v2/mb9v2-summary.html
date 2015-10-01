@@ -1,0 +1,163 @@
+{{<layout}}
+{{$pageTitle}}Check and confirm{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+
+<script type="text/javascript">
+            function CommaFormatted(amount) {
+	var delimiter = ","; // replace comma if desired
+	//var a = amount.split('.',2)
+	//var d = a[1];
+	var i = amount;
+	if(isNaN(i)) { return ''; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	var n = new String(i);
+	var a = [];
+	while(n.length > 3) {
+		var nn = n.substr(n.length-3);
+		a.unshift(nn);
+		n = n.substr(0,n.length-3);
+	}
+	if(n.length > 0) { a.unshift(n); }
+	n = a.join(delimiter);
+	amount = n;
+	amount = minus + amount;
+	return amount;
+}
+        </script>
+
+
+
+<main id="content" role="main">
+    <div class="inner-block">
+
+                
+                
+                 <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="">Account home</a>
+</li>
+  <li>
+<a href="/mb9v2/mb9v2-check-income-tax.html">Income Tax</a>
+</li>
+    
+     <li>
+<a href="/mb9v2/mb9v2-tax-on-income.html">Tax on income</a>
+</li>
+       <li>
+<a href="/mb9v2/mb9v2-home">Your medical benefit</a>
+</li>
+    
+ 
+    
+    
+ 
+</ol>
+</div>
+        
+            <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
+        
+        
+        
+        
+        <div class="column-two-thirds">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Check and confirm</h1>
+         
+        </header> 
+        <div class="grid-row group">
+            
+            
+             
+            <div class="grid-row2"></div>
+            
+            <h4 class="heading-small">{{employer}}</h4>
+            
+                       
+           <div class="job">
+            <div class="bd-top3">
+               <!-- <h3 class="heading-small">{{employer}}</h3>-->
+                <table class="mb-sum borderless">
+                    <tbody>
+                                               <tr>
+                            <td>Value:    £<script>var total= {{tempValue}}; document.write(CommaFormatted(total))</script></td>
+                            
+                            <td><a href="mb9v2-update?employer={{employer}}">Change the value</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+               </div>
+               </div>
+                
+                
+                <br>
+                
+                
+              
+               <!-- <div class="important">
+                    Changes made apply only for the tax year to 5 April 2016. From 6 April 2016 you will have no medical insurance recorded. You must tell us if you have it in the tax year from 6 April 2016. 
+                </div>-->
+           
+      
+        <div class="next-question">
+            <a href="mb9v2-done?amount={{tempValue}}" class="button">Confirm</a>
+        </div>
+       
+            
+            
+            
+              <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="mb9v2-update?employer={{employer}}">Back</a></p>
+                        
+                        <!-- end of link -->
+            
+            
+        </div>  
+        
+        
+        <!-- start of anythign wrong link-->
+        
+         <div class="column-two-thirds">
+             
+             
+         
+                    <p class="report-a-problem-toggle" style="padding:50px 0 0 0; margin-bottom:-100px">
+                        <a href="#" id="toggle2">Is there anything wrong with this page?</p></a>
+                    </p>
+            
+             
+             
+<div  class="toggle2" style="display:none; padding:80px 0 0 0;">
+                <div class="report-a-problem-container">
+                    <div class="report-a-problem-inner">
+                        <div class="report-a-problem-content" >
+                            <h2 class="heading-medium">Help us improve GOV.UK</h2>
+                            <p style="font-size:19px">Don't include personal or financial information, eg your National Insurance number or credit card details.</p>
+                            <form accept-charset="UTF-8" id="help-improve-form" novalidate="novalidate" _lpchecked="1">
+
+                                <div class="form-group form-group-error">
+                                    <label for="what_doing" class="form-label">What you were doing</label>
+                                    <label for="what_doing" class="error">Please enter details of what you were doing.</label><input id="what_doing" class="form-control" name="what_doing" type="text" required="" aria-required="true" aria-invalid="true">
+                                </div>
+                                <div class="form-group form-group-error">
+                                    <label for="went_wrong" class="form-label">What went wrong</label>
+                                    <label for="went_wrong" class="error">Please enter details of what went wrong.</label><input id="went_wrong" class="form-control" name="went_wrong" type="text" required="" aria-required="true">
+                                </div>
+                                <div class="button-wrapper">
+                                    <button name="commit" type="submit" class="button">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+             <!-- end of anything wrong link -->
+        
+        
+        </div><!-- end inner block -->
+</main>
+{{/content}}
+{{/layout}}
