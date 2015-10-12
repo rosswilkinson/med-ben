@@ -8,7 +8,7 @@ app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
 app.set('view engine', 'html');
 app.set('vendorViews', __dirname + '/govuk/views');
 app.set('views', __dirname + '/views');
-//app.use(express.basicAuth('team9', 'team9-fre'));
+app.use(express.basicAuth('team9', 't34m9-hmrc'));
 
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
