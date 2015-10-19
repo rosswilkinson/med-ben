@@ -1,5 +1,5 @@
 {{<layout}}
-{{$pageTitle}}Your medical insurance benefit{{/pageTitle}}
+{{$pageTitle}}Estimated Income Tax{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
 
@@ -12,7 +12,7 @@
  <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
     <li>
-<a href="">Account home</a>
+<a href="http://personal-tax-account.herokuapp.com/pta/pta-home-1">Account home</a>
 </li>
 
     
@@ -23,58 +23,107 @@
         
             
         <header class="page-header group">
-            <h1 class="heading-xlarge2">Check your Income Tax</h1>
-            <h3 class="heading-medium-title">6 April 2015 to 5 April 2016</h3>
+            <h1 class="heading-xlarge2">Estimated Income Tax</h1>
+          <!--  <h3 class="heading-medium-title">6 April 2015 to 5 April 2016</h3>-->
             
             
            
         </header>
         
-     <div class="column-two-thirds">
-<section class="section--branded hmrc flush--bottom hard--bottom">
-        <h2>Your Income Tax estimate</h2>
-
-        
-            <div class="heading-xlarge link-colour flush--bottom" id="income-tax-figure"> £2,960
-            </div>
-
-            <p>Income Tax is collected throughout the year from your pay or pension.</p>
-
-            
-<details>
-
-    <summary><span class="summary">Why is this an estimate?</span></summary>
-
-    <div class="panel-indent">
-
-      <p>
-       The total amount due for the tax year can be worked out only when the year has ended and your total income for the year is known.
-      </p>
-
-    </div>
-
-  </details>
     
+<section class="section--branded">
+        <h2>6 April 2015 to 5 April 2016</h2>
+ <div class="column-two-thirds">
+     
+     <h3 class="heading-small tax-data">Your income tax estimate is <br>
+              <span class="secondary-text-colour bold-xlarge">£2,960</span></h3>
+     
+     
+     <p style="padding-top:10px">This tax is automatically collected throughout the year from your pay, pension or from your bank or building society. This is known as Pay As You Earn (PAYE). Your <a href="mb10v2-tax-codes.html">tax codes</a> tell your employer, pension provider or bank how much tax to take off your income.</p>
+     
+     
+     <p><a href="mb10v2-tax-on-income.html">Your income</a> this year is approximately £25,400. <a href="mb10v2-tax-free-amount.html">Your tax free amount</a> is £10,200.</p>
+     
+           
     
+    <h3 class="heading-medium">Tax on your income</h3>
+     
+     
+     <div class="text">
+                    <div role="img" aria-label="Chart representing data referenced in list below">
+                        <div class="number-bar">
+                            <span style="left:0">£0</span>
+                           <span class="centred" style="left:25.00%">£10,600</span>
+                            <span class="centred" style="left:58.38%">£25,400</span>
+                            <span style="right:0">£42,385</span>
+                        </div>
+                        <div class="bar tax-bar">
+                            <div style="left:0" class="tax-point"></div>
+                          <div style="left:25.00%" class="tax-point"></div>
+                            <div style="left:58.20%" class="tax-point"></div>
+                            <div style="right:0" class="tax-point"></div>
+                        </div>
 
-            <table id="tax-estimate-table">
-                <thead>
-                    <tr>
-                        <th>Tax estimate</th>
-                        <th class="text--right">Amount (£)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr id="totalTaxOnIncome">
-                    <td>Tax on your income</td>
-                    <td class="text--right">2,960</td>
-                </tr>
-                
-                
-                </tbody>
-                
-            </table>
-        
+                        <div class="chart">
+                         <div style="width:25.00%;" class="TaxFree chart-bar"></div>
+                            <div style="width:33.38%;" class="Band1 chart-bar"></div>
+                        </div>
+                    </div>
+              </div>
+     
+     <br>
+     
+     <section class="table-section">
+                   <table>
+                      <thead>
+                          <tr>
+                              <th>Key</th>
+                              <th>%<abbr title="Tax">tax rate</abbr></th>
+                              <th>Income (£)</th>
+                              <th class="numeric">Tax (£)</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                         <tr>
+                              <td><span class="key-icon TaxFree"></span> Tax free amount</td>
+                              <td>0%</td>
+                              <td>10,600</td>
+                              <td class="numeric">0</td>
+                          </tr>
+                          <tr>
+                              <td><div class="key-icon Band1">.</div>Basic tax rate</td>
+                              <td>20%</td>
+                              <td>14,800</td>
+                              <td class="numeric">2,960.00</td>
+                          </tr>
+                          <tr>
+                              <td class="row-sum">Total</td>
+                              <td class="row-sum"></td>
+                              <td class="row-sum">25,400</td>
+                              <td class="numeric row-sum">2,960.00</td>
+                          </tr>
+                      </tbody>
+                  </table>
+               </section>
+     
+     <div class="divider--bottom">
+                   <p><span class="key-icon Band-unused"></span><span> Income above £42,785 will be taxed at a higher rate.</span>
+                   </p>
+         
+         <!--<p>Because you have made a gift aid payment you are able to earn more income at a lower tax rate. This is called <a href="tax-relief">Tax Relief</a>.</p>
+                   <p>-->
+         
+          <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="http://personal-tax-account.herokuapp.com/pta/pta-home-1">Back to account home</a></p>
+                        
+                        <!-- end of link -->
+         
+         
+               </div>
+     
+
+          
     </section>
         
          
@@ -82,48 +131,23 @@
          
          
          
-         <section id="your-tax-codes" class="section--branded hmrc flush--bottom hard--bottom">
-                    <h2>Your tax code(s)</h2>
-
-                    <p>Your tax code tells your employer or pension provider how much of your pay or pension is tax-free or how much you may owe. <a id="worked-out-tax-codes" href="/mb9v2/mb9v2-tax-codes.html" target="_self" >View how we worked out your tax code(s).</a></p>
-                    
-
-<table id="tax-code-employments">
-    <thead>
-    <tr>
-        <th>Job or pension</th>
-        <th class="text--right">Tax code</th>
-    </tr>
-    </thead>
-   <tbody>
-        
-            
-                <tr>
-                    <td class="users-income-name">Waitrose</td>
-                    <td class="text--right users-income-taxcode">1020L</td>
-                </tr>
-            
        
-         <tr>
-                    <td class="users-income-name">Starbucks</td>
-                    <td class="text--right users-income-taxcode">BR</td>
-                </tr>
-               
-            
-        
-    </tbody>
-</table>
-
-
-                </section>
          
-        <p style="padding-top:30px"> You can view a detailed estimate of how much tax you might pay by the end of the tax year.</p>
-         
-        
-         <p><a id="view-detailed-estimate" href="/mb10v2/mb10v2-tax-on-income.html" target="_self"  class="button">View detailed estimate</a></p>
+       
          
          
         </div>
+        
+        
+        
+        <div class="column-third">
+                  <h4 class="heading-small"><a href="mb10v2-tax-on-income.html">Your income</a></h4>
+                  <div class="secondary-text-colour bold-medium">£25,400</div>
+                  <h4 class="heading-small"><a href="mb10v2-tax-free-amount.html">Your tax free amount</a></h4>
+                  <div class="secondary-text-colour bold-medium">£10,200</div>
+                  <h4 class="heading-small"><a href="mb10v2-tax-codes.html">Your tax code</a></h4>
+                  <div class="secondary-text-colour bold-medium">1020L</div>
+            </div>
         
         
        

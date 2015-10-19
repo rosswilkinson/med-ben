@@ -1,7 +1,20 @@
- {{<layout}}
-{{$pageTitle}}Your medical insurance benefit{{/pageTitle}}
+{{<layout}}
+{{$pageTitle}}Tax estimate{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
+<script>
+    $(document).ready(function() {
+        var sbBen = {{ccBen}};
+        if(sbBen === 0){
+            $('#zero-bens').hide();
+        }
+    });
+    //var ccBen = {{ccBen}};
+    //console.log($('#zero-bens'));
+</script>
+
+
+
 <script type="text/javascript">
             function CommaFormatted(amount) {
 	var delimiter = ","; // replace comma if desired
@@ -50,7 +63,7 @@
         
             
         <header class="page-header group">
-            <h1 class="heading-xlarge2">Your tax codes</h1>
+            <h1 class="heading-xlarge2">Your tax free amount</h1>
         
             
             
@@ -64,41 +77,51 @@
      
      
      <div class="column-two-thirds">
-       <h3 class="heading-small tax-data">Your tax codes are<br>
-        <div class="grid-row">
-            <div class="column-half grid">
-               <div class="secondary-text-colour bold-xlarge"><script>var total = 10600 - {{sbBen}};  document.write(total / 10)</script>L</div>
-               <div class="secondary-text-colour bold-small">Waitrose</div>
-            </div>
-          <div class="column-half grid">
-                <div class="secondary-text-colour bold-xlarge">BR</div>
-                <div class="secondary-text-colour bold-small">Starbucks</div>
-            </div>
-
-        </div>
-
+       <h3 class="heading-small tax-data">Your tax free amount is<br>
+        <span class="secondary-text-colour bold-xlarge">£<script>var total = 10600 - {{sbBen}};  document.write(CommaFormatted(total))</script></span>
         </h3>
          
-         <br><br>
-         <h3 class="heading-medium">What your tax codes mean</h3>
 
-          <p>Your tax-free amount is £<script>var total = 10600 - {{sbBen}};  document.write(CommaFormatted(total))</script>. This is income you don’t pay tax on. This number is used to create your tax code.</p>
-
-          <h4 class="heading-small"><script>var total = 10600 - {{sbBen}};  document.write(total / 10)</script>L Waitrose</h4>
-          <p>The last digit of your tax free amount of £<script>var total = 10600 - {{sbBen}};  document.write(CommaFormatted(total))</script> is removed to create the numbers in your tax code. The letter L means you are entitled to the basic tax-free Personal Allowance. </p>
+<p>Your tax free amount is spread across the tax year. Each payday you get part of your tax free amount so that by the end of the tax year you’ve had the full tax free amount available to you. </p>
          
-         <h4 class="heading-small">BR Starbucks</h4>
-          <p>BR means that all your income from this job or pension is taxed at the basic rate of 20%. </p>
+         <p>Everyone who lives in the UK receives some income before tax has to be paid - a “tax free amount” of income. That tax free amount is a “personal allowance” that depends on your circumstances.</p>
+         
+         <h3 class="heading-medium">How we work out your tax free amount</h3>
+         <section class="table-section">
+                       <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">Tax free allowances</th>
+                            <th class="numeric">Amount (£)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>
+                                  Personal Allowance
+                              </td>
+                              <td class="numeric">10,600</td>
+                            </tr>
+                            
+                            <tr>
+                              <td>
+                                  Less medical benefit
+                              </td>
+                              <td class="numeric">{{sbBen}}</td>
+                            </tr>
+                        
+                             <tr>
+                                <td class="row-sum">Total</td>
+                                <td class="numeric row-sum"><script>var total = 10600 - {{sbBen}};  document.write(CommaFormatted(total))</script></td>
+                             </tr>
+                       </tbody>
+                      </table>
+                    </section>
+         
+         <p class="short">Your tax free amount of £<script>var total = 10600 - {{sbBen}};  document.write(CommaFormatted(total))</script> is used to create <a href="mb10v2-tax-codes-updated">your tax code</a>.</p>
          
          
          
-          <p>You have £<script>var total = 10600 - {{sbBen}}; document.write(CommaFormatted(total))</script> tax free amount remaining after your taxable benefits or underpayments. This figure is used to work out your tax code.</p>
-
-         <!-- <h4 class="heading-small">500L Northern Rock</h4>
-          <p>The last digit of your tax free amount is removed to create the numbers in your tax code. The letter X means xxxxx. [If letter at start and end of tax code addsecond sentence] The letter X means xxxxx.</p>-->
-
-          <p><a href="mb10v2-tax-free-amount-updated">See how we worked out your tax free amount</a></p>
-          <p><a href="http://personal-tax-account.herokuapp.com/pta/pta-home-1">Back to Account Home</a> </p>
        </div>
      
         </section>
@@ -108,8 +131,8 @@
                       <div class="secondary-text-colour bold-medium">£<script>var total = 0.20 * (25000 - 10600 + {{sbBen}})   ; document.write(CommaFormatted(total))</script></div>
                       <h4 class="heading-small"><a href="mb10v2-tax-on-income-updated">Your income</a></h4>
                       <div class="secondary-text-colour bold-medium">£<script>var total = 25000 + {{sbBen}}; document.write(CommaFormatted(total))</script></div>
-                      <h4 class="heading-small"><a href="mb10v2-tax-free-amount-updated">Your tax free amount</a></h4>
-                      <div class="secondary-text-colour bold-medium">£<script>var total = 10600 - {{sbBen}};  document.write(CommaFormatted(total))</script></div>
+                      <h4 class="heading-small"><a href="mb10v2-tax-codes-updated">Your tax code</a></h4>
+                      <div class="secondary-text-colour bold-medium"><script>var total = 10600 - {{sbBen}};  document.write(total / 10)</script>L</div>
           </div>
         
      
@@ -123,7 +146,11 @@
          
          
          
-         
+           <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="/mb10/mb10-check-income-tax-updated">Back</a></p>
+                        
+                        <!-- end of link -->
       
         
     
@@ -181,10 +208,7 @@
         
         
     </div><!-- end inner block -->
-
-
-
-
+    
     
 </main>
 

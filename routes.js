@@ -588,6 +588,11 @@ module.exports = {
     });
    
       
+        app.get('/mb10v2/mb10v2-tax-free-amount.html', function (req, res) {
+      res.render('mb10v2/mb10v2-tax-free-amount', {'assetPath' : assetPath });
+    });
+      
+      
       
       
 /* Med Bens */
@@ -4928,6 +4933,16 @@ module.exports = {
     });
       
   
+       app.get('/mb10v2/mb10v2-tax-free-amount-updated', function (req, res) {
+        res.render('mb10v2/mb10v2-tax-free-amount-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
       
       
       
