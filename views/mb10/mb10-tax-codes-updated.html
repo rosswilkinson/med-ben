@@ -80,14 +80,52 @@
         </h3>
          
          <br><br>
-         <h3 class="heading-medium">What your tax codes mean</h3>
+         <h3 class="heading-medium">What your tax code means</h3>
 
-          <p>Your tax-free amount is £<script>var total = 10600 - {{ccBen}};  document.write(CommaFormatted(total))</script>. This is income you don’t pay tax on. This number is used to create your tax code.</p>
+         
+         <p>  <p>Your tax-free amount is £10,600. This is income you don’t pay tax on. To create your tax code we take your Tax Free amount then we deduct any taxable benefits in order to collect the tax due on these from your employer via Pay As You Earn (PAYE).</p>
+         
+         
+         
+           <h3 class="heading-medium">How we work out your tax code</h3>
+         <section class="table-section">
+                       <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">Tax code calculation</th>
+                            <th class="numeric">Amount (£)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>
+                                 Your tax free amount
+                              </td>
+                              <td class="numeric">10,600</td>
+                            </tr>
+                            
+                           <tr>
+                              <td>
+                                Less medical benefit
+                              </td>
+                              <td class="numeric">{{ccBen}}</td>
+                            </tr>
+                        
+                             <tr>
+                                <td class="row-sum">Total</td>
+                                <td class="numeric row-sum"><script>var total = 10600 - {{ccBen}};  document.write(CommaFormatted(total))</script></td>
+                             </tr>
+                       </tbody>
+                      </table>
+             
+             
+         </p>
+          <p>You have £<script>var total = 10600 - {{ccBen}};  document.write(CommaFormatted(total))</script> remaining after your taxable benefits or underpayments. This figure is used to work out your tax code.</p>
 
           <h4 class="heading-small"><script>var total = 10600 - {{ccBen}};  document.write(total / 10)</script>L John Lewis</h4>
           <p>The last digit of your tax free amount of £<script>var total = 10600 - {{ccBen}};  document.write(CommaFormatted(total))</script> is removed to create the numbers in your tax code. The letter L means you are entitled to the basic tax-free Personal Allowance. </p>
          
-          <p>You have £<script>var total = 10600 - {{ccBen}}; document.write(CommaFormatted(total))</script> tax free amount remaining after your taxable benefits or underpayments. This figure is used to work out your tax code.</p>
+          
 
          <!-- <h4 class="heading-small">500L Northern Rock</h4>
           <p>The last digit of your tax free amount is removed to create the numbers in your tax code. The letter X means xxxxx. [If letter at start and end of tax code addsecond sentence] The letter X means xxxxx.</p>-->
@@ -104,7 +142,7 @@
                       <h4 class="heading-small"><a href="mb10-tax-on-income-updated">Your income</a></h4>
                       <div class="secondary-text-colour bold-medium">£<script>var total = 30000 + {{ccBen}}; document.write(CommaFormatted(total))</script></div>
                       <h4 class="heading-small"><a href="mb10-tax-free-amount-updated">Your tax free amount</a></h4>
-                      <div class="secondary-text-colour bold-medium">£<script>var total = 10600 - {{ccBen}};  document.write(CommaFormatted(total))</script></div>
+                      <div class="secondary-text-colour bold-medium">£10,600</div>
           </div>
         
      
