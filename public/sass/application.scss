@@ -1140,6 +1140,153 @@ details, summary {
 
 
 
+.icon {
+    float: right;
+    width: 80px;
+}
+
+
+.warning_message_image {
+    float: left;
+    width: 100%;
+}
+.warning-space {
+    padding-top: 15px;
+}
+.warning-weight {
+    font-weight: 600;
+}
+
+
+
+.icon-important {
+    background-image: url("../images/icon-information-2x.png");
+    height: 34px;
+    width: 34px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+
+
+
+
+.secondary-text-colour {
+    color: #6f777b;
+   
+}
+
+.number-bar {
+    margin: 0.263158em 0.2631578947em;
+}
+
+.number-bar {
+    position: relative;
+    width: auto;
+    height: 0.98947368421052631579em;
+    color: #6F777B;
+    font-weight: bold;
+}
+
+.number-bar .centred {
+    width: 30%;
+    margin-left: -15%;
+}
+
+
+
+.number-bar span {
+    position: absolute;
+    text-align: center;
+    font-size: 0.57894736842105263158em;
+}
+
+
+.tax-bar {
+    position: relative;
+    height: 0.52631578947368421053em;
+    border: 0px solid #6F777B;
+    width: auto;
+}
+
+
+.tax-point {
+    height: 0.52631578947368421053em;
+    width: 1px;
+    background: #BFC1C3;
+    position: absolute;
+}
+
+.chart {
+    position: relative;
+    height: 1.31578947368421052632em;
+    width: auto;
+    background-color: #bfc1c3;
+}
+
+.TaxFree {
+    background-color: #28A197;
+}
+
+
+
+.Band1 {
+    background-color: #005EA5;
+}
+
+.chart-bar {
+    height: 100%;
+    width: 0%;
+
+    float: left;
+}
+
+.table-section {
+    margin-bottom: 2em;
+}
+
+
+table th.numeric {
+    text-align: right;
+}
+
+able td.row-sum {
+    font-weight: 700;
+}
+
+
+.key-icon.Band-unused {
+    height: 1.31578947368421052632em;
+    width: 1.31578947368421052632em;
+}
+
+
+
+
+.key-icon {
+    display: block;
+    width: 1.578947368421053em;
+    height: 1.578947368421053em;
+    
+    float: left;
+    clear: both;
+    margin-right: 0.5em;
+}
+
+.Band-unused {
+    background-color: #BFC1C3;
+}
+
+table td.numeric {
+    font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    font-weight: 400;
+    text-transform: none;
+    text-align: right;
+}
+
 
 
 @media screen and (max-width: 1024px) {
@@ -1166,4 +1313,20 @@ details, summary {
 }
 
 
+.tax-data {
+    margin-top: 0.26316em;
+    margin-bottom: 1.05263em;
+}
 
+
+
+
+.column-half {
+    float: left;
+    width: 50%;
+}
+
+
+table td.row-sum {
+    font-weight: 700;
+}
