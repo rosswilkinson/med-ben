@@ -1,0 +1,150 @@
+{{<layout}}
+{{$pageTitle}}Confirm you’ve never had this benefit{{/pageTitle}}
+{{$content}}
+{{>hmrc_banner}}
+<main id="content" role="main">
+    <div class="inner-block">
+        
+        
+    <div id="global-breadcrumb" class="header-context">
+<ol class="group" role="breadcrumbs">
+<li>
+<a href="https://tai-prototype.herokuapp.com/sprint31/v1/pta">Account home</a>
+</li>
+<li>
+<a href="https://tai-prototype.herokuapp.com/sprint31/v1/income-tax">Income Tax</a>
+</li>
+    
+     <li>
+<a href="https://tai-prototype.herokuapp.com/sprint31/v1/your-income">Tax on income</a>
+</li>
+    
+<li><a href="/mb10-1/mb10-1-home">Your medical benefit</a></li>
+    
+
+</ol>
+</div>
+        
+            <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>
+        
+        
+        
+      <div class="column-two-thirds">
+        <header class="page-header group">
+            <h1 class="heading-xlarge">Confirm you’ve never had this benefit</h1>
+            
+            
+             
+            <div class="panel-indent">
+                <p>If you’ve never had this benefit, it’ll be removed from your record for the tax year 6 April 2015 to 5 April 2016.</p>
+            </div>
+
+
+            
+        </header> 
+        <div class="grid-row group">
+           
+                
+            <p>Is it correct that you’ve never had this medical insurance benefit from {{employer}}?</p>
+            
+            
+        </div>  
+            
+        <!--confirm box   <label class="form-checkbox" for="checkbox-telephone-number">
+    <input id="checkbox-telephone-number" value="checkbox-telephone-number" type="checkbox">
+    I confirm that these changes are correct
+  </label>-->
+            
+          
+              <input type="hidden" name="Employer" value="{{employer}}">
+            
+            <fieldset class="questions">
+                
+                
+                
+  <fieldset class="inline">
+    <label class="block-label" for="radio-inline-1">
+      <input id="radio-inline-1" name="radio-inline-group" value="Yes" type="radio">
+      Yes
+    </label>
+    <label class="block-label" for="radio-inline-2">
+      <input id="radio-inline-2" name="radio-inline-group" value="No" type="radio">
+      No
+    </label>
+  </fieldset>
+
+
+                
+                
+                
+           
+                  
+             </fieldset>
+                   
+         
+            
+          
+            <div class="next-question">
+              <a id="question-submit4-v10-1" href="/" class="button">Confirm</a>
+                </div>
+          
+          
+          <!--old submit button 
+        <div class="next-question">
+            <a href="/mb6/mb6-finish" class="button alertButton">Confirm and remove</a>
+        </div>-->
+       
+          
+          
+          
+           <!-- back to previous page link -->
+                                          
+                       <p class="back-to-previous"><a href="/mb10/mb10-home">Back</a></p>
+                        
+                        <!-- end of link -->
+          
+          
+        </div>
+        
+        <!-- start of anythign wrong link-->
+        
+         <div class="column-two-thirds">
+             
+             
+         
+                    <p class="report-a-problem-toggle" style="padding:50px 0 0 0; margin-bottom:-100px">
+                        <a href="#" id="toggle2">Is there anything wrong with this page?</p></a>
+                    </p>
+            
+             
+             
+<div  class="toggle2" style="display:none; padding:80px 0 0 0;">
+                <div class="report-a-problem-container">
+                    <div class="report-a-problem-inner">
+                        <div class="report-a-problem-content" >
+                            <h2 class="heading-medium">Help us improve GOV.UK</h2>
+                            <p style="font-size:19px">Don't include personal or financial information, eg your National Insurance number or credit card details.</p>
+                            <form accept-charset="UTF-8" id="help-improve-form" novalidate="novalidate" _lpchecked="1">
+
+                                <div class="form-group form-group-error">
+                                    <label for="what_doing" class="form-label">What you were doing</label>
+                                    <label for="what_doing" class="error">Please enter details of what you were doing.</label><input id="what_doing" class="form-control" name="what_doing" type="text" required="" aria-required="true" aria-invalid="true">
+                                </div>
+                                <div class="form-group form-group-error">
+                                    <label for="went_wrong" class="form-label">What went wrong</label>
+                                    <label for="went_wrong" class="error">Please enter details of what went wrong.</label><input id="went_wrong" class="form-control" name="went_wrong" type="text" required="" aria-required="true">
+                                </div>
+                                <div class="button-wrapper">
+                                    <button name="commit" type="submit" class="button">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+             <!-- end of anything wrong link -->
+    
+    
+    </div>
+</main>
+{{/content}}
+{{/layout}}

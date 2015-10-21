@@ -595,6 +595,44 @@ module.exports = {
       
       
       
+        /*mb10-1 */
+      
+       app.get('/mb10-1/mb10-1-pta-home.html', function (req, res) {
+      res.render('mb10-1/mb10-1-pta-home', {'assetPath' : assetPath });
+    });
+      
+      
+      
+      app.get('/mb10-1/mb10-1-tax-on-income.html', function (req, res) {
+      res.render('mb10-1/mb10-1-tax-on-income', {'assetPath' : assetPath });
+    });
+      
+        app.get('/mb10-1/mb10-1-check-income-tax.html', function (req, res) {
+      res.render('mb10-1/mb10-1-check-income-tax', {'assetPath' : assetPath });
+    });
+      
+      app.get('/mb10-1/mb10-1-tax-codes.html', function (req, res) {
+      res.render('mb10-1/mb10-1-tax-codes', {'assetPath' : assetPath });
+    });
+      
+        app.get('/mb10-1/mb10-1-tax-free-amount.html', function (req, res) {
+      res.render('mb10-1/mb10-1-tax-free-amount', {'assetPath' : assetPath });
+    });
+      
+      
+      
+         app.get('/mb10-1/mb10-1-about-a-change.html', function (req, res) {
+      res.render('mb10-1/mb10-1-about-a-change', {'assetPath' : assetPath });
+    });
+      
+    
+
+      
+      
+      
+      
+      
+      
 /* Med Bens */
     app.get('/mb/mb-start.html', function (req, res) {
       res.render('mb/mb-start', {'assetPath' : assetPath });
@@ -4996,6 +5034,324 @@ module.exports = {
 
       
 
+      
+      
+      
+      
+         /*mb10-1 */
+      
+      
+      
+    app.get('/mb10-1/mb10-1-start.html', function (req, res) {
+        resetFunction();
+        res.render('mb10-1/mb10-1-start', {
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb10-1/mb10-1-home', function (req, res) {
+        res.render('mb10-1/mb10-1-home', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb10-1/mb10-1-home2', function (req, res) {
+        res.render('mb10-1/mb10-1-home2', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+     app.get('/mb10-1/mb10-1-add', function (req, res) {
+        res.render('mb10-1/mb10-1-add', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb10-1/mb10-1-add-amount', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb10-1/mb10-1-add-amount', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+          app.get('/mb10-1/mb10-1-exit-survey', function (req, res) {
+        addedEmployer = req.query.addedEmployer;
+        res.render('mb10-1/mb10-1-exit-survey', {
+          'assetPath' : assetPath 
+        });
+    });
+      
+       
+      
+    
+      
+      
+      
+    
+         
+    app.get('/mb10-1/mb10-1-question-a', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb10-1/mb10-1-question-a', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       app.get('/mb10-1/mb10-1-question-b', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb10-1/mb10-1-question-b', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+    app.get('/mb10-1/mb10-1-update', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb10-1/mb10-1-update', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
+      
+      
+      
+       app.get('/mb10-1/mb10-1-update-only', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb10-1/mb10-1-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+       
+      
+    app.get('/mb10-1/mb10-1-summary', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb10-1/mb10-1-summary', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+       
+      
+      
+      
+       app.get('/mb10-1/mb10-1-summary-add', function (req, res) {
+        addedAmount = req.query.addedAmount;
+        res.render('mb10-1/mb10-1-summary-add', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb10-1/mb10-1-summary-update-only', function (req, res) {
+        tempValue = req.query.update;
+        res.render('mb10-1/mb10-1-summary-update-only', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+    app.get('/mb10-1/mb10-1-done', function (req, res) {
+        if (req.query.amount) {
+            tempValue = req.query.amount;
+            updateFunction();
+        }
+        res.render('mb10-1/mb10-1-done', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb10-1/mb10-1-home-updated', function (req, res) {
+        res.render('mb10-1/mb10-1-home-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+    app.get('/mb10-1/mb10-1-finish', function (req, res) {
+        updateFunction();
+        res.render('mb10-1/mb10-1-finish', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+      
+    app.get('/mb10-1/mb10-1-remove', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb10-1/mb10-1-remove', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+
+       app.get('/mb10-1/mb10-1-remove-b', function (req, res) {
+        tempValue = 0;
+        employer = req.query.employer;
+        res.render('mb10-1/mb10-1-remove-b', {
+            'employer' : employer,
+            'tempValue' : tempValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath 
+        });
+    });
+   
+
+      
+        app.get('/mb10-1/mb10-1-tax-on-income-updated', function (req, res) {
+        res.render('mb10-1/mb10-1-tax-on-income-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+         app.get('/mb10-1/mb10-1-tax-free-amount-updated', function (req, res) {
+        res.render('mb10-1/mb10-1-tax-free-amount-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+      
+       app.get('/mb10-1/mb10-1-check-income-tax-updated', function (req, res) {
+        res.render('mb10-1/mb10-1-check-income-tax-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+  
+      
+      
+      
+           app.get('/mb10-1/mb10-1-ended-amend', function (req, res) {
+        res.render('mb10-1/mb10-1-ended-amend', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+           app.get('/mb10-1/mb10-1-about-a-change-amended', function (req, res) {
+        res.render('mb10-1/mb10-1-about-a-change-amended', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+      
+      
+       
+           app.get('/mb10-1/mb10-1-tax-on-income', function (req, res) {
+        res.render('mb10-1/mb10-1-tax-on-income', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb10-1/mb10-1-tax-codes-updated', function (req, res) {
+        res.render('mb10-1/mb10-1-tax-codes-updated', {
+          'sbBen' : sbBen,
+          'ccBen' : ccBen,
+          'assetPath' : assetPath,
+          'addedEmployer' : addedEmployer,
+          'addedAmount' : addedAmount
+        });
+    });
+      
+
+      
       
       
    
