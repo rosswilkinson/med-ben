@@ -2101,3 +2101,40 @@ table td.numeric {
 
 table td.row-sum {
   font-weight: 700; }
+
+.grey-button {
+  background-color: #dee0e2;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.2em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 5px 15px 15px 300px;
+  padding: 0.52632em 0.78947em 0.26316em 0.78947em;
+  vertical-align: top; }
+
+.grey-button:link, .grey-button:hover, .grey-button:focus, .grey-button:visited {
+  color: #0b0c0c; }
+
+table.tespattern td {
+  font-size: 16px; }
+
+table.tespattern th, table.tespattern td {
+  padding: 10px 10px 10px 0;
+  font-size: 16px; }

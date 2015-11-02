@@ -1500,7 +1500,25 @@ $('.summary[target="boxtwo"]').click(function(){
     
     
 //v10.1 radio routing questions 
-       $("#question-submit-v10-1").click(function(e) {
+        $("#question-submit-v10-tes").click(function(e) {
+        e.preventDefault();
+        
+        var employer = $('input[name="Employer"]').val();
+        var url = "";
+        if ($("#radio-1").is(":checked")) {
+            url = "/mb10-1/mb10-1-question-a?employer=" + employer;
+        } else if ($("#radio-2").is(":checked")) {
+            url = "/mb10-1/mb10-1-remove-b?employer=" + employer;
+        }
+        
+        if (url.length > 0) {
+            window.location = url;
+        }
+    });
+    
+    
+    
+    $("#question-submit-v10-1").click(function(e) {
         e.preventDefault();
         
         var employer = $('input[name="Employer"]').val();

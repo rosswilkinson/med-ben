@@ -5111,6 +5111,20 @@ module.exports = {
     });
       
       
+      app.get('/mb10-1/mb10-1-new', function (req, res) {
+        employer = req.query.employer;
+        summaryFunction();
+        res.render('mb10-1/mb10-1-new', {
+            'employer' : employer,
+            'currentValue' : currentValue,
+            'sbBen' : sbBen,
+            'ccBen' : ccBen,
+            'assetPath' : assetPath,
+        });
+    });
+      
+      
+      
        app.get('/mb10-1/mb10-1-question-b', function (req, res) {
         employer = req.query.employer;
         summaryFunction();
