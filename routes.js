@@ -381,12 +381,12 @@ module.exports = {
       res.render('car-service/splash-page', {'assetPath' : assetPath });
     });
       
-       app.get('/car-service/sprint-31-confirmation-page.html', function (req, res) {
-      res.render('car-service/sprint-31-confirmation-page', {'assetPath' : assetPath });
+       app.get('/car-service/sprint-34-confirmation-page.html', function (req, res) {
+      res.render('car-service/sprint-34-confirmation-page', {'assetPath' : assetPath });
     });
       
-      app.get('/car-service/sprint-31-confirmation-page-standalone.html', function (req, res) {
-      res.render('car-service/sprint-31-confirmation-page-standalone', {'assetPath' : assetPath });
+      app.get('/car-service/sprint-34-confirmation-page-standalone.html', function (req, res) {
+      res.render('car-service/sprint-34-confirmation-page-standalone', {'assetPath' : assetPath });
     });
       
        app.get('/car-service/service-breadcrumb.html', function (req, res) {
@@ -625,6 +625,14 @@ module.exports = {
       res.render('mb10-1/mb10-1-about-a-change', {'assetPath' : assetPath });
     });
       
+      
+       app.get('/mb10-1/mb10-1-start2.html', function (req, res) {
+      res.render('mb10-1/mb10-1-start2', {'assetPath' : assetPath });
+    });
+      
+       app.get('/mb10-1/mb10-1-start3.html', function (req, res) {
+      res.render('mb10-1/mb10-1-start3', {'assetPath' : assetPath });
+    });
     
 
       
@@ -637,6 +645,8 @@ module.exports = {
     app.get('/mb/mb-start.html', function (req, res) {
       res.render('mb/mb-start', {'assetPath' : assetPath });
     });
+      
+       
       
     app.get('/mb/mb-summary.html', function (req, res) {
         summaryAmounts();
