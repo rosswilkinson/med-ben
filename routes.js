@@ -634,6 +634,18 @@ module.exports = {
       res.render('mb10-1/mb10-1-start3', {'assetPath' : assetPath });
     });
     
+      
+       app.get('/mb10-1/mb10-1-done-b1.html', function (req, res) {
+      res.render('mb10-1/mb10-1-done-b1', {'assetPath' : assetPath });
+    });
+      
+       app.get('/mb10-1/mb10-1-done-b2.html', function (req, res) {
+      res.render('mb10-1/mb10-1-done-b2', {'assetPath' : assetPath });
+    });
+      
+       app.get('/mb10-1/mb10-1-done-b3.html', function (req, res) {
+      res.render('mb10-1/mb10-1-done-b3', {'assetPath' : assetPath });
+    });
 
       
       
