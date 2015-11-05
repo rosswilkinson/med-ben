@@ -646,6 +646,14 @@ module.exports = {
        app.get('/mb10-1/mb10-1-done-b3.html', function (req, res) {
       res.render('mb10-1/mb10-1-done-b3', {'assetPath' : assetPath });
     });
+      
+       app.get('/mb10-1/mb10-1-home-content.html', function (req, res) {
+      res.render('mb10-1/mb10-1-home-content', {'assetPath' : assetPath });
+    });
+
+       app.get('/mb10-1/mb10-1-home-content-noben.html', function (req, res) {
+      res.render('mb10-1/mb10-1-home-content-noben', {'assetPath' : assetPath });
+    });
 
       
       
