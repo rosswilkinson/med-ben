@@ -405,6 +405,18 @@ module.exports = {
       res.render('car-service/integrated-breadcrumb-journey', {'assetPath' : assetPath });
     });
       
+       app.get('/car-service/confirmation-code.html', function (req, res) {
+      res.render('car-service/confirmation-code', {'assetPath' : assetPath });
+    });
+      
+      app.get('/car-service/confirmation-company.html', function (req, res) {
+      res.render('car-service/confirmation-company', {'assetPath' : assetPath });
+    });
+      
+      app.get('/car-service/confirmation-income.html', function (req, res) {
+      res.render('car-service/confirmation-income', {'assetPath' : assetPath });
+    });
+      
       
       
       /* TES SERVICE */
