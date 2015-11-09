@@ -4496,6 +4496,8 @@ module.exports = {
       
       
       
+      
+      
      app.get('/mb10/mb10-add', function (req, res) {
         res.render('mb10/mb10-add', {
           'assetPath' : assetPath 
@@ -5104,6 +5106,15 @@ module.exports = {
       
        app.get('/mb10-1/mb10-1-home2', function (req, res) {
         res.render('mb10-1/mb10-1-home2', {
+            'assetPath' : assetPath,
+            'addedEmployer' : addedEmployer,
+            'addedAmount' : addedAmount
+        });
+    });
+      
+      
+       app.get('/mb10-1/mb10-1-home2-noben', function (req, res) {
+        res.render('mb10-1/mb10-1-home2-noben', {
             'assetPath' : assetPath,
             'addedEmployer' : addedEmployer,
             'addedAmount' : addedAmount
