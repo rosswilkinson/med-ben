@@ -5435,10 +5435,19 @@ module.exports = {
     });
       
     app.get('/mb11/mb11-home', function (req, res) {
+        if(req.param('medben')){
+            ccBen = req.param('medben');
+        }
+        
+        if(req.param('employ')){
+            employer = req.param('employ');
+        }
         res.render('mb11/mb11-home', {
             'assetPath' : assetPath,
             'addedEmployer' : addedEmployer,
-            'addedAmount' : addedAmount
+            'addedAmount' : addedAmount,
+            'amount' : ccBen,
+            'emp' : employer
         });
     });
       
@@ -5609,17 +5618,22 @@ module.exports = {
     });
       
     app.get('/mb11/mb11-done', function (req, res) {
-        if (req.query.amount) {
-            tempValue = req.query.amount;
-            updateFunction();
-        }
+//        if (req.query.amount) {
+    //        tempValue = req.query.amount;
+       //     updateFunction();
+     //   }
+        if(req.param('amount')){
+         var linkk = req.query.amount;   
+        } else{
+        var linkk = ccBen; }
+        
         res.render('mb11/mb11-done', {
             'employer' : employer,
             'currentValue' : currentValue,
             'tempValue' : tempValue,
             'sbBen' : sbBen,
             'ccBen' : ccBen,
-            
+            'link' : linkk,
             'assetPath' : assetPath 
         });
     });

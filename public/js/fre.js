@@ -1709,7 +1709,7 @@ $('.summary[target="boxtwo"]').click(function(){
         if ($("#radio-indent9-2").is(":checked") && updatedVal.length > 0) {
             url = "/mb11/mb11-summary?employer=" + employer + "&update=" + updatedVal;
         } else if ($("#radio-indent9-1").is(":checked")) {
-            url = "/mb11/mb11-done?amount=600";
+            url = "/mb11/mb11-done";
         }
         
         if (url.length > 0) {

@@ -16,17 +16,15 @@
   
     
     <li>
-<a href="http://personal-tax-account.herokuapp.com/pta/pta-home-1?in-page">Account home</a>
+<a href="https://tai-prototype.herokuapp.com/sprint33/v2/pta">Account home</a>
 </li>
 <li>
-<a href="https://tai-prototype.herokuapp.com/sprint33/v3/income-tax-landing">Income Tax</a>
+<a href="https://tai-prototype.herokuapp.com/sprint33/v2/income-tax-landing">Income Tax</a>
 </li>
     
      <li>
-<a href="https://tai-prototype.herokuapp.com/sprint33/v3/taxable-income">Taxable income</a>
+<a href="https://tai-prototype.herokuapp.com/sprint33/v2/your-income">Taxable income</a>
 </li>
-
-<li><a href="/mb11/mb11-home">Your medical benefit</a></li>
     
    
     
@@ -58,7 +56,6 @@
                 
                     <form id="mb-choice" method="GET" action="mb10-summary">
                         
-                       
                            <div class="form-group">
                             
                              <div style="width: 30px; float: left;">
@@ -70,7 +67,7 @@
                            <div style="margin-left:50px;"> <p>Don’t calculate the value yourself. If you’re not sure of the value just ask {{employer}} how much they paid.</p></div>
                             
                             
-                        <label class="form-label" for="update"><p>Benefit value (since 6 April 2015): £{{currentValue}}</p>
+                        <label class="form-label" for="update"><p>Benefit value (since 6 April 2015): £{{ccBen}}</p>
                        
                            
                             
@@ -131,7 +128,7 @@
                     
                     
                       
-                        
+                        <input type="hidden" name="amount" value="a353553"/>
                         
                      <div >
                          <a id="question-submit5-v11" href="/" class="button">Confirm</a>

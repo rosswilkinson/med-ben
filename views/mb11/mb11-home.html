@@ -12,14 +12,14 @@
  <div id="global-breadcrumb" class="header-context">
 <ol class="group" role="breadcrumbs">
   <li>
-<a href="http://personal-tax-account.herokuapp.com/pta/pta-home-1?in-page">Account home</a>
+<a href="https://tai-prototype.herokuapp.com/sprint33/v2/pta">Account home</a>
 </li>
 <li>
-<a href="https://tai-prototype.herokuapp.com/sprint33/v3/income-tax-landing">Income Tax</a>
+<a href="https://tai-prototype.herokuapp.com/sprint33/v2/income-tax-landing">Income Tax</a>
 </li>
     
      <li>
-<a href="https://tai-prototype.herokuapp.com/sprint33/v3/taxable-income">Taxable income</a>
+<a href="https://tai-prototype.herokuapp.com/sprint33/v2/your-income">Taxable income</a>
 </li>
     
 
@@ -80,18 +80,18 @@
              
              
 <div class="job-wrapper" id="cc-table">
-    <h4 class="heading-small">Costa</h4>
+    <h4 class="heading-small">{{emp}}</h4>
     <div class="dash-info">
-        Benefit value: £<span id="cc-amount">600</span>
+        Benefit value: £<span id="cc-amount">{{amount}}</span>
      </div>
          
          <div class="dash-nav">
              <div class="nav-styling">
-                 <a href="mb11-question-a?employer=Costa">I've stopped getting this benefit</a>
+                 <a href="mb11-question-a?employer={{emp}}">I've stopped getting this benefit</a>
              </div>
          <!--<td><a href="mb6-update?employer=Costa">You've stopped getting this benefit</a></td>-->
              <div class="nav-styling">
-                 <a href="mb11-remove-b?employer=Costa">I've never had this benefit</a>
+                 <a href="mb11-remove-b?employer={{emp}}">I've never had this benefit</a>
              </div>
         </div>
                     
@@ -106,7 +106,7 @@
     <a href="/mb7/mb7-income-tax.html">OK, account home</a></p>-->
              
             <h4 class="heading-small" style="padding-top:10px;">Your taxable income</h4>
-             <p style="padding-top:0px; font-size:19px;"><a href="https://tai-prototype.herokuapp.com/sprint33/v3/taxable-income">View how we calculate your taxable income</a></p>
+             <p style="padding-top:0px; font-size:19px;"><a href="https://tai-prototype.herokuapp.com/sprint33/v2/your-income">View how we calculate your taxable income</a></p>
    
                  
                  
