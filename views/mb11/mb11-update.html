@@ -1,5 +1,5 @@
 {{<layout}}
-{{$pageTitle}}Confirm the value of this benefit{{/pageTitle}}
+{{$pageTitle}}Confirm benefit value{{/pageTitle}}
 {{$content}}
 {{>hmrc_banner}}
 <main id="content" role="main">
@@ -35,7 +35,7 @@
         <div class="eng-welsh-toggle"><p style="font-size:19px">English | <a href="">Cymraeg</a></p></div>            
 
                 <header class="page-header group">
-                    <h1 class="heading-xlarge">Confirm the value of this benefit</h1>
+                    <h1 class="heading-xlarge">Confirm benefit value</h1>
 
                 </header>
 
@@ -64,14 +64,14 @@
                             </p>
 						</div>
                             
-                           <div style="margin-left:50px;"> <p>Don’t calculate the value yourself. If you’re not sure of the value just ask {{employer}} how much they paid.</p></div>
+                           <div style="margin-left:50px;"> <p>Don't calculate the value yourself; ask {{employer}} how much they paid for your medical insurance benefit.</p></div>
                             
                             
                         <label class="form-label" for="update"><p>Benefit value (since 6 April 2015): £{{ccBen}}</p>
                        
                            
                             
-                            <p>Is this value correct (ask the employer that provided it if you’re not sure)?</p>
+                            <p>Is this value correct (ask {{employer}} if you're not sure)?</p>
                            
                             
                             
@@ -113,7 +113,7 @@
                         
                    <!-- show if slects no -->
                        <div class="panel-indent" id="paidnobox">
-                           <p>Actual value (paid by {{employer}})<br>  <span class="form-hint">The amount you enter will be rounded down when used in any future tax calculations.</span></p>
+                           <p>Actual value (paid by {{employer}})<br>  <span class="form-hint">The amount you enter will be rounded down to the nearest British pound when used in any future tax calculation.</span></p>
                       
                         <br>
                         <div class="pound">
