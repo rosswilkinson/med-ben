@@ -373,6 +373,12 @@ module.exports = {
     });
       
       
+       app.get('/car-service/confirmation-text.html', function (req, res) {
+      res.render('car-service/confirmation-text', {'assetPath' : assetPath });
+    });
+      
+      
+      
       app.get('/car-service/car-12.html', function (req, res) {
       res.render('car-service/car-12', {'assetPath' : assetPath });
     });
