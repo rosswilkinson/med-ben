@@ -24,6 +24,6 @@
     "grunt-execute": "~0.2.1",
     "grunt-sass": "^1.2.0",
     "grunt-text-replace": "~0.3.10",
-    "node-sass": "0.x"
+    "node-sass": "^3.7.0"
   }
 }
