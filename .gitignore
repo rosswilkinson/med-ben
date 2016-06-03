@@ -2,3 +2,6 @@
 .DS_Store
 .start.pid
 desktop.ini
+npm-debug.log
+node_modules/*
+.idea/*
